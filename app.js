@@ -99,6 +99,13 @@ const markAttendance = () => {
 
         showCustomConfirm("You are about to mark attendance for<br><br>following registration <span class='text-primary'>00"+studentREG+"</span><br><br>Are You Sure?",function(result) {
                 if (result) {
+                    let formData = new FormData();
+                    formData.append("reg", studentREG);
+
+                    fetch("addAttendance.php",{
+                        method: "POST",
+                        body: formData,
+                    })
 
                 }
             }
