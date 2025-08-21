@@ -15,11 +15,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($resultBatch->num_rows > 0) {
         $row = $resultBatch->fetch_assoc();
         $batch = $row['batch'];
-    } else {
-        $batch = null;
+    }
+    $stmt->close();
+
+    $stmt_insert = $conn->prepare("INSERT INTO attendance (reg_id, batch_id,timestamp,addedBy) VALUES(?, ?,?,?)");
+    $time = time();
+    $user = "System";
+
+    $stmt_insert->bind_param("ssss", $reg, $batch, $time,$user);
+    if($stmt_insert->execute()){
+        echo "Ok";
+    }
+    else{
+        echo "failed";
     }
 
-    $stmt->close();
+    $stmt_insert->close();
+    $conn->close();
 
 
 
