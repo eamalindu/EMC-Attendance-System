@@ -19,21 +19,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->close();
 
     // Check if student has already marked attendance today
-    $check_sql = "SELECT COUNT(*) as cnt FROM attendance WHERE reg_id = ? AND DATE(timestamp) = CURDATE()";
+    $check_sql = "SELECT timestamp FROM attendance WHERE reg_id = ? AND DATE(timestamp) = CURDATE() LIMIT 1";
 
     $stmt_check = $conn->prepare($check_sql);
     $stmt_check->bind_param("s", $reg);
     $stmt_check->execute();
     $result = $stmt_check->get_result();
     $row = $result->fetch_assoc();
+    if ($row) {
+        // format timestamp
+        $markedTime = date("h:i A", strtotime($row['timestamp']));
+        echo "Duplicate entry detected!\nToday’s attendance has already been submitted at $markedTime.";
 
-    if ($row['cnt'] > 0) {
-        echo "Duplicate Record <br> Attendance Already Marked"; // already marked today
     } else {
         // Insert new record
-        $stmt_insert = $conn->prepare(
-            "INSERT INTO attendance (reg_id, batch_id, timestamp, addedBy) VALUES (?, ?, NOW(), ?)"
-        );
+        $stmt_insert = $conn->prepare("INSERT INTO attendance (reg_id, batch_id, timestamp, addedBy) VALUES (?, ?, NOW(), ?)");
 
         $user = "System";
         $stmt_insert->bind_param("sss", $reg, $batch, $user);
@@ -49,8 +49,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $stmt_check->close();
     $conn->close();
-
-
 
 
 }
