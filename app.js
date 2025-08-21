@@ -105,7 +105,7 @@ const markAttendance = () => {
                             // Success action
                             showCustomModal('Attendance Added Successfully', 'success');
                         } else {
-                            console.log("Server response:", data);
+                            showCustomModal(data, 'error');
                         }
                     })
                     .catch(error => {

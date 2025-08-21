@@ -19,9 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->close();
 
     // Check if student has already marked attendance today
-    $check_sql = "SELECT COUNT(*) as cnt 
-              FROM attendance 
-              WHERE reg_id = ? AND DATE(timestamp) = CURDATE()";
+    $check_sql = "SELECT COUNT(*) as cnt FROM attendance WHERE reg_id = ? AND DATE(timestamp) = CURDATE()";
 
     $stmt_check = $conn->prepare($check_sql);
     $stmt_check->bind_param("s", $reg);
@@ -30,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $row = $result->fetch_assoc();
 
     if ($row['cnt'] > 0) {
-        echo "Duplicate"; // already marked today
+        echo "Duplicate Record <br> Attendance Already Marked"; // already marked today
     } else {
         // Insert new record
         $stmt_insert = $conn->prepare(
