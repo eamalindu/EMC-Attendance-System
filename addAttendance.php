@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($row) {
         // format timestamp
         $markedTime = date("h:i A", strtotime($row['timestamp']));
-        echo "Duplicate entry detected!\nToday’s attendance has already been submitted at $markedTime.";
+        echo "Duplicate entry detected!\n\nToday’s attendance has already been submitted at $markedTime.";
 
     } else {
         // Insert new record
