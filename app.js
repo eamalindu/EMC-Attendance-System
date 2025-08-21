@@ -103,7 +103,7 @@ const markAttendance = () => {
                     .then(data => {
                         if (data.trim() === "Ok") {
                             // Success action
-                            console.log("Attendance added successfully");
+                            showCustomModal('Attendance Added Successfully', 'success');
                         } else {
                             console.log("Server response:", data);
                         }
