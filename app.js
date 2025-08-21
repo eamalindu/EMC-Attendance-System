@@ -18,8 +18,7 @@ const getStudent = () => {
 
 
     fetch(`getStudent.php?reg=${encodeURIComponent(studentREG)}`, {
-        method: 'GET',
-        headers: { 'Accept': 'application/json' }
+        method: 'GET', headers: {'Accept': 'application/json'}
     })
         .then(response => response.json())
         .then(data => {
@@ -38,20 +37,18 @@ const getStudent = () => {
                 sName.value = data.name;
                 sEID.value = data.eid;
                 sBatch.value = data.batch;
-                sContact.value = "0"+data.contact;
-                sPContact.value ="0"+data.pStatus;
+                sContact.value = "0" + data.contact;
+                sPContact.value = "0" + data.pStatus;
                 sStatus.value = data.sStatus;
-                if(data.sStatus == "Active"){
+                if (data.sStatus == "Active") {
                     sStatus.classList.remove('text-danger');
                     sStatus.classList.add('text-success');
-                }
-                else{
+                } else {
                     sStatus.classList.remove('text-success');
                     sStatus.classList.add('text-danger');
                 }
 
                 getGender(data.nic);
-
 
 
             }
@@ -66,12 +63,11 @@ const getStudent = () => {
 const getGender = (nic) => {
     let nicValue = (nic).toString();
 
-    let genderValue = nicValue.substring(4,7);
+    let genderValue = nicValue.substring(4, 7);
 
-    if(parseInt(genderValue) <500 ){
+    if (parseInt(genderValue) < 500) {
         profile.src = "images/male.png";
-    }
-    else{
+    } else {
         profile.src = "images/female.png";
     }
 
@@ -79,37 +75,45 @@ const getGender = (nic) => {
 
 }
 
-const goToHistory = ()=>{
+const goToHistory = () => {
     let studentREG = document.getElementById("search").value;
 
-    if(studentREG === ""){
-        showCustomModal('Please Enter a Valid Registration Number','warning');
-    }
-    else{
-        window.location.href = 'attendance-history.php?reg='+encodeURIComponent(studentREG);
+    if (studentREG === "") {
+        showCustomModal('Please Enter a Valid Registration Number', 'warning');
+    } else {
+        window.location.href = 'attendance-history.php?reg=' + encodeURIComponent(studentREG);
     }
 }
 
 const markAttendance = () => {
     let studentREG = document.getElementById("search").value;
-    if(studentREG === ""){
-        showCustomModal('Please Enter a Valid Registration Number','warning');
-    }
-    else{
+    if (studentREG === "") {
+        showCustomModal('Please Enter a Valid Registration Number', 'warning');
+    } else {
 
-        showCustomConfirm("You are about to mark attendance for<br><br>following registration <span class='text-primary'>00"+studentREG+"</span><br><br>Are You Sure?",function(result) {
-                if (result) {
-                    let formData = new FormData();
-                    formData.append("reg", studentREG);
+        showCustomConfirm("You are about to mark attendance for<br><br>following registration <span class='text-primary'>00" + studentREG + "</span><br><br>Are You Sure?", function (result) {
+            if (result) {
+                let formData = new FormData();
+                formData.append("reg", studentREG);
 
-                    fetch("addAttendance.php",{
-                        method: "POST",
-                        body: formData,
+                fetch("addAttendance.php", {
+                    method: "POST", body: formData,
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        if (data.trim() === "Ok") {
+                            // Success action
+                            console.log("Attendance added successfully");
+                        } else {
+                            console.log("Server response:", data);
+                        }
                     })
+                    .catch(error => {
+                        console.error("Error:", error);
+                    });
 
-                }
             }
-        );
+        });
 
     }
 
