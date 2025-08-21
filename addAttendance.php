@@ -18,19 +18,40 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     $stmt->close();
 
-    $stmt_insert = $conn->prepare("INSERT INTO attendance (reg_id, batch_id,timestamp,addedBy) VALUES(?, ?,NOW(),?)");
-    $user = "System";
+    // Check if student has already marked attendance today
+    $check_sql = "SELECT COUNT(*) as cnt 
+              FROM attendance 
+              WHERE reg_id = ? AND DATE(timestamp) = CURDATE()";
 
-    $stmt_insert->bind_param("sss", $reg, $batch,$user);
-    if($stmt_insert->execute()){
-        echo "Ok";
-    }
-    else{
-        echo "failed".$stmt_insert->error;
+    $stmt_check = $conn->prepare($check_sql);
+    $stmt_check->bind_param("s", $reg);
+    $stmt_check->execute();
+    $result = $stmt_check->get_result();
+    $row = $result->fetch_assoc();
+
+    if ($row['cnt'] > 0) {
+        echo "Duplicate"; // already marked today
+    } else {
+        // Insert new record
+        $stmt_insert = $conn->prepare(
+            "INSERT INTO attendance (reg_id, batch_id, timestamp, addedBy) VALUES (?, ?, NOW(), ?)"
+        );
+
+        $user = "System";
+        $stmt_insert->bind_param("sss", $reg, $batch, $user);
+
+        if ($stmt_insert->execute()) {
+            echo "Ok";
+        } else {
+            echo "failed: " . $stmt_insert->error;
+        }
+
+        $stmt_insert->close();
     }
 
-    $stmt_insert->close();
+    $stmt_check->close();
     $conn->close();
+
 
 
 
