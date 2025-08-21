@@ -18,16 +18,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
     $stmt->close();
 
-    $stmt_insert = $conn->prepare("INSERT INTO attendance (reg_id, batch_id,timestamp,addedBy) VALUES(?, ?,?,?)");
-    $time = time();
+    $stmt_insert = $conn->prepare("INSERT INTO attendance (reg_id, batch_id,timestamp,addedBy) VALUES(?, ?,NOW(),?)");
     $user = "System";
 
-    $stmt_insert->bind_param("ssss", $reg, $batch, $time,$user);
+    $stmt_insert->bind_param("sss", $reg, $batch,$user);
     if($stmt_insert->execute()){
         echo "Ok";
     }
     else{
-        echo "failed";
+        echo "failed".$stmt_insert->error;
     }
 
     $stmt_insert->close();
