@@ -13,11 +13,11 @@
     <div class="row mb-4">
         <div class="col p-0 input-group">
             <input type="text" id="search" name="search" placeholder="Enter Your Reg Number" class="w-75 form-control" onkeyup="getStudent()">
-            <button type="button" onclick="markAttendance()" class="w-25 btn btn-success" style="width: 15%!important;">Mark</button>
+            <button type="button" id="btnMark" onclick="markAttendance()" class="w-25 btn btn-success">Mark</button>
         </div>
     </div>
     <div class="row">
-        <div class="col-7 p-0" style="height: 400px">
+        <div class="col-12 p-0 col-lg-7" style="height: 400px">
             <div class="card h-100">
                 <div class="card-body d-flex justify-content-center align-items-center">
                     <div class="h-100 d-flex justify-content-center align-items-center d-none" id="noResult">
@@ -54,8 +54,8 @@
             </div>
             </div>
         </div>
-        <div class="col-1 p-0"></div>
-        <div class="col-4 p-0">
+        <div class="col-lg-1 col-12 p-1"></div>
+        <div class="col-lg-4 col-12 p-0">
             <div class="card h-100 d-flex justify-content-center align-items-center">
                 <img src="images/img.png" id="profile" width="75%">
             </div>

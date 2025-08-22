@@ -7,3 +7,25 @@
 .cursor-pointer:hover{
     cursor: pointer;
 }
+
+#btnMark{
+    width:15%!important;
+}
+
+@media only screen and (max-width: 600px) {
+    .container{
+        width: 100% !important;
+        padding: 1.5rem!important;
+    }
+    #search{
+        width: 70%!important;
+        display: block;
+        flex: none!important;
+    }
+    #btnMark{
+        width: 30%!important;
+    }
+    .input-group-text{
+        width: fit-content!important;
+    }
+}
