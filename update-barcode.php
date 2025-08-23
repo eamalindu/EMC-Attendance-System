@@ -14,7 +14,7 @@
     <div class="row mb-4">
         <div class="col-6 p-0 ">
             <div class="input-group w-100">
-                <input type="text" id="search" name="search" placeholder="Enter Your Reg Number" class="w-25 form-control" onkeyup="getStudent()">
+                <input type="text" id="search" name="search" placeholder="Enter Your Reg Number" class="w-25 form-control" onkeyup="getStudentD()">
                 <input type="text" id="barcode" name="barcode" placeholder="Scan Bar Code" class="w-25 form-control">
                 <button type="button" id="updateBar" onclick="" class="btn btn-warning text-white">Update</button>
             </div>
@@ -65,20 +65,18 @@
         </div>
         <div class="col-lg-6 col-12">
             <div class="card h-100 d-flex justify-content-center align-items-center bg-secondary-subtle border-0">
-                <div class="esoft-card d-flex">
+                <div class="esoft-card d-flex rounded rounded-2">
                     <div class="w-50 h-100">
-                        <img src="images/img.png" id="profile" width="90%" class="d-block mx-auto mt-2">
-                        <h3 class="text-center mt-3">E12345</h3>
+                        <img src="" id="profile" width="90%" class="d-block mx-auto mt-5">
                     </div>
                     <div class="w-75 h-100">
-                        <div class="d-flex justify-content-center align-items-center h-100">
+                        <h4 class="text-end mt-2 text-white me-2">Student ID Card</h4>
+                        <div class="d-flex justify-content-center align-items-center h-75">
 
-                            <div class="text-center">
-                                <img src="images/esoft-logo.png" alt="" width="90%" class="d-block mx-auto mt-2">
-
-                                <p>00012345</p>
-                                <p>00012345</p>
-                                <p>0705368016</p>
+                            <div class="text-center mt-5">
+                                <p class="mb-0 h3" id="cardName"></p>
+                                <p class="mb-0 h3" id="cardContact"></p>
+                                <p id="cardBatch" class="h3"></p>
                             </div>
                         </div>
                     </div>

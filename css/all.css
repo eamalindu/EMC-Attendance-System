@@ -16,6 +16,8 @@
     width:90%;
     height: 260px;
     background: #fff;
+    background: url("https://thumbs.dreamstime.com/b/blue-art-to-name-card-beautiful-background-to-make-name-card-id-card-blue-art-name-card-background-108022023.jpg");
+    background-size: cover;
 }
 
 @media only screen and (max-width: 600px) {
