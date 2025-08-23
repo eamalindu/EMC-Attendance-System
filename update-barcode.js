@@ -1,3 +1,3 @@
 window.addEventListener('DOMContentLoaded', () => {
-    barcode.disabled = true;
+    barcode.disabled = false;
 });
