@@ -65,6 +65,7 @@
         </div>
         <div class="col-lg-6 col-12">
             <div class="card h-100">
+                <div class="card-body d-flex justify-content-center align-items-center">1</div>
             </div>
         </div>
 
