@@ -16,12 +16,14 @@ const getStudentD = () => {
             if (data.error) {
                 noResult.classList.remove('d-none');
                 result.classList.add('d-none');
+                esoft_card.classList.add('d-none');
 
                 profile.src = "images/img.png";
 
             } else {
                 noResult.classList.add('d-none');
                 result.classList.remove('d-none');
+                esoft_card.classList.remove('d-none');
 
                 sName.value = data.name;
                 sEID.value = data.eid;
