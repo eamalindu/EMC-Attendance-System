@@ -54,3 +54,7 @@ const getStudentD = () => {
 
         });
 };
+
+const updateBarCode = ()=>{
+
+}

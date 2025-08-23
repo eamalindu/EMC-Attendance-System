@@ -16,7 +16,7 @@
             <div class="input-group w-100">
                 <input type="text" id="search" name="search" placeholder="Enter Your Reg Number" class="w-25 form-control" onkeyup="getStudentD()">
                 <input type="text" id="barcode" name="barcode" placeholder="Scan Bar Code" class="w-25 form-control">
-                <button type="button" id="updateBar" onclick="" class="btn btn-warning text-white">Update</button>
+                <button type="button" id="updateBar" onclick="updateBarCode()" class="btn btn-warning text-white">Update</button>
             </div>
         </div>
     </div>
