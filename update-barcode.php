@@ -11,7 +11,51 @@
 <div class="container p-5">
     <h2 class="mb-3">Update Barcode (Student Access Card)</h2>
 
+    <div class="row mb-4">
+        <div class="col-12 p-0 col-lg-7" style="height: 400px">
+            <div class="card h-100">
+                <div class="card-body d-flex justify-content-center align-items-center">
+                    <div class="h-100 d-flex justify-content-center align-items-center d-none" id="noResult">
+                        <h3 class="text-muted"> No Results Found!</h3>
+                    </div>
+                    <div class="w-100" id="result">
 
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25" >Student Name</span>
+                            <input type="text" class="form-control fw-bold" id="sName" placeholder="John Doe" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25">Student EID</span>
+                            <input type="text" class="form-control fw-bold" id="sEID" placeholder="Exxxxxx" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25" >Student Batch</span>
+                            <input type="text" class="form-control fw-bold" id="sBatch" placeholder="L4-DiSE-01" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25">Student Contact</span>
+                            <input type="text" class="form-control fw-bold" id="sContact" placeholder="07x xxxx xxx" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25">Parent contact</span>
+                            <input type="text" class="form-control fw-bold" id="sPContact" placeholder="Paid" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25">Student Status</span>
+                            <input type="text" class="form-control fw-bold" id="sStatus" placeholder="Paid" aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-1 col-12 p-1"></div>
+        <div class="col-lg-4 col-12 p-0">
+
+        </div>
+    </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
+<script src="app.js"></script>
 </body>
 </html>
