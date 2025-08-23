@@ -64,8 +64,25 @@
             </div>
         </div>
         <div class="col-lg-6 col-12">
-            <div class="card h-100 d-flex justify-content-center align-items-center">
-                <div class="esoft-card"></div>
+            <div class="card h-100 d-flex justify-content-center align-items-center bg-secondary-subtle border-0">
+                <div class="esoft-card d-flex">
+                    <div class="w-50 h-100">
+                        <img src="images/img.png" id="profile" width="90%" class="d-block mx-auto mt-2">
+                        <h3 class="text-center mt-3">E12345</h3>
+                    </div>
+                    <div class="w-75 h-100">
+                        <div class="d-flex justify-content-center align-items-center h-100">
+
+                            <div class="text-center">
+                                <img src="images/esoft-logo.png" alt="" width="90%" class="d-block mx-auto mt-2">
+
+                                <p>00012345</p>
+                                <p>00012345</p>
+                                <p>0705368016</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
