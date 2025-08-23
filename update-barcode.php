@@ -9,7 +9,7 @@
 </head>
 <body>
 <div class="container p-5">
-    <h2 class="mb-3">Mark Attendance</h2>
+    <h2 class="mb-3">Update Barcode (Student Access Card)</h2>
     <div class="row mb-4">
         <div class="col p-0 input-group">
             <input type="text" id="search" name="search" placeholder="Enter Your Reg Number" class="w-75 form-control" onkeyup="getStudent()">
