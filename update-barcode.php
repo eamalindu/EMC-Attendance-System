@@ -66,14 +66,14 @@
         <div class="col-lg-6 col-12">
             <div class="card h-100 d-flex justify-content-center align-items-center bg-secondary-subtle border-0">
                 <div class="esoft-card d-flex rounded rounded-2" id="esoft_card">
-                    <div class="w-50 h-100">
+                    <div class="w-50 h-100 d-flex justify-content-center align-items-center">
                         <img src="" id="profile" width="90%" class="d-block mx-auto mt-5">
                     </div>
                     <div class="w-75 h-100">
                         <h4 class="text-end mt-2 text-white me-2">Student ID Card</h4>
                         <div class="d-flex justify-content-center align-items-center h-75">
 
-                            <div class="mt-5">
+                            <div class="mt-5 text-muted">
                                 <p class="mb-0 h4" id="cardName"></p>
                                 <p class="mb-0 h4" id="cardContact"></p>
                                 <p id="cardBatch" class="h4"></p>
