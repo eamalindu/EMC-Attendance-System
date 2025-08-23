@@ -63,8 +63,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-1 col-12 p-1"></div>
-        <div class="col-lg-4 col-12 p-0">
+        <div class="col-lg-6 col-12">
+            <div class="card h-100">
+            </div>
+        </div>
+
 
         </div>
     </div>
