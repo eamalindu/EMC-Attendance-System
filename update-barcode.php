@@ -64,8 +64,8 @@
             </div>
         </div>
         <div class="col-lg-6 col-12">
-            <div class="card h-100">
-                <div class="card-body d-flex justify-content-center align-items-center">1</div>
+            <div class="card h-100 d-flex justify-content-center align-items-center">
+                <div class="esoft-card"></div>
             </div>
         </div>
 

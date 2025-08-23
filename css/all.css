@@ -12,6 +12,12 @@
     width:15%!important;
 }
 
+.esoft-card{
+    width:90%;
+    height: 315px;
+    background: #f3f3f3;
+}
+
 @media only screen and (max-width: 600px) {
     .container{
         width: 100% !important;
