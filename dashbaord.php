@@ -7,11 +7,173 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.css">
     <link rel="stylesheet" href="css/all.css">
+    <style>
+        .pointer:hover{
+            cursor: pointer;
+        }
+        .dashboard-widget-blue{
+            background: linear-gradient(white, white 50%, #0DCAF0FF 50%, #0DCAF0FF);
+            background-size: 100% 200%;
+            transition: background 1s;
+            outline:1px solid rgba(0, 0, 0, 0.175);
+            border: none;
+        }
+        .dashboard-widget-blue:hover{
+            color: white!important;
+            outline-color: rgb(13,202,240)!important;
+            transition: all ease-in-out .5s;
+            background-position: 100% 100%;
+        }
+        .dashboard-widget-green{
+            background: linear-gradient(white, white 50%, #198754FF 50%, #198754FF);
+            background-size: 100% 200%;
+            transition: background 1s;
+            outline:1px solid rgba(0, 0, 0, 0.175);
+            border: none;
+        }
+        .dashboard-widget-green:hover{
+            color: white!important;
+            outline-color: rgb(25,135,84)!important;
+            background-position: 100% 100%;
+            transition: all ease-in-out 0.5s;
+        }
+        .dashboard-widget-red{
+            background: linear-gradient(white, white 50%, #DC3545FF 50%, #DC3545FF);
+            background-size: 100% 200%;
+            transition: background 1s;
+            outline:1px solid rgba(0, 0, 0, 0.175);
+            border: none;
+        }
+        .dashboard-widget-red:hover{
+            color: white!important;
+            outline-color: rgb(220,53,69)!important;
+            transition: all ease-in-out .5s;
+            background-position: 100% 100%;
+        }
+        .dashboard-widget-yellow{
+            background: linear-gradient(white, white 50%, #FFC107FF 50%, #FFC107FF);
+            background-size: 100% 200%;
+            transition: background 1s;
+            outline:1px solid rgba(0, 0, 0, 0.175);
+            border: none;
+        }
+        .dashboard-widget-yellow:hover{
+            background-position: 100% 100%;
+            color: white!important;
+            border-color: rgb(255,193,7)!important;
+            transition: all ease-in-out .5s;
+        }
+        .dashboard-widget-purple{
+            background: linear-gradient(white, white 50%, rebeccapurple 50%, rebeccapurple);
+            background-size: 100% 200%;
+            transition: background 1s;
+            outline:1px solid rgba(0, 0, 0, 0.175);
+            border: none;
+        }
+        .dashboard-widget-purple:hover{
+            color: white!important;
+            outline-color: rebeccapurple!important;
+            transition: all ease-in-out .5s;
+            background-position: 100% 100%;
+        }
+    </style>
 </head>
 <body>
 <div class="container p-5">
     <h2 >Dashboard</h2>
-    <p class="mb-3">Welcome Back </p>
-</div>
+    <p class="mb-4">Welcome Back </p>
+
+    <div class="container-fluid">
+        <div class="card-footer pt-3 pb-4">
+            <div class="row">
+                <div class="col-lg-4 col-12">
+                    <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-yellow"
+                         onclick="showSchedulePool()">
+                        <div class="row h-100">
+                            <div class="col-3 d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="border-radius: 50%;height: 60px;width: 60px;background: #fff7e5">
+                                    <i aria-hidden="true" class="fa-solid fa-clock"
+                                       style="color:#FDE74C;font-size: 25px"></i>
+                                </div>
+                            </div>
+                            <div class="col-9 d-flex align-items-center justify-content-around">
+                                <span class="text-uppercase">Scheduled Inquiries</span>
+                                <span class="text-dark display-6 fw-bold" id="textScheduledInquiryCount">0</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-red"
+                         onclick="showNewPool()">
+                        <div class="row h-100">
+                            <div class="col-3 d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="border-radius: 50%;height: 60px;width: 60px;background: #f7dddd">
+                                    <i aria-hidden="true" class="fa-solid fa-hourglass-half"
+                                       style="color:#fd4c4c;font-size: 25px"></i>
+                                </div>
+                            </div>
+                            <div class="col-9 d-flex align-items-center justify-content-around">
+                                <span class="lh-1 text-uppercase">Pending Inquiries</span>
+                                <span class="text-dark display-6 lh-1 fw-bold" id="textNewInquiryCount">1</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-12">
+                    <div class="card card-body rounded-0 h-100 text-muted dashboard-widget-green">
+                        <div class="row h-100">
+                            <div class="col-3 d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center justify-content-center"
+                                     style="border-radius: 50%;height: 60px;width: 60px;background: #DDF6F7">
+                                    <i aria-hidden="true" class="fa-solid fa-circle-check"
+                                       style="color:#1ec781;font-size: 25px"></i>
+                                </div>
+                            </div>
+                            <div class="col-9 d-flex align-items-center justify-content-around">
+                                <span class="text-uppercase">Completed Inquiries<br><span class="small"><small>(This Month)</small></span></span>
+                                <span class="text-dark display-6 fw-bold" id="textRegisteredInquiryCount">0</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-lg-4 col-12">
+                    <a aria-controls="offcanvasRight" aria-current="page" class="text-decoration-none"
+                       data-bs-target="#offCanvasInquiry" data-bs-toggle="offcanvas">
+                        <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-blue">
+                            <div class="row h-100">
+                                <div class="col-3 d-flex align-items-center justify-content-center">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                         style="border-radius: 50%;height: 60px;width: 60px;background: #c1eaff">
+                                        <i aria-hidden="true" class="fa-solid fa-circle-plus"
+                                           style="color:#1e7bc7;font-size: 25px"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9 lh-1 d-flex align-items-center justify-content-center">
+                                    <div class="lh-1">
+                                        <span class="text-uppercase">Add New Inquiry</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+
 </body>
 </html>
