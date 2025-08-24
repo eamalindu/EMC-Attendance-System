@@ -32,9 +32,9 @@ const getStudentD = () => {
                 sPContact.value = "0" + data.pStatus;
                 sStatus.value = data.sStatus;
 
-                cardName.innerHTML = "Name : "+data.name;
-                cardContact.innerHTML = "Phone : 0"+data.contact;
-                cardBatch.innerHTML = "Batch : "+data.batch;
+                cardName.innerHTML = "Name : " + data.name;
+                cardContact.innerHTML = "Phone : 0" + data.contact;
+                cardBatch.innerHTML = "Batch : " + data.batch;
 
                 if (data.sStatus == "Active") {
                     sStatus.classList.remove('text-danger');
@@ -55,20 +55,38 @@ const getStudentD = () => {
         });
 };
 
-const updateBarCode = ()=>{
+const updateBarCode = () => {
 
     let reg = document.getElementById("search").value;
     let barcode = document.getElementById("barcode").value;
 
-    if(reg !== "" && barcode !== ""){
+    if (reg !== "" && barcode !== "") {
 
-        showCustomConfirm("You are about to update barcode of the following registration <span class='text-primary'>00"+reg+"</span><br><br>Are You Sure?", function (result) {
+        showCustomConfirm("You are about to update barcode of the following registration <span class='text-primary'>00" + reg + "</span><br><br>Are You Sure?", function (result) {
+
+            let formData = new FormData();
+            formData.append("reg", reg);
+            formData.append("barcode", barcode);
+            fetch("updateBarCode.php", {
+                method: "POST", body: formData,
+            })
+                .then(response => response.text())
+                .then(data => {
+                    if (data.trim() === "Ok") {
+                        // Success action
+                        showCustomModal('Attendance Added Successfully', 'success');
+                    } else {
+                        showCustomModal(data, 'error');
+                    }
+                })
+                .catch(error => {
+                    console.error("Error:", error);
+                });
 
         });
 
-    }
-    else{
-        showCustomModal("Registration Number and Barcode is required!","warning");
+    } else {
+        showCustomModal("Registration Number and Barcode is required!", "warning");
     }
 
 }
