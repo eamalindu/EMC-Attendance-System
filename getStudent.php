@@ -9,7 +9,7 @@ if (isset($_GET['reg'])) {
     $_SESSION['reg'] = $reg;
 
     // Use the correct table and column names
-    $sql = "SELECT id, name, eid, batch, contact, pStatus, sStatus, reg, nic FROM student WHERE reg = '$reg'";
+    $sql = "SELECT id, name, eid, batch, contact, pStatus, sStatus, reg, nic,barcode FROM student WHERE reg = '$reg'";
     $result = $conn->query($sql);
 
     if ($result) {
