@@ -43,7 +43,8 @@ if (isset($_GET['reg'])) {
             <h2 class="text-center">Attendance Report : <?php echo "00" . $reg . " [" . $name . "]" ?></h2>
         </div>
         <div class="col-1 p-0">
-            <button id="exportBtn" class="btn btn-success btn-small d-block float-end"><i class="fa-solid fa-file-excel"></i>
+            <button id="exportBtn" class="btn btn-success btn-small d-block float-end"><i
+                        class="fa-solid fa-file-excel"></i>
                 Export
             </button>
         </div>

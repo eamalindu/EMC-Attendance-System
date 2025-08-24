@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mark Attendance</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/all.css">
 </head>
 <body>
@@ -12,7 +13,8 @@
     <h2 class="mb-3">Mark Attendance</h2>
     <div class="row mb-4">
         <div class="col p-0 input-group">
-            <input type="text" id="search" name="search" placeholder="Enter Your Reg Number" class="w-75 form-control" onkeyup="getStudent()">
+            <input type="text" id="search" name="search" placeholder="Enter Your Reg Number" class="w-75 form-control"
+                   onkeyup="getStudent()">
             <button type="button" id="btnMark" onclick="markAttendance()" class="w-25 btn btn-success">Mark</button>
         </div>
     </div>
@@ -21,37 +23,44 @@
             <div class="card h-100">
                 <div class="card-body d-flex justify-content-center align-items-center">
                     <div class="h-100 d-flex justify-content-center align-items-center d-none" id="noResult">
-                       <h3 class="text-muted"> No Results Found!</h3>
+                        <h3 class="text-muted"> No Results Found!</h3>
                     </div>
                     <div class="w-100" id="result">
 
-                    <div class="input-group mb-3">
-                        <span class="input-group-text w-25" >Student Name</span>
-                        <input type="text" class="form-control fw-bold" id="sName" placeholder="John Doe" aria-label="Username" aria-describedby="basic-addon1">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25">Student Name</span>
+                            <input type="text" class="form-control fw-bold" id="sName" placeholder="John Doe"
+                                   aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25">Student EID</span>
+                            <input type="text" class="form-control fw-bold" id="sEID" placeholder="Exxxxxx"
+                                   aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25">Student Batch</span>
+                            <input type="text" class="form-control fw-bold" id="sBatch" placeholder="L4-DiSE-01"
+                                   aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25">Student Contact</span>
+                            <input type="text" class="form-control fw-bold" id="sContact" placeholder="07x xxxx xxx"
+                                   aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25">Parent contact</span>
+                            <input type="text" class="form-control fw-bold" id="sPContact" placeholder="Paid"
+                                   aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text w-25">Student Status</span>
+                            <input type="text" class="form-control fw-bold" id="sStatus" placeholder="Paid"
+                                   aria-label="Username" aria-describedby="basic-addon1">
+                        </div>
+                        <a class="text-muted text-center d-block mx-0 cursor-pointer" onclick="goToHistory()"
+                           target="_blank">Attendance History</a>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text w-25">Student EID</span>
-                        <input type="text" class="form-control fw-bold" id="sEID" placeholder="Exxxxxx" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text w-25" >Student Batch</span>
-                        <input type="text" class="form-control fw-bold" id="sBatch" placeholder="L4-DiSE-01" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text w-25">Student Contact</span>
-                        <input type="text" class="form-control fw-bold" id="sContact" placeholder="07x xxxx xxx" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text w-25">Parent contact</span>
-                        <input type="text" class="form-control fw-bold" id="sPContact" placeholder="Paid" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text w-25">Student Status</span>
-                        <input type="text" class="form-control fw-bold" id="sStatus" placeholder="Paid" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                        <a class="text-muted text-center d-block mx-0 cursor-pointer" onclick="goToHistory()" target="_blank">Attendance History</a>
                 </div>
-            </div>
             </div>
         </div>
         <div class="col-lg-1 col-12 p-1"></div>
@@ -62,7 +71,9 @@
         </div>
     </div>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script src="app.js"></script>
 </body>

@@ -4,75 +4,86 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mark Attendance</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.css">
     <link rel="stylesheet" href="css/all.css">
     <style>
-        .pointer:hover{
+        .pointer:hover {
             cursor: pointer;
         }
-        .dashboard-widget-blue{
+
+        .dashboard-widget-blue {
             background: linear-gradient(white, white 50%, #0DCAF0FF 50%, #0DCAF0FF);
             background-size: 100% 200%;
             transition: background 1s;
-            outline:1px solid rgba(0, 0, 0, 0.175);
+            outline: 1px solid rgba(0, 0, 0, 0.175);
             border: none;
         }
-        .dashboard-widget-blue:hover{
-            color: white!important;
-            outline-color: rgb(13,202,240)!important;
+
+        .dashboard-widget-blue:hover {
+            color: white !important;
+            outline-color: rgb(13, 202, 240) !important;
             transition: all ease-in-out .5s;
             background-position: 100% 100%;
         }
-        .dashboard-widget-green{
+
+        .dashboard-widget-green {
             background: linear-gradient(white, white 50%, #198754FF 50%, #198754FF);
             background-size: 100% 200%;
             transition: background 1s;
-            outline:1px solid rgba(0, 0, 0, 0.175);
+            outline: 1px solid rgba(0, 0, 0, 0.175);
             border: none;
         }
-        .dashboard-widget-green:hover{
-            color: white!important;
-            outline-color: rgb(25,135,84)!important;
+
+        .dashboard-widget-green:hover {
+            color: white !important;
+            outline-color: rgb(25, 135, 84) !important;
             background-position: 100% 100%;
             transition: all ease-in-out 0.5s;
         }
-        .dashboard-widget-red{
+
+        .dashboard-widget-red {
             background: linear-gradient(white, white 50%, #DC3545FF 50%, #DC3545FF);
             background-size: 100% 200%;
             transition: background 1s;
-            outline:1px solid rgba(0, 0, 0, 0.175);
+            outline: 1px solid rgba(0, 0, 0, 0.175);
             border: none;
         }
-        .dashboard-widget-red:hover{
-            color: white!important;
-            outline-color: rgb(220,53,69)!important;
+
+        .dashboard-widget-red:hover {
+            color: white !important;
+            outline-color: rgb(220, 53, 69) !important;
             transition: all ease-in-out .5s;
             background-position: 100% 100%;
         }
-        .dashboard-widget-yellow{
+
+        .dashboard-widget-yellow {
             background: linear-gradient(white, white 50%, #FFC107FF 50%, #FFC107FF);
             background-size: 100% 200%;
             transition: background 1s;
-            outline:1px solid rgba(0, 0, 0, 0.175);
+            outline: 1px solid rgba(0, 0, 0, 0.175);
             border: none;
         }
-        .dashboard-widget-yellow:hover{
+
+        .dashboard-widget-yellow:hover {
             background-position: 100% 100%;
-            color: white!important;
-            border-color: rgb(255,193,7)!important;
+            color: white !important;
+            border-color: rgb(255, 193, 7) !important;
             transition: all ease-in-out .5s;
         }
-        .dashboard-widget-purple{
+
+        .dashboard-widget-purple {
             background: linear-gradient(white, white 50%, rebeccapurple 50%, rebeccapurple);
             background-size: 100% 200%;
             transition: background 1s;
-            outline:1px solid rgba(0, 0, 0, 0.175);
+            outline: 1px solid rgba(0, 0, 0, 0.175);
             border: none;
         }
-        .dashboard-widget-purple:hover{
-            color: white!important;
-            outline-color: rebeccapurple!important;
+
+        .dashboard-widget-purple:hover {
+            color: white !important;
+            outline-color: rebeccapurple !important;
             transition: all ease-in-out .5s;
             background-position: 100% 100%;
         }
@@ -80,7 +91,7 @@
 </head>
 <body>
 <div class="container p-5">
-    <h2 >Dashboard</h2>
+    <h2>Dashboard</h2>
     <p class="mb-3">Welcome Back </p>
 
     <div class="container-fluid p-0">
@@ -171,7 +182,7 @@
         </div>
 
     </div>
-    </div>
+</div>
 
 
 </body>

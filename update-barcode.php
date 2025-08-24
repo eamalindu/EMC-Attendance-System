@@ -14,9 +14,12 @@
     <div class="row mb-4">
         <div class="col-6 p-0 ">
             <div class="input-group w-100">
-                <input type="text" id="search" name="search" placeholder="Enter Your Reg Number" class="w-25 form-control" onkeyup="getStudentD()">
+                <input type="text" id="search" name="search" placeholder="Enter Your Reg Number"
+                       class="w-25 form-control" onkeyup="getStudentD()">
                 <input type="text" id="barcode" name="barcode" placeholder="Scan Bar Code" class="w-25 form-control">
-                <button type="button" id="updateBar" onclick="updateBarCode()" class="btn btn-warning text-white">Update</button>
+                <button type="button" id="updateBar" onclick="updateBarCode()" class="btn btn-warning text-white">
+                    Update
+                </button>
             </div>
         </div>
     </div>
@@ -85,8 +88,8 @@
         </div>
 
 
-        </div>
     </div>
+</div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
