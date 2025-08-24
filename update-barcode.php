@@ -64,7 +64,7 @@
             </div>
         </div>
         <div class="col-lg-6 col-12">
-            <div class="card h-100 d-flex justify-content-center align-items-center bg-secondary-subtle border-0">
+            <div class="card h-100 d-flex justify-content-center align-items-center">
                 <div class="esoft-card d-flex rounded rounded-2" id="esoft_card">
                     <div class="w-50 h-100 d-flex justify-content-center align-items-center">
                         <img src="" id="profile" width="90%" class="d-block mx-auto mt-5">
