@@ -12,45 +12,6 @@
 <div class="container p-5">
     <h2 >Dashboard</h2>
     <p class="mb-3">Welcome Back </p>
-
-    <div class="row">
-        <div class="col-3">
-            <div class="card border-success">
-                <div class="card-body">
-                    <i class="fas fa-user-graduate"></i>
-                </div>
-                <div class="card-footer text-center fw-bold border-success bg-success-subtle">
-                    Mark Attendance
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card">
-                <div class="card-body"> </div>
-                <div class="card-footer text-center text-muted">
-                    Update Barcode
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card">
-                <div class="card-body"> </div>
-                <div class="card-footer text-center text-muted">
-                    Update Barcode
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card">
-                <div class="card-body"> </div>
-                <div class="card-footer text-center text-muted">
-                    Mark Attendance
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 </div>
 </body>
 </html>
