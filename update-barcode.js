@@ -74,7 +74,7 @@ const updateBarCode = () => {
                 .then(data => {
                     if (data.trim() === "Ok") {
                         // Success action
-                        showCustomModal('Attendance Added Successfully', 'success');
+                        showCustomModal('Barcode Updated Successfully', 'success');
                     } else {
                         showCustomModal(data, 'error');
                     }
