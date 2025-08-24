@@ -74,7 +74,11 @@ const updateBarCode = () => {
                 .then(data => {
                     if (data.trim() === "Ok") {
                         // Success action
+                        barcode.value = "";
+                        search.value = "";
+
                         showCustomModal('Barcode Updated Successfully', 'success');
+
                     } else {
                         showCustomModal(data, 'error');
                     }
