@@ -12,6 +12,10 @@
     width:15%!important;
 }
 
+i{
+    font-family: 'Font Awesome 6 Pro', serif !important;
+}
+
 .esoft-card{
     width:90%;
     height: 260px;
