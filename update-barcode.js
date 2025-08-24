@@ -61,7 +61,14 @@ const updateBarCode = ()=>{
     let barcode = document.getElementById("barcode").value;
 
     if(reg !== "" && barcode !== ""){
-        
+
+        showCustomConfirm("You are about to update barcode of the following registration <span class='text-primary'>00"+reg+"</span><br><br>Are You Sure?", function (result) {
+
+        });
+
+    }
+    else{
+        showCustomModal("Registration Number and Barcode is required!","warning");
     }
 
 }
