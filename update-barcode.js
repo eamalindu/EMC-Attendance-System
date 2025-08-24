@@ -57,4 +57,11 @@ const getStudentD = () => {
 
 const updateBarCode = ()=>{
 
+    let reg = document.getElementById("search").value;
+    let barcode = document.getElementById("barcode").value;
+
+    if(reg !== "" && barcode !== ""){
+        
+    }
+
 }
