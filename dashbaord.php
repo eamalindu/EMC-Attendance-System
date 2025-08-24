@@ -81,10 +81,10 @@
 <body>
 <div class="container p-5">
     <h2 >Dashboard</h2>
-    <p class="mb-4">Welcome Back </p>
+    <p class="mb-3">Welcome Back </p>
 
-    <div class="container-fluid">
-        <div class="card-footer pt-3 pb-4">
+    <div class="container-fluid p-0">
+        <div class="card-footer pt-2 pb-4">
             <div class="row">
                 <div class="col-lg-4 col-12">
                     <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-yellow"
@@ -99,7 +99,6 @@
                             </div>
                             <div class="col-9 d-flex align-items-center justify-content-around">
                                 <span class="text-uppercase">Scheduled Inquiries</span>
-                                <span class="text-dark display-6 fw-bold" id="textScheduledInquiryCount">0</span>
 
                             </div>
 
@@ -121,7 +120,7 @@
                             </div>
                             <div class="col-9 d-flex align-items-center justify-content-around">
                                 <span class="lh-1 text-uppercase">Pending Inquiries</span>
-                                <span class="text-dark display-6 lh-1 fw-bold" id="textNewInquiryCount">1</span>
+
 
                             </div>
                         </div>
@@ -138,8 +137,8 @@
                                 </div>
                             </div>
                             <div class="col-9 d-flex align-items-center justify-content-around">
-                                <span class="text-uppercase">Completed Inquiries<br><span class="small"><small>(This Month)</small></span></span>
-                                <span class="text-dark display-6 fw-bold" id="textRegisteredInquiryCount">0</span>
+                                <span class="text-uppercase">Completed Inquiries</span>
+
 
                             </div>
                         </div>
