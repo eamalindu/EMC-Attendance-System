@@ -92,7 +92,66 @@
 <body>
 <div class="container p-5">
     <h2 class="mb-4">Dashboard</h2>
-    <p class="mt-3">Quick Access </p>
+
+
+    <p class="mt-3">Current Records</p>
+    <div class="row">
+        <div class="col-3">
+            <div class="card card-body border-0" style=" background-image: linear-gradient(0deg, #4CAF50, #4ac362)">
+                <div class="row h-100">
+                    <div class="w-75 float-start text-white">
+                        <h3>999</h3>
+                        Active Students
+                    </div>
+                    <div class="w-25 float-start d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card card-body border-0" style="background-image: linear-gradient(0deg, #ffeb3b, #fff176);
+">
+                <div class="row h-100">
+                    <div class="w-75 float-start text-white">
+                        <h3>999</h3>
+                        Active Students
+                    </div>
+                    <div class="w-25 float-start d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card card-body border-0" style=" background-image: linear-gradient(0deg, #ff9800, #ffb74d);
+">
+                <div class="row h-100">
+                    <div class="w-75 float-start text-white">
+                        <h3>999</h3>
+                        Active Students
+                    </div>
+                    <div class="w-25 float-start d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card card-body border-0" style="background-image: linear-gradient(0deg, #f44336, #ff6659);">
+                <div class="row h-100">
+                    <div class="w-75 float-start text-white">
+                        <h3>999</h3>
+                        Active Students
+                    </div>
+                    <div class="w-25 float-start d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <p class="mt-5">Quick Access </p>
 
     <div class="container-fluid p-0">
         <div class="card-footer pt-2 pb-2">
@@ -205,63 +264,6 @@
         </div>
 
 
-    <p class="mt-3">Current Records</p>
-    <div class="row">
-        <div class="col-3">
-            <div class="card card-body border-0" style=" background-image: linear-gradient(0deg, #4CAF50, #4ac362)">
-                <div class="row h-100">
-                    <div class="w-75 float-start text-white">
-                        <h3>999</h3>
-                        Active Students
-                    </div>
-                    <div class="w-25 float-start d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card card-body border-0" style="background-image: linear-gradient(0deg, #ffeb3b, #fff176);
-">
-                <div class="row h-100">
-                    <div class="w-75 float-start text-white">
-                        <h3>999</h3>
-                        Active Students
-                    </div>
-                    <div class="w-25 float-start d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card card-body border-0" style=" background-image: linear-gradient(0deg, #ff9800, #ffb74d);
-">
-                <div class="row h-100">
-                    <div class="w-75 float-start text-white">
-                        <h3>999</h3>
-                        Active Students
-                    </div>
-                    <div class="w-25 float-start d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card card-body border-0" style="background-image: linear-gradient(0deg, #f44336, #ff6659);">
-                <div class="row h-100">
-                    <div class="w-75 float-start text-white">
-                        <h3>999</h3>
-                        Active Students
-                    </div>
-                    <div class="w-25 float-start d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
 </div>
 
