@@ -100,37 +100,42 @@ require_once "config.php";
             transition: all ease-in-out .5s;
             background-position: 100% 100%;
         }
-        .card-green{
-            background-image: linear-gradient(90deg, rgba(96,225,100,0.9), rgba(46,120,61,0.7));
-        }
-        .card-green:hover{
-            cursor: pointer;
-            transition: all ease-in-out 100ms;
-            background-image: linear-gradient(90deg, rgba(96,225,100,1), rgba(46,120,61,1));
+
+        .card-green {
+            background-image: linear-gradient(90deg, rgba(96, 225, 100, 0.9), rgba(46, 120, 61, 0.7));
         }
 
-        .card-yellow{
-            background-image: linear-gradient(90deg, rgba(255, 235, 59, 0.9), rgba(251,226,0,0.7));
-        }
-        .card-yellow:hover{
+        .card-green:hover {
             cursor: pointer;
             transition: all ease-in-out 100ms;
-            background-image: linear-gradient(90deg, rgba(255, 235, 59, 1), rgba(251,226,0,1));
+            background-image: linear-gradient(90deg, rgba(96, 225, 100, 1), rgba(46, 120, 61, 1));
         }
 
-        .card-orange{
+        .card-yellow {
+            background-image: linear-gradient(90deg, rgba(255, 235, 59, 0.9), rgba(251, 226, 0, 0.7));
+        }
+
+        .card-yellow:hover {
+            cursor: pointer;
+            transition: all ease-in-out 100ms;
+            background-image: linear-gradient(90deg, rgba(255, 235, 59, 1), rgba(251, 226, 0, 1));
+        }
+
+        .card-orange {
             background-image: linear-gradient(90deg, rgba(255, 152, 0, 0.9), rgba(255, 183, 77, 0.7));
         }
-        .card-orange:hover{
+
+        .card-orange:hover {
             cursor: pointer;
             transition: all ease-in-out 100ms;
             background-image: linear-gradient(90deg, rgba(255, 152, 0, 1), rgba(255, 183, 77, 1));
         }
 
-        .card-red{
+        .card-red {
             background-image: linear-gradient(90deg, rgba(244, 67, 54, 0.9), rgba(255, 102, 89, 0.7));
         }
-        .card-red:hover{
+
+        .card-red:hover {
             cursor: pointer;
             transition: all ease-in-out 100ms;
             background-image: linear-gradient(90deg, rgba(244, 67, 54, 1), rgba(255, 102, 89, 1));
@@ -141,7 +146,7 @@ require_once "config.php";
 <div class="container p-5">
     <span class="mb-4 h3">Dashboard</span>
     <span class="float-end h3 text-capitalize">
-         <?php echo "Hello, ".$_SESSION["username"];?> 👋
+         <?php echo "Hello, " . $_SESSION["username"]; ?> 👋
     </span>
 
     <p class="mt-4">Current Records</p>
