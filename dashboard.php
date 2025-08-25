@@ -33,7 +33,7 @@ require_once "config.php";
     <p class="mt-4">Current Records</p>
     <div class="row">
         <div class="col-3">
-            <div class="card card-body border-0 card-green">
+            <div class="card card-body border-0 card-green" onclick="window.location.href='active-students.php';">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
                         <h3>
