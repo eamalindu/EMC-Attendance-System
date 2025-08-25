@@ -119,22 +119,24 @@
                     </a>
                 </div>
                 <div class="col-lg-4 col-12">
-                    <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-red">
-                        <div class="row h-100">
-                            <div class="col-3 d-flex align-items-center justify-content-center">
-                                <div class="d-flex align-items-center justify-content-center"
-                                     style="border-radius: 50%;height: 60px;width: 60px;background: #f7dddd">
-                                    <i aria-hidden="true" class="fa-solid fa-barcode"
-                                       style="color:#fd4c4c;font-size: 25px"></i>
+                    <a href="update-barcode.php" class="text-decoration-none">
+                        <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-red">
+                            <div class="row h-100">
+                                <div class="col-3 d-flex align-items-center justify-content-center">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                         style="border-radius: 50%;height: 60px;width: 60px;background: #f7dddd">
+                                        <i aria-hidden="true" class="fa-solid fa-barcode"
+                                           style="color:#fd4c4c;font-size: 25px"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9 d-flex align-items-center justify-content-around">
+                                    <span class="lh-1 text-uppercase">Update Barcode</span>
+
+
                                 </div>
                             </div>
-                            <div class="col-9 d-flex align-items-center justify-content-around">
-                                <span class="lh-1 text-uppercase">Update Barcode</span>
-
-
-                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-4 col-12">
                     <div class="card card-body rounded-0 h-100 text-muted dashboard-widget-green">
