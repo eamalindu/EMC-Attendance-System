@@ -109,7 +109,7 @@ require_once "config.php";
          <?php echo "Hello, ".$_SESSION["username"];?> 👋
     </span>
 
-    <p class="mt-3">Current Records</p>
+    <p class="mt-4">Current Records</p>
     <div class="row">
         <div class="col-3">
             <div class="card card-body border-0" style=" background-image: linear-gradient(90deg, rgba(96,225,100,0.9), rgba(46,120,61,0.7));
