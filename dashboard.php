@@ -21,6 +21,7 @@ require_once "config.php";
           integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/dashboard.css">
     <style>
         .pointer:hover {
             cursor: pointer;
