@@ -105,7 +105,7 @@ require_once "config.php";
 <body>
 <div class="container p-5">
     <span class="mb-4 h3">Dashboard</span>
-    <span class="float-end h3">
+    <span class="float-end h3 text-capitalize">
          <?php echo "Hello, ".$_SESSION["username"];?> 👋
     </span>
 
