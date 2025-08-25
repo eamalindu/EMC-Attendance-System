@@ -98,8 +98,7 @@
         <div class="card-footer pt-2 pb-4">
             <div class="row">
                 <div class="col-lg-4 col-12">
-                    <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-yellow"
-                         onclick="showSchedulePool()">
+                    <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-yellow">
                         <div class="row h-100">
                             <div class="col-3 d-flex align-items-center justify-content-center">
                                 <div class="d-flex align-items-center justify-content-center"
@@ -119,8 +118,7 @@
 
                 </div>
                 <div class="col-lg-4 col-12">
-                    <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-red"
-                         onclick="showNewPool()">
+                    <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-red">
                         <div class="row h-100">
                             <div class="col-3 d-flex align-items-center justify-content-center">
                                 <div class="d-flex align-items-center justify-content-center"
