@@ -32,7 +32,7 @@ require_once "config.php";
 
     <p class="mt-4">Current Records</p>
     <div class="row">
-        <div class="col-3">
+        <div class="col-12 col-lg-3 mb-2 mb-lg-0">
             <div class="card card-body border-0 card-green" onclick="window.location.href='active-students.php';">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
@@ -52,7 +52,7 @@ require_once "config.php";
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-lg-3 mb-2 mb-lg-0">
             <div class="card card-body border-0 card-yellow">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
@@ -72,7 +72,7 @@ require_once "config.php";
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-lg-3 mb-2 mb-lg-0">
             <div class="card card-body border-0 card-orange">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
@@ -92,7 +92,7 @@ require_once "config.php";
                 </div>
             </div>
         </div>
-        <div class="col-3">
+        <div class="col-12 col-lg-3 mb-2 mb-lg-0">
             <div class="card card-body border-0 card-red">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
@@ -118,7 +118,7 @@ require_once "config.php";
     <div class="container-fluid p-0">
         <div class="card-footer pt-2 pb-2">
             <div class="row">
-                <div class="col-lg-4 col-12">
+                <div class="col-lg-4 col-12 mb-3 mb-lg-0">
                     <a href="attendance.php" class="text-decoration-none">
                         <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-yellow">
                             <div class="row h-100">
@@ -139,7 +139,7 @@ require_once "config.php";
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-12">
+                <div class="col-lg-4 col-12 mb-3 mb-lg-0">
                     <a href="update-barcode.php" class="text-decoration-none">
                         <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-red">
                             <div class="row h-100">
@@ -159,7 +159,7 @@ require_once "config.php";
                         </div>
                     </a>
                 </div>
-                <div class="col-lg-4 col-12">
+                <div class="col-lg-4 col-12 mb-lg-0">
                     <div class="card card-body rounded-0 h-100 text-muted dashboard-widget-green">
                         <div class="row h-100">
                             <div class="col-3 d-flex align-items-center justify-content-center">
@@ -179,7 +179,7 @@ require_once "config.php";
                 </div>
             </div>
             <div class="row mt-3">
-                <div class="col-lg-4 col-12">
+                <div class="col-lg-4 col-12 mb-3 mb-lg-0">
                     <a aria-controls="offcanvasRight" aria-current="page" class="text-decoration-none"
                        data-bs-target="#offCanvasInquiry" data-bs-toggle="offcanvas">
                         <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-blue">
@@ -201,7 +201,7 @@ require_once "config.php";
                     </a>
                 </div>
 
-                <div class="col-lg-4 col-12">
+                <div class="col-lg-4 col-12 mb-3 mb-lg-0">
                     <a aria-controls="offcanvasRight" aria-current="page" class="text-decoration-none"
                        data-bs-target="#offCanvasInquiry" data-bs-toggle="offcanvas">
                         <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-purple">
