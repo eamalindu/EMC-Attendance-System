@@ -91,11 +91,11 @@
 </head>
 <body>
 <div class="container p-5">
-    <h2>Dashboard</h2>
-    <p class="mb-3">Welcome Back </p>
+    <h2 class="mb-5">Dashboard</h2>
+    <p class="mt-3">Quick Access </p>
 
     <div class="container-fluid p-0">
-        <div class="card-footer pt-2 pb-4">
+        <div class="card-footer pt-2 pb-2">
             <div class="row">
                 <div class="col-lg-4 col-12">
                     <a href="attendance.php" class="text-decoration-none">
@@ -204,9 +204,32 @@
             </div>
         </div>
 
+
+    <p class="mt-3">Current Records</p>
+    <div class="row">
+        <div class="col-3">
+            <div class="card card-body">
+
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card card-body">
+
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card card-body">
+
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card card-body">
+
+            </div>
+        </div>
     </div>
 </div>
-
+</div>
 
 </body>
 </html>
