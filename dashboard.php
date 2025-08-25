@@ -126,6 +126,15 @@ require_once "config.php";
             transition: all ease-in-out 100ms;
             background-image: linear-gradient(90deg, rgba(255, 152, 0, 1), rgba(255, 183, 77, 1));
         }
+
+        .card-red{
+            background-image: linear-gradient(90deg, rgba(244, 67, 54, 0.9), rgba(255, 102, 89, 0.7));
+        }
+        .card-red:hover{
+            cursor: pointer;
+            transition: all ease-in-out 100ms;
+            background-image: linear-gradient(90deg, rgba(244, 67, 54, 1), rgba(255, 102, 89, 1));
+        }
     </style>
 </head>
 <body>
@@ -198,8 +207,7 @@ require_once "config.php";
             </div>
         </div>
         <div class="col-3">
-            <div class="card card-body border-0" style="background-image: linear-gradient(90deg, rgba(244, 67, 54, 0.9), rgba(255, 102, 89, 0.7));
-">
+            <div class="card card-body border-0 card-red">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
                         <h3>
