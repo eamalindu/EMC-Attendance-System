@@ -41,6 +41,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Attendance Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -51,7 +53,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <img id="mainLogo" src="https://payments.esoft.lk/images/esoft-logo.png" width="50%">
 
             <div class="login-form">
-                <h1>Student Attendance</h1>
+                <h2>Student Attendance</h2>
                 <form action="" method="post">
                     <label>Please Enter Your Username</label>
                     <input type="text" placeholder="Your username" class="inputs" name="username" id="username" required autocomplete="off">
@@ -66,6 +68,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </div>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <?php if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] === false): ?>
     <script>
