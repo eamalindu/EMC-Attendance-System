@@ -301,6 +301,8 @@ require_once "config.php";
 
     </div>
 </div>
-
+<div class="logout">
+    <button class="btn btn-danger btn-sm" onclick="logout()">Logout</button>
+</div>
 </body>
 </html>
