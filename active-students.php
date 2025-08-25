@@ -83,5 +83,27 @@
 <script>
     new DataTable('#tle')
 </script>
+<script>
+    document.getElementById('exportBtn').addEventListener('click', function () {
+        // Get the table element
+        let table = document.getElementById('tle');
+
+        if (!table) {
+            alert("Table not found!");
+            return;
+        }
+
+        // Convert HTML table to a worksheet
+        let workbook = XLSX.utils.book_new();
+        let worksheet = XLSX.utils.table_to_sheet(table);
+
+        // Add worksheet to workbook
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Active Students");
+
+        // Export workbook to file
+        XLSX.writeFile(workbook, "Active Students.xlsx");
+    });
+
+</script>
 </body>
 </html>
