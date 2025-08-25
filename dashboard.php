@@ -132,7 +132,7 @@ require_once "config.php";
                             $sql = "SELECT count(*) FROM student where sStatus = 'Postponed'";
                             $result = mysqli_query($conn, $sql);
                             $row = mysqli_fetch_array($result);
-                            echo "0".$row[0];
+                            echo "0" . $row[0];
                             ?>
                         </h3>
                         Postponed Students
@@ -153,7 +153,7 @@ require_once "config.php";
                             $sql = "SELECT count(*) FROM student where sStatus = 'Suspended'";
                             $result = mysqli_query($conn, $sql);
                             $row = mysqli_fetch_array($result);
-                            echo "0".$row[0];
+                            echo "0" . $row[0];
                             ?>
                         </h3>
                         Suspended Students
