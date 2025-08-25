@@ -98,24 +98,25 @@
         <div class="card-footer pt-2 pb-4">
             <div class="row">
                 <div class="col-lg-4 col-12">
-                    <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-yellow">
-                        <div class="row h-100">
-                            <div class="col-3 d-flex align-items-center justify-content-center">
-                                <div class="d-flex align-items-center justify-content-center"
-                                     style="border-radius: 50%;height: 60px;width: 60px;background: #fff7e5">
-                                    <i aria-hidden="true" class="fa-solid fa-user-graduate"
-                                       style="color:#FDE74C;font-size: 25px"></i>
+                    <a href="attendance.php" class="text-decoration-none">
+                        <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-yellow">
+                            <div class="row h-100">
+                                <div class="col-3 d-flex align-items-center justify-content-center">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                         style="border-radius: 50%;height: 60px;width: 60px;background: #fff7e5">
+                                        <i aria-hidden="true" class="fa-solid fa-user-graduate"
+                                           style="color:#FDE74C;font-size: 25px"></i>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="col-9 d-flex align-items-center justify-content-around">
-                                <span class="text-uppercase">Mark Attendance</span>
+                                <div class="col-9 d-flex align-items-center justify-content-around">
+                                    <span class="text-uppercase">Mark Attendance</span>
+
+                                </div>
 
                             </div>
 
                         </div>
-
-                    </div>
-
+                    </a>
                 </div>
                 <div class="col-lg-4 col-12">
                     <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-red">
