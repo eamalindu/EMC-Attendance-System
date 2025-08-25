@@ -1,3 +1,8 @@
+<?php
+
+require_once "config.php";
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -97,11 +102,18 @@
     <p class="mt-3">Current Records</p>
     <div class="row">
         <div class="col-3">
-            <div class="card card-body border-0" style=" background-image: linear-gradient(90deg, rgba(96,225,100,0.9), rgba(74, 195, 98, 0.7));
+            <div class="card card-body border-0" style=" background-image: linear-gradient(90deg, rgba(96,225,100,0.9), rgba(46,120,61,0.7));
 ">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
-                        <h3>999</h3>
+                        <h3>
+                            <?php
+                            $sql = "SELECT count(*) FROM student where sStatus = 'Active'";
+                            $result = mysqli_query($conn, $sql);
+                            $row = mysqli_fetch_array($result);
+                            echo $row[0];
+                            ?>
+                        </h3>
                         Active Students
                     </div>
                     <div class="w-25 float-start d-flex align-items-center justify-content-center">
@@ -115,11 +127,18 @@
                  style="background-image: linear-gradient(90deg, rgba(255, 235, 59, 0.9), rgba(251,226,0,0.7));">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
-                        <h3>999</h3>
+                        <h3>
+                            <?php
+                            $sql = "SELECT count(*) FROM student where sStatus = 'Postponed'";
+                            $result = mysqli_query($conn, $sql);
+                            $row = mysqli_fetch_array($result);
+                            echo "0".$row[0];
+                            ?>
+                        </h3>
                         Postponed Students
                     </div>
                     <div class="w-25 float-start d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
+                        <i class="fa-solid fa-user-clock fa-2x text-white"></i>
                     </div>
                 </div>
             </div>
@@ -129,11 +148,18 @@
                  style="background-image: linear-gradient(90deg, rgba(255, 152, 0, 0.9), rgba(255, 183, 77, 0.7));">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
-                        <h3>999</h3>
+                        <h3>
+                            <?php
+                            $sql = "SELECT count(*) FROM student where sStatus = 'Suspended'";
+                            $result = mysqli_query($conn, $sql);
+                            $row = mysqli_fetch_array($result);
+                            echo "0".$row[0];
+                            ?>
+                        </h3>
                         Suspended Students
                     </div>
                     <div class="w-25 float-start d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
+                        <i class="fa-solid fa-user-slash fa-2x text-white"></i>
                     </div>
                 </div>
             </div>
@@ -143,11 +169,18 @@
 ">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
-                        <h3>999</h3>
+                        <h3>
+                            <?php
+                            $sql = "SELECT count(*) FROM student where sStatus = 'Inactivated'";
+                            $result = mysqli_query($conn, $sql);
+                            $row = mysqli_fetch_array($result);
+                            echo $row[0];
+                            ?>
+                        </h3>
                         Inactive Students
                     </div>
                     <div class="w-25 float-start d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
+                        <i class="fa-solid fa-user-xmark fa-2x text-white"></i>
                     </div>
                 </div>
             </div>
