@@ -188,13 +188,13 @@
                                 <div class="col-3 d-flex align-items-center justify-content-center">
                                     <div class="d-flex align-items-center justify-content-center"
                                          style="border-radius: 50%;height: 60px;width: 60px;background: #dfc1ff">
-                                        <i aria-hidden="true" class="fa-solid fa-upload"
+                                        <i aria-hidden="true" class="fa-solid fa-user-gear"
                                            style="color:rebeccapurple;font-size: 25px"></i>
                                     </div>
                                 </div>
                                 <div class="col-9 lh-1 d-flex align-items-center justify-content-center">
                                     <div class="lh-1">
-                                        <span class="text-uppercase">Upload New Batch Details</span>
+                                        <span class="text-uppercase">Manage Students</span>
                                     </div>
                                 </div>
                             </div>
