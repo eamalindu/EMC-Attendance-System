@@ -12,7 +12,7 @@
 <div class="container p-5">
     <h2 class="mb-3">Mark Attendance</h2>
     <div class="row mb-4">
-        <div class="col p-0 input-group">
+        <div class="col-12 p-0 input-group">
             <input type="text" id="search" name="search" placeholder="Enter Your Reg Number" class="w-75 form-control"
                    onkeyup="getStudent()">
             <button type="button" id="btnMark" onclick="markAttendance()" class="w-25 btn btn-success">Mark</button>
