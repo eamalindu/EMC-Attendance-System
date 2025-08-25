@@ -111,7 +111,8 @@
             </div>
         </div>
         <div class="col-3">
-            <div class="card card-body border-0" style="background-image: linear-gradient(90deg, rgba(255, 235, 59, 0.9), rgba(251,226,0,0.7));">
+            <div class="card card-body border-0"
+                 style="background-image: linear-gradient(90deg, rgba(255, 235, 59, 0.9), rgba(251,226,0,0.7));">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
                         <h3>999</h3>
@@ -124,7 +125,8 @@
             </div>
         </div>
         <div class="col-3">
-            <div class="card card-body border-0" style="background-image: linear-gradient(90deg, rgba(255, 152, 0, 0.9), rgba(255, 183, 77, 0.7));">
+            <div class="card card-body border-0"
+                 style="background-image: linear-gradient(90deg, rgba(255, 152, 0, 0.9), rgba(255, 183, 77, 0.7));">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
                         <h3>999</h3>
@@ -264,7 +266,7 @@
         </div>
 
 
-</div>
+    </div>
 </div>
 
 </body>
