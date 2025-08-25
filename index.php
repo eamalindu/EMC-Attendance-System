@@ -59,7 +59,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="text" placeholder="Your username" class="inputs" name="username" id="username" required autocomplete="off">
                     <label>Please Enter Your Password</label>
                     <input type="password" placeholder="********" class="inputs" name="password" id="password" required autocomplete="off">
-                    <button class="btn">LOGIN</button>
+                    <button class="btns">LOGIN</button>
                 </form>
                 <p style="color: gray;margin-top: 20px;text-decoration: underline;"><a>Forget Password?</a></p>
                 <p style="color: gray;margin-top: 20px;position: fixed;bottom: 10px;left: 82%;"><small>Maintained by
