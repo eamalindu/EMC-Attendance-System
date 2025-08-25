@@ -179,6 +179,28 @@
                         </div>
                     </a>
                 </div>
+
+                <div class="col-lg-4 col-12">
+                    <a aria-controls="offcanvasRight" aria-current="page" class="text-decoration-none"
+                       data-bs-target="#offCanvasInquiry" data-bs-toggle="offcanvas">
+                        <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-purple">
+                            <div class="row h-100">
+                                <div class="col-3 d-flex align-items-center justify-content-center">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                         style="border-radius: 50%;height: 60px;width: 60px;background: #dfc1ff">
+                                        <i aria-hidden="true" class="fa-solid fa-upload"
+                                           style="color:rebeccapurple;font-size: 25px"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9 lh-1 d-flex align-items-center justify-content-center">
+                                    <div class="lh-1">
+                                        <span class="text-uppercase">Upload New Batch Details</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
         </div>
 
