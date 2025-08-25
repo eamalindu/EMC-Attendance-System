@@ -304,6 +304,7 @@ require_once "config.php";
 <div class="logout">
     <button class="btn btn-danger btn-sm" onclick="logout()">Logout</button>
 </div>
+<script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script src="logout.js"></script>
 </body>
 </html>
