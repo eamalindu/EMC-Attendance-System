@@ -208,8 +208,16 @@
     <p class="mt-3">Current Records</p>
     <div class="row">
         <div class="col-3">
-            <div class="card card-body">
-
+            <div class="card card-body" style=" background-image: linear-gradient(0deg, #4CAF50, #4ac362)">
+                <div class="row h-100">
+                    <div class="w-75 float-start text-white">
+                        <h3>999</h3>
+                        Active Students
+                    </div>
+                    <div class="w-25 float-start d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-3">
