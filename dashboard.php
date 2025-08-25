@@ -100,6 +100,23 @@ require_once "config.php";
             transition: all ease-in-out .5s;
             background-position: 100% 100%;
         }
+        .card-green{
+            background-image: linear-gradient(90deg, rgba(96,225,100,0.9), rgba(46,120,61,0.7));
+        }
+        .card-green:hover{
+            cursor: pointer;
+            transition: all ease-in-out 100ms;
+            background-image: linear-gradient(90deg, rgba(96,225,100,1), rgba(46,120,61,1));
+        }
+
+        .card-yellow{
+            background-image: linear-gradient(90deg, rgba(255, 235, 59, 0.9), rgba(251,226,0,0.7));
+        }
+        .card-yellow:hover{
+            cursor: pointer;
+            transition: all ease-in-out 100ms;
+            background-image: linear-gradient(90deg, rgba(255, 235, 59, 1), rgba(251,226,0,1));
+        }
     </style>
 </head>
 <body>
@@ -112,8 +129,7 @@ require_once "config.php";
     <p class="mt-4">Current Records</p>
     <div class="row">
         <div class="col-3">
-            <div class="card card-body border-0" style=" background-image: linear-gradient(90deg, rgba(96,225,100,0.9), rgba(46,120,61,0.7));
-">
+            <div class="card card-body border-0 card-green">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
                         <h3>
@@ -133,8 +149,7 @@ require_once "config.php";
             </div>
         </div>
         <div class="col-3">
-            <div class="card card-body border-0"
-                 style="background-image: linear-gradient(90deg, rgba(255, 235, 59, 0.9), rgba(251,226,0,0.7));">
+            <div class="card card-body border-0 card-yellow">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
                         <h3>
