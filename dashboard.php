@@ -97,20 +97,7 @@
     <p class="mt-3">Current Records</p>
     <div class="row">
         <div class="col-3">
-            <div class="card card-body border-0" style=" background-image: linear-gradient(0deg, #4CAF50, #4ac362)">
-                <div class="row h-100">
-                    <div class="w-75 float-start text-white">
-                        <h3>999</h3>
-                        Active Students
-                    </div>
-                    <div class="w-25 float-start d-flex align-items-center justify-content-center">
-                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="card card-body border-0" style="background-image: linear-gradient(0deg, #ffeb3b, #fff176);
+            <div class="card card-body border-0" style=" background-image: linear-gradient(90deg, rgba(96,225,100,0.9), rgba(74, 195, 98, 0.7));
 ">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
@@ -124,12 +111,11 @@
             </div>
         </div>
         <div class="col-3">
-            <div class="card card-body border-0" style=" background-image: linear-gradient(0deg, #ff9800, #ffb74d);
-">
+            <div class="card card-body border-0" style="background-image: linear-gradient(90deg, rgba(255, 235, 59, 0.9), rgba(251,226,0,0.7));">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
                         <h3>999</h3>
-                        Active Students
+                        Postponed Students
                     </div>
                     <div class="w-25 float-start d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-user-check fa-2x text-white"></i>
@@ -138,11 +124,25 @@
             </div>
         </div>
         <div class="col-3">
-            <div class="card card-body border-0" style="background-image: linear-gradient(0deg, #f44336, #ff6659);">
+            <div class="card card-body border-0" style="background-image: linear-gradient(90deg, rgba(255, 152, 0, 0.9), rgba(255, 183, 77, 0.7));">
                 <div class="row h-100">
                     <div class="w-75 float-start text-white">
                         <h3>999</h3>
-                        Active Students
+                        Suspended Students
+                    </div>
+                    <div class="w-25 float-start d-flex align-items-center justify-content-center">
+                        <i class="fa-solid fa-user-check fa-2x text-white"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="card card-body border-0" style="background-image: linear-gradient(90deg, rgba(244, 67, 54, 0.9), rgba(255, 102, 89, 0.7));
+">
+                <div class="row h-100">
+                    <div class="w-75 float-start text-white">
+                        <h3>999</h3>
+                        Inactive Students
                     </div>
                     <div class="w-25 float-start d-flex align-items-center justify-content-center">
                         <i class="fa-solid fa-user-check fa-2x text-white"></i>
@@ -151,7 +151,7 @@
             </div>
         </div>
     </div>
-    <p class="mt-5">Quick Access </p>
+    <p class="mt-4">Quick Access </p>
 
     <div class="container-fluid p-0">
         <div class="card-footer pt-2 pb-2">
