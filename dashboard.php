@@ -91,7 +91,7 @@
 </head>
 <body>
 <div class="container p-5">
-    <h2 class="mb-5">Dashboard</h2>
+    <h2 class="mb-4">Dashboard</h2>
     <p class="mt-3">Quick Access </p>
 
     <div class="container-fluid p-0">
