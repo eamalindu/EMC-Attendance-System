@@ -104,12 +104,12 @@
                             <div class="col-3 d-flex align-items-center justify-content-center">
                                 <div class="d-flex align-items-center justify-content-center"
                                      style="border-radius: 50%;height: 60px;width: 60px;background: #fff7e5">
-                                    <i aria-hidden="true" class="fa-solid fa-clock"
+                                    <i aria-hidden="true" class="fa-solid fa-user-graduate"
                                        style="color:#FDE74C;font-size: 25px"></i>
                                 </div>
                             </div>
                             <div class="col-9 d-flex align-items-center justify-content-around">
-                                <span class="text-uppercase">Scheduled Inquiries</span>
+                                <span class="text-uppercase">Mark Attendance</span>
 
                             </div>
 
@@ -125,12 +125,12 @@
                             <div class="col-3 d-flex align-items-center justify-content-center">
                                 <div class="d-flex align-items-center justify-content-center"
                                      style="border-radius: 50%;height: 60px;width: 60px;background: #f7dddd">
-                                    <i aria-hidden="true" class="fa-solid fa-hourglass-half"
+                                    <i aria-hidden="true" class="fa-solid fa-barcode"
                                        style="color:#fd4c4c;font-size: 25px"></i>
                                 </div>
                             </div>
                             <div class="col-9 d-flex align-items-center justify-content-around">
-                                <span class="lh-1 text-uppercase">Pending Inquiries</span>
+                                <span class="lh-1 text-uppercase">Update Barcode</span>
 
 
                             </div>
@@ -143,12 +143,12 @@
                             <div class="col-3 d-flex align-items-center justify-content-center">
                                 <div class="d-flex align-items-center justify-content-center"
                                      style="border-radius: 50%;height: 60px;width: 60px;background: #DDF6F7">
-                                    <i aria-hidden="true" class="fa-solid fa-circle-check"
+                                    <i aria-hidden="true" class="fa-solid fa-file-arrow-down"
                                        style="color:#1ec781;font-size: 25px"></i>
                                 </div>
                             </div>
                             <div class="col-9 d-flex align-items-center justify-content-around">
-                                <span class="text-uppercase">Completed Inquiries</span>
+                                <span class="text-uppercase">Attendance Report</span>
 
 
                             </div>
@@ -165,13 +165,13 @@
                                 <div class="col-3 d-flex align-items-center justify-content-center">
                                     <div class="d-flex align-items-center justify-content-center"
                                          style="border-radius: 50%;height: 60px;width: 60px;background: #c1eaff">
-                                        <i aria-hidden="true" class="fa-solid fa-circle-plus"
+                                        <i aria-hidden="true" class="fa-solid fa-upload"
                                            style="color:#1e7bc7;font-size: 25px"></i>
                                     </div>
                                 </div>
                                 <div class="col-9 lh-1 d-flex align-items-center justify-content-center">
                                     <div class="lh-1">
-                                        <span class="text-uppercase">Add New Inquiry</span>
+                                        <span class="text-uppercase">Upload New Batch Details</span>
                                     </div>
                                 </div>
                             </div>
