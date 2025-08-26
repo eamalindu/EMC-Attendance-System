@@ -15,6 +15,9 @@ window.addEventListener('DOMContentLoaded', () => {
                 dataType: 'text'
             }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
             JsonToTable(data, tblReport, displayListDate);
+            if (data.length !== 0) {
+                $('#tblReport').dataTable();
+            }
         })
 });
 
@@ -34,6 +37,18 @@ window.addEventListener('DOMContentLoaded', () => {
                     .then(response => response.json())
                     .then(data => {
                         console.log(data);
+                        displayListDate = [{property: 'reg_id', dataType: 'text'}, {
+                            property: 'batch_id',
+                            dataType: 'text'
+                        }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
+
+                        if ($.fn.DataTable.isDataTable('#tblReport')) {
+                            $('#tblReport').DataTable().clear().destroy();
+                        }
+                        JsonToTable(data, tblReport, displayListDate);
+                        if (data.length !== 0) {
+                            $('#tblReport').DataTable();
+                        }
                     })
             }
 
@@ -50,8 +65,14 @@ window.addEventListener('DOMContentLoaded', () => {
                             property: 'batch_id',
                             dataType: 'text'
                         }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
-                        JsonToTable(data, tblReport, displayListDate);
 
+                        if ($.fn.DataTable.isDataTable('#tblReport')) {
+                            $('#tblReport').DataTable().clear().destroy();
+                        }
+                        JsonToTable(data, tblReport, displayListDate);
+                        if (data.length !== 0) {
+                            $('#tblReport').DataTable();
+                        }
                     })
 
             }
@@ -59,6 +80,25 @@ window.addEventListener('DOMContentLoaded', () => {
             if (selectedDate === "" && selectedBatch !== "") {
                 //only batch
                 console.log("Batch Selected");
+                fetch(`generateReport.php?SelectedBatch=${encodeURIComponent(selectedBatch)}`, {
+                    method: 'GET', headers: {'Accept': 'application/json'}
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        displayListDate = [{property: 'reg_id', dataType: 'text'}, {
+                            property: 'batch_id',
+                            dataType: 'text'
+                        }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
+
+                        if ($.fn.DataTable.isDataTable('#tblReport')) {
+                            $('#tblReport').DataTable().clear().destroy();
+                        }
+                        JsonToTable(data, tblReport, displayListDate);
+                        if (data.length !== 0) {
+                            $('#tblReport').DataTable();
+                        }
+                    })
 
             }
 
