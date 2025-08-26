@@ -33,7 +33,7 @@ require_once "config.php";
                         }
                    ?>
                 </select>
-                <button type="button" id="btnAttendance" onclick="generateReport()" class="btn btn-success text-white">
+                <button type="button" id="btnAttendance" onclick="generateReport()" class="btn btn-success text-white rounded-end-2">
                     Search
                 </button>
                 <button type="button" id="btnClear" class="btn btn-danger bg-red ms-2 rounded-0">X</button>

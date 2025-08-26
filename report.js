@@ -5,3 +5,8 @@ const generateReport = ()=>{
 
     showCustomModal(selectedDate+" "+selectedBatch,'info');
 }
+
+document.querySelector('#btnClear').addEventListener('click', ()=>{
+    date.value = "";
+    batch.value = "";
+});
