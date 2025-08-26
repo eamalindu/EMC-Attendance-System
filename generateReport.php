@@ -8,11 +8,11 @@ if (isset($_GET["SelectedDate"]) && isset($_GET["SelectedBatch"])) {
     $selectedDate = $_GET["SelectedDate"];
     $selectedBatch = $_GET["SelectedBatch"];
 
-    $sql = "SELECT reg_id,batch_id,timestamp,addedBY FROM attendance WHERE batch_id = '$selectedBatch' AND DAY(timestamp) = '$selectedDate'";
+    $sql = "SELECT reg_id,batch_id,timestamp,addedBY FROM attendance WHERE batch_id = '$selectedBatch' AND DATE(timestamp) = '$selectedDate'";
 } elseif (isset($_GET["SelectedDate"])) {
     // Date only
     $selectedDate = $_GET["SelectedDate"];
-    $sql = "SELECT reg_id,batch_id,timestamp,addedBY FROM attendance WHERE DAY(timestamp) = '$selectedDate'";
+    $sql = "SELECT reg_id,batch_id,timestamp,addedBY FROM attendance WHERE DATE(timestamp) = '$selectedDate'";
 } elseif (isset($_GET["SelectedBatch"])) {
     // Batch only
     $selectedBatch = $_GET["SelectedBatch"];
