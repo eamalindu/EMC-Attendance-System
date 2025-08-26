@@ -11,8 +11,7 @@ window.addEventListener('DOMContentLoaded', () => {
         .then(data => {
             console.log(data)
             displayListDate = [{property: 'reg_id', dataType: 'text'}, {
-                property: 'batch_id',
-                dataType: 'text'
+                property: 'batch_id', dataType: 'text'
             }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
             JsonToTable(data, tblReport, displayListDate);
             if (data.length !== 0) {
@@ -21,95 +20,92 @@ window.addEventListener('DOMContentLoaded', () => {
         })
 });
 
-    const generateReport = () => {
+const generateReport = () => {
 
-        let selectedDate = date.value;
-        let selectedBatch = batch.value;
+    let selectedDate = date.value;
+    let selectedBatch = batch.value;
 
-        if (selectedBatch !== "" || selectedDate !== "") {
+    if (selectedBatch !== "" || selectedDate !== "") {
 
-            if (selectedDate !== "" && selectedBatch !== "") {
-                //both selected
-                console.log("Both Selected");
-                fetch(`generateReport.php?SelectedDate=${encodeURIComponent(selectedDate)}&SelectedBatch=${encodeURIComponent(selectedBatch)}`, {
-                    method: 'GET', headers: {'Accept': 'application/json'}
+        if (selectedDate !== "" && selectedBatch !== "") {
+            //both selected
+            console.log("Both Selected");
+            fetch(`generateReport.php?SelectedDate=${encodeURIComponent(selectedDate)}&SelectedBatch=${encodeURIComponent(selectedBatch)}`, {
+                method: 'GET', headers: {'Accept': 'application/json'}
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    displayListDate = [{property: 'reg_id', dataType: 'text'}, {
+                        property: 'batch_id', dataType: 'text'
+                    }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
+
+                    if ($.fn.DataTable.isDataTable('#tblReport')) {
+                        $('#tblReport').DataTable().clear().destroy();
+                    }
+                    JsonToTable(data, tblReport, displayListDate);
+                    if (data.length !== 0) {
+                        $('#tblReport').DataTable();
+                    }
                 })
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log(data);
-                        displayListDate = [{property: 'reg_id', dataType: 'text'}, {
-                            property: 'batch_id',
-                            dataType: 'text'
-                        }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
-
-                        if ($.fn.DataTable.isDataTable('#tblReport')) {
-                            $('#tblReport').DataTable().clear().destroy();
-                        }
-                        JsonToTable(data, tblReport, displayListDate);
-                        if (data.length !== 0) {
-                            $('#tblReport').DataTable();
-                        }
-                    })
-            }
-
-            if (selectedDate !== "" && selectedBatch === "") {
-                //only date
-                console.log("Date Selected");
-                fetch(`generateReport.php?SelectedDate=${encodeURIComponent(selectedDate)}`, {
-                    method: 'GET', headers: {'Accept': 'application/json'}
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log(data)
-                        displayListDate = [{property: 'reg_id', dataType: 'text'}, {
-                            property: 'batch_id',
-                            dataType: 'text'
-                        }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
-
-                        if ($.fn.DataTable.isDataTable('#tblReport')) {
-                            $('#tblReport').DataTable().clear().destroy();
-                        }
-                        JsonToTable(data, tblReport, displayListDate);
-                        if (data.length !== 0) {
-                            $('#tblReport').DataTable();
-                        }
-                    })
-
-            }
-
-            if (selectedDate === "" && selectedBatch !== "") {
-                //only batch
-                console.log("Batch Selected");
-                fetch(`generateReport.php?SelectedBatch=${encodeURIComponent(selectedBatch)}`, {
-                    method: 'GET', headers: {'Accept': 'application/json'}
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        console.log(data);
-                        displayListDate = [{property: 'reg_id', dataType: 'text'}, {
-                            property: 'batch_id',
-                            dataType: 'text'
-                        }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
-
-                        if ($.fn.DataTable.isDataTable('#tblReport')) {
-                            $('#tblReport').DataTable().clear().destroy();
-                        }
-                        JsonToTable(data, tblReport, displayListDate);
-                        if (data.length !== 0) {
-                            $('#tblReport').DataTable();
-                        }
-                    })
-
-            }
-
-        } else {
-            showCustomModal("Please select date or batch", "warning");
         }
 
+        if (selectedDate !== "" && selectedBatch === "") {
+            //only date
+            console.log("Date Selected");
+            fetch(`generateReport.php?SelectedDate=${encodeURIComponent(selectedDate)}`, {
+                method: 'GET', headers: {'Accept': 'application/json'}
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data)
+                    displayListDate = [{property: 'reg_id', dataType: 'text'}, {
+                        property: 'batch_id', dataType: 'text'
+                    }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
 
+                    if ($.fn.DataTable.isDataTable('#tblReport')) {
+                        $('#tblReport').DataTable().clear().destroy();
+                    }
+                    JsonToTable(data, tblReport, displayListDate);
+                    if (data.length !== 0) {
+                        $('#tblReport').DataTable();
+                    }
+                })
+
+        }
+
+        if (selectedDate === "" && selectedBatch !== "") {
+            //only batch
+            console.log("Batch Selected");
+            fetch(`generateReport.php?SelectedBatch=${encodeURIComponent(selectedBatch)}`, {
+                method: 'GET', headers: {'Accept': 'application/json'}
+            })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    displayListDate = [{property: 'reg_id', dataType: 'text'}, {
+                        property: 'batch_id', dataType: 'text'
+                    }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
+
+                    if ($.fn.DataTable.isDataTable('#tblReport')) {
+                        $('#tblReport').DataTable().clear().destroy();
+                    }
+                    JsonToTable(data, tblReport, displayListDate);
+                    if (data.length !== 0) {
+                        $('#tblReport').DataTable();
+                    }
+                })
+
+        }
+
+    } else {
+        showCustomModal("Please select date or batch", "warning");
     }
 
-    document.querySelector('#btnClear').addEventListener('click', () => {
-        date.value = "";
-        batch.value = "";
-    });
+
+}
+
+document.querySelector('#btnClear').addEventListener('click', () => {
+    date.value = "";
+    batch.value = "";
+});
