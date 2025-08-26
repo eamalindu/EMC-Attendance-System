@@ -20,7 +20,7 @@ require_once "config.php";
 <div class="container p-5">
     <h2 class="mb-3">Attendance Report</h2>
     <div class="row mb-4">
-        <div class="col-12 col-lg-6 p-0 ">
+        <div class="col-12 col-lg-6 p-0">
             <div class="input-group w-100">
                 <input type="date" id="date" name="date" placeholder="Enter Your Reg Number" class="w-25 form-control">
                 <select class="form-select w-25" id="batch" name="batch">
@@ -33,7 +33,7 @@ require_once "config.php";
                         }
                    ?>
                 </select>
-                <button type="button" id="" class="btn btn-success text-white">
+                <button type="button" id="btnAttendance" onclick="generateReport()" class="btn btn-success text-white">
                     Search
                 </button>
             </div>
@@ -41,6 +41,11 @@ require_once "config.php";
     </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+<script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script src="loader.js"></script>
+<script src="report.js"></script>
 </body>
 </html>
