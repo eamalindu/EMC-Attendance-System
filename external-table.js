@@ -42,7 +42,8 @@ const JsonToTable = (dataList,tabledID,displayPropertyList) => {
     else{
         const tableTR = document.createElement('tr');
         const  tableTD = document.createElement('td');
-        tableTD.colSpan = (displayPropertyList.length+2);
+        tableTD.classList.add('text-center');
+        tableTD.colSpan = (displayPropertyList.length+1);
         tableTD.innerText = 'No Records Found!';
         tableTR.appendChild(tableTD)
         tbody.appendChild(tableTR);

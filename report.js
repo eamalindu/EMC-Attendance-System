@@ -51,6 +51,7 @@ window.addEventListener('DOMContentLoaded', () => {
                             dataType: 'text'
                         }, {property: 'timestamp', dataType: 'text'}, {property: 'addedBY', dataType: 'text'}];
                         JsonToTable(data, tblReport, displayListDate);
+
                     })
 
             }
