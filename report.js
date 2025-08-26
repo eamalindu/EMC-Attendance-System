@@ -14,14 +14,17 @@ const generateReport = ()=>{
 
         if(selectedDate!=="" && selectedBatch!==""){
             //both selected
+            console.log("Both Selected");
         }
 
         if(selectedDate!=="" && selectedBatch===""){
             //only date
+            console.log("Date Selected");
         }
 
         if(selectedDate==="" && selectedBatch!==""){
             //only batch
+            console.log("Batch Selected");
         }
 
     }
