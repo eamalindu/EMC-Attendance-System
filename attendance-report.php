@@ -19,6 +19,26 @@ require_once "config.php";
 </div>
 <div class="container p-5">
     <h2 class="mb-3">Attendance Report</h2>
+    <div class="row mb-4">
+        <div class="col-12 col-lg-6 p-0 ">
+            <div class="input-group w-100">
+                <input type="date" id="date" name="date" placeholder="Enter Your Reg Number" class="w-25 form-control">
+                <select class="form-select w-25" id="batch" name="batch">
+                   <?php
+                        echo "<option value='' disabled selected>Select Batch</option>";
+                        $sql = "SELECT DISTINCT batch FROM student order by batch asc";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_assoc($result)) {
+                            echo "<option value='" . $row['batch'] . "'>" . $row['batch'] . "</option>";
+                        }
+                   ?>
+                </select>
+                <button type="button" id="" class="btn btn-success text-white">
+                    Search
+                </button>
+            </div>
+        </div>
+    </div>
 </div>
 
 <script src="loader.js"></script>
