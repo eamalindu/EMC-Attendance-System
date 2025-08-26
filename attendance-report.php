@@ -10,6 +10,7 @@ require_once "config.php";
     <title>Attendance Report</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/loader.css">
 </head>
@@ -21,7 +22,6 @@ require_once "config.php";
     <h2 class="mb-3">Attendance Report</h2>
     <div class="row mb-4">
         <div class="col-12 col-lg-6 p-0">
-            <p class="mb-0 text-muted ms-1">Search Parameters</p>
             <div class="d-flex w-100">
                 <input type="date" id="date" name="date" placeholder="Enter Your Reg Number" class="w-50 form-control">
                 <select class="form-select w-50 ms-2" id="batch" name="batch">
@@ -34,11 +34,17 @@ require_once "config.php";
                         }
                    ?>
                 </select>
-                <button type="button" id="btnAttendance" onclick="generateReport()" class="ms-2 btn btn-success text-white rounded-end-2">
+                <button type="button" id="btnAttendance" onclick="generateReport()" class="ms-2 btn btn-success text-white rounded-0">
                     Search
                 </button>
                 <button type="button" id="btnClear" class="btn btn-danger bg-red ms-2 rounded-0">X</button>
             </div>
+        </div>
+        <div class="col-12 col-lg-6">
+            <button id="exportBtn" class="btn btn-secondary btn-small d-block float-end rounded-0"><i
+                        class="fa-solid fa-file-excel"></i>
+                Export
+            </button>
         </div>
     </div>
 </div>
