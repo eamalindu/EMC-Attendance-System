@@ -11,8 +11,12 @@
 
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.dataTables.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.3.2/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="css/loader.css">
 </head>
 <body>
+<div class="preloader w-100 min-vh-100">
+<div class="loader"></div>
+</div>
 <div class="container p-5">
     <div class="row m-0 mb-4">
         <div class="col-1 p-0">
@@ -118,5 +122,6 @@
     });
 
 </script>
+<script src="loader.js"></script>
 </body>
 </html>
