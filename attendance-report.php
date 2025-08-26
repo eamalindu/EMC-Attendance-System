@@ -49,7 +49,7 @@ require_once "config.php";
             </button>
         </div>
     </div>
-    <table class="table w-100 table-bordered table-striped" id="tblReport">
+    <table class="table w-100 table-bordered" id="tblReport">
         <thead>
         <tr>
             <th>#</th>
