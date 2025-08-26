@@ -80,28 +80,41 @@
 <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
 
 <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script>
     new DataTable('#tle')
 </script>
 <script>
+    
+
     document.getElementById('exportBtn').addEventListener('click', function () {
-        // Get the table element
-        let table = document.getElementById('tle');
 
-        if (!table) {
-            alert("Table not found!");
-            return;
-        }
+        showCustomConfirm("You Are About to Download the Excel File<br>Are You Sure?",function (result){
 
-        // Convert HTML table to a worksheet
-        let workbook = XLSX.utils.book_new();
-        let worksheet = XLSX.utils.table_to_sheet(table);
+            if(result) {
 
-        // Add worksheet to workbook
-        XLSX.utils.book_append_sheet(workbook, worksheet, "Active Students");
+                // Get the table element
+                let table = document.getElementById('tle');
 
-        // Export workbook to file
-        XLSX.writeFile(workbook, "Active Students.xlsx");
+                if (!table) {
+                    alert("Table not found!");
+                    return;
+                }
+
+                // Convert HTML table to a worksheet
+                let workbook = XLSX.utils.book_new();
+                let worksheet = XLSX.utils.table_to_sheet(table);
+
+                // Add worksheet to workbook
+                XLSX.utils.book_append_sheet(workbook, worksheet, "Active Students");
+
+                // Export workbook to file
+                XLSX.writeFile(workbook, "Active Students.xlsx");
+            }
+        })
+
+
     });
 
 </script>
