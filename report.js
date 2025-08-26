@@ -10,7 +10,7 @@ const generateReport = ()=>{
     let selectedDate = date.value;
     let selectedBatch = batch.value;
 
-    if(selectedBatch!=="" && selectedDate!=="") {
+    if(selectedBatch!=="" || selectedDate!=="") {
 
     }
     else{
