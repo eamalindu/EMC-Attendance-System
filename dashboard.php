@@ -164,22 +164,24 @@ require_once "config.php";
                     </a>
                 </div>
                 <div class="col-lg-4 col-12 mb-lg-0">
-                    <div class="card card-body rounded-0 h-100 text-muted dashboard-widget-green">
-                        <div class="row h-100">
-                            <div class="col-3 d-flex align-items-center justify-content-center">
-                                <div class="d-flex align-items-center justify-content-center"
-                                     style="border-radius: 50%;height: 60px;width: 60px;background: #DDF6F7">
-                                    <i aria-hidden="true" class="fa-solid fa-file-arrow-down"
-                                       style="color:#1ec781;font-size: 25px"></i>
+                    <a href="attendance-report.php" class="text-decoration-none">
+                        <div class="card card-body rounded-0 h-100 text-muted dashboard-widget-green">
+                            <div class="row h-100">
+                                <div class="col-3 d-flex align-items-center justify-content-center">
+                                    <div class="d-flex align-items-center justify-content-center"
+                                         style="border-radius: 50%;height: 60px;width: 60px;background: #DDF6F7">
+                                        <i aria-hidden="true" class="fa-solid fa-file-arrow-down"
+                                           style="color:#1ec781;font-size: 25px"></i>
+                                    </div>
+                                </div>
+                                <div class="col-9 d-flex align-items-center justify-content-around">
+                                    <span class="text-uppercase">Attendance Report</span>
+
+
                                 </div>
                             </div>
-                            <div class="col-9 d-flex align-items-center justify-content-around">
-                                <span class="text-uppercase">Attendance Report</span>
-
-
-                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
             <div class="row mt-3">
@@ -257,7 +259,9 @@ require_once "config.php";
 <div class="logout">
     <button class="btn btn-danger btn-sm" onclick="logout()">Logout</button>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script src="logout.js"></script>
 <script src="loader.js"></script>
