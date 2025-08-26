@@ -21,9 +21,10 @@ require_once "config.php";
     <h2 class="mb-3">Attendance Report</h2>
     <div class="row mb-4">
         <div class="col-12 col-lg-6 p-0">
-            <div class="input-group w-100">
-                <input type="date" id="date" name="date" placeholder="Enter Your Reg Number" class="w-25 form-control">
-                <select class="form-select w-25" id="batch" name="batch">
+            <p class="mb-0 text-muted ms-1">Search Parameters</p>
+            <div class="d-flex w-100">
+                <input type="date" id="date" name="date" placeholder="Enter Your Reg Number" class="w-50 form-control">
+                <select class="form-select w-50 ms-2" id="batch" name="batch">
                    <?php
                         echo "<option value='' disabled selected>Select Batch</option>";
                         $sql = "SELECT DISTINCT batch FROM student order by batch asc";
@@ -33,7 +34,7 @@ require_once "config.php";
                         }
                    ?>
                 </select>
-                <button type="button" id="btnAttendance" onclick="generateReport()" class="btn btn-success text-white rounded-end-2">
+                <button type="button" id="btnAttendance" onclick="generateReport()" class="ms-2 btn btn-success text-white rounded-end-2">
                     Search
                 </button>
                 <button type="button" id="btnClear" class="btn btn-danger bg-red ms-2 rounded-0">X</button>
