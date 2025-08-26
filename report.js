@@ -10,7 +10,15 @@ const generateReport = ()=>{
     let selectedDate = date.value;
     let selectedBatch = batch.value;
 
-    showCustomModal(selectedDate+" "+selectedBatch,'info');
+    if(selectedBatch!=="" && selectedDate!=="") {
+
+    }
+    else{
+        showCustomModal("Please select date or batch","warning");
+    }
+
+
+
 }
 
 document.querySelector('#btnClear').addEventListener('click', ()=>{
