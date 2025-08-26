@@ -12,6 +12,18 @@ const generateReport = ()=>{
 
     if(selectedBatch!=="" || selectedDate!=="") {
 
+        if(selectedDate!=="" && selectedBatch!==""){
+            //both selected
+        }
+
+        if(selectedDate!=="" && selectedBatch===""){
+            //only date
+        }
+
+        if(selectedDate==="" && selectedBatch!==""){
+            //only batch
+        }
+
     }
     else{
         showCustomModal("Please select date or batch","warning");
