@@ -20,6 +20,14 @@ const generateReport = ()=>{
         if(selectedDate!=="" && selectedBatch===""){
             //only date
             console.log("Date Selected");
+            fetch(`generateReport.php?SelectedDate=${encodeURIComponent(selectedDate)}`, {
+                method: 'GET', headers: {'Accept': 'application/json'}
+            })
+                .then(response => response.json())
+                .then(data=>{
+                    console.log(data)
+                })
+
         }
 
         if(selectedDate==="" && selectedBatch!==""){
