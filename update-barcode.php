@@ -16,10 +16,10 @@
 <div class="container p-5">
     <h2 class="mb-3">Update Barcode (Student Access Card)</h2>
     <div class="row mb-4">
-        <div class="col-6 p-0 ">
+        <div class="col-12 col-lg-6 p-0 ">
             <div class="input-group w-100">
                 <input type="text" id="search" name="search" placeholder="Enter Your Reg Number"
-                       class="w-25 form-control" onkeyup="getStudentD()">
+                       class="w-25 form-control" onkeyup="getStudentD()" style="width: 50%!important;">
                 <input type="text" id="barcode" name="barcode" placeholder="Scan Bar Code" class="w-25 form-control">
                 <button type="button" id="updateBar" onclick="updateBarCode()" class="btn btn-warning text-white">
                     Update
@@ -28,7 +28,7 @@
         </div>
     </div>
     <div class="row mb-4">
-        <div class="col-12 p-0 col-lg-6" style="height: 400px">
+        <div class="col-12 p-0 col-lg-6 mb-2 m-lg-0" style="height: 400px">
             <div class="card h-100">
                 <div class="card-body d-flex justify-content-center align-items-center">
                     <div class="h-100 d-flex justify-content-center align-items-center d-none" id="noResult">
