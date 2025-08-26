@@ -1,10 +1,11 @@
-const JsonToTable = (data,tableID) => {
+const JsonToTable = (data,tableID,propertyList) => {
 
     const tbody = tabledID.children[1];
     //clear the table body
     tbody.innerHTML = '';
 
     if(data.length!==0) {
+
 
     }
     else{
