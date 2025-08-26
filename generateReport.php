@@ -31,7 +31,7 @@ if ($result && $result->num_rows > 0) {
     }
     echo json_encode($data);
 } else {
-    echo json_encode(["error" => "No student found"]);
+    echo json_encode([]);
 }
 
 
