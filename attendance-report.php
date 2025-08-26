@@ -36,6 +36,7 @@ require_once "config.php";
                 <button type="button" id="btnAttendance" onclick="generateReport()" class="btn btn-success text-white">
                     Search
                 </button>
+                <button type="button" id="btnClear" class="btn btn-danger ms-2 rounded-0">X</button>
             </div>
         </div>
     </div>
