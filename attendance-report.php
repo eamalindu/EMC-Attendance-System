@@ -47,8 +47,16 @@ require_once "config.php";
             </button>
         </div>
     </div>
-    <table class="table table-striped table-hover table-sm" id="tblReport">
-        <thead></thead>
+    <table class="table w-100 table-bordered table-striped" id="tblReport">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Registration Number</th>
+            <th>Batch</th>
+            <th>Recorded</th>
+            <th>Added By</th>
+        </tr>
+        </thead>
         <tbody></tbody>
     </table>
 </div>
