@@ -51,9 +51,9 @@ require_once "config.php";
         <thead>
         <tr>
             <th>#</th>
-            <th>Registration Number</th>
+            <th>Reg Number</th>
             <th>Batch</th>
-            <th>Recorded</th>
+            <th>Recorded Time</th>
             <th>Added By</th>
         </tr>
         </thead>
