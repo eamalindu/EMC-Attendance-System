@@ -103,6 +103,7 @@ const markAttendance = () => {
                     .then(data => {
                         if (data.trim() === "Ok") {
                             // Success action
+                            search.value="";
                             showCustomModal('Attendance Added Successfully', 'success');
                         } else {
                             showCustomModal(data, 'error');
