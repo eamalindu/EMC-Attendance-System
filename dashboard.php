@@ -22,8 +22,12 @@ require_once "config.php";
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.css">
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/loader.css">
 </head>
 <body>
+<div class="preloader w-100 min-vh-100">
+    <div class="loader"></div>
+</div>
 <div class="container p-5">
     <span class="mb-4 h3">Dashboard</span>
     <span class="float-end h3 text-capitalize">
@@ -255,5 +259,6 @@ require_once "config.php";
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script src="logout.js"></script>
+<script src="loader.js"></script>
 </body>
 </html>
