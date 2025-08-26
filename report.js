@@ -33,6 +33,8 @@ const generateReport = ()=>{
                 .then(response => response.json())
                 .then(data=>{
                     console.log(data)
+                    displayListDate = [{property:'reg_id',dataType:'text'},{property:'batch_id',dataType:'text'},{property:'timestamp',dataType:'text'},{property:'addedBY',dataType:'text'}];
+                    JsonToTable(data,tblReport,displayListDate);
                 })
 
         }

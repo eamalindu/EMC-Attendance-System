@@ -1,4 +1,4 @@
-const JsonToTable = (dataList,tableID,displayPropertyList) => {
+const JsonToTable = (dataList,tabledID,displayPropertyList) => {
     //access the table via querySelector
     //const table = document.querySelector('#tblEmp');
 

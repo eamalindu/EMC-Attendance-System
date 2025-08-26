@@ -47,6 +47,10 @@ require_once "config.php";
             </button>
         </div>
     </div>
+    <table class="table table-striped table-hover table-sm" id="tblReport">
+        <thead></thead>
+        <tbody></tbody>
+    </table>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
