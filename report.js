@@ -15,6 +15,13 @@ const generateReport = ()=>{
         if(selectedDate!=="" && selectedBatch!==""){
             //both selected
             console.log("Both Selected");
+            fetch(`generateReport.php?SelectedDate=${encodeURIComponent(selectedDate)}&SelectedBatch=${encodeURIComponent(selectedBatch)}`, {
+                method: 'GET', headers: {'Accept': 'application/json'}
+            })
+                .then(response => response.json())
+                .then(data=>{
+                    console.log(data);
+                })
         }
 
         if(selectedDate!=="" && selectedBatch===""){
@@ -33,6 +40,7 @@ const generateReport = ()=>{
         if(selectedDate==="" && selectedBatch!==""){
             //only batch
             console.log("Batch Selected");
+
         }
 
     }
