@@ -22,7 +22,8 @@
     <div class="row mb-4">
         <div class="col-12 col-lg-6 p-0">
             <div class="d-flex w-100">
-                <input type="date" id="date" name="date" placeholder="Enter Your Reg Number" class="w-50 form-control" <?php echo "value='" . (isset($_GET['date']) ? htmlspecialchars($_GET['date']) : '') . "'"; ?>>
+                <input type="date" id="date" name="date" placeholder="Enter Your Reg Number"
+                       class="w-50 form-control" <?php echo "value='" . (isset($_GET['date']) ? htmlspecialchars($_GET['date']) : '') . "'"; ?>>
                 <select class="form-select w-50 ms-2" id="batch" name="batch">
                     <?php
                     require_once("config.php");
@@ -30,7 +31,7 @@
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($result)) {
 
-                        if (isset($_GET)&&$_GET['batch'] == $row['batch']) {
+                        if (isset($_GET) && $_GET['batch'] == $row['batch']) {
                             echo "<option value='" . $row['batch'] . "' selected>" . $row['batch'] . "</option>";
                         } else {
                             echo "<option value='" . $row['batch'] . "'>" . $row['batch'] . "</option>";
@@ -57,17 +58,17 @@
 
     <?php
 
-if (isset($_GET['date']) && isset($_GET['batch'])) {
-    $batch = $_GET["batch"];
-    $date = $_GET["date"];
+    if (isset($_GET['date']) && isset($_GET['batch'])) {
+        $batch = $_GET["batch"];
+        $date = $_GET["date"];
 
 
-    $sql = "select * from student where batch = '$batch' and reg not in (select reg_id from attendance where batch_id = '$batch' and date(timestamp ) = '$date')";
-    $result = mysqli_query($conn, $sql);
+        $sql = "select * from student where batch = '$batch' and reg not in (select reg_id from attendance where batch_id = '$batch' and date(timestamp ) = '$date')";
+        $result = mysqli_query($conn, $sql);
 
-    if ($result->num_rows > 0) {
-        $count = 1;
-        echo "<table id='tle' class='table w-100 table-bordered table-striped '>
+        if ($result->num_rows > 0) {
+            $count = 1;
+            echo "<table id='tle' class='table w-100 table-bordered table-striped '>
             <thead>
                 <tr>
                     <th>#</th>
@@ -81,25 +82,27 @@ if (isset($_GET['date']) && isset($_GET['batch'])) {
             </thead>
             <tbody>";
 
-        while ($row = $result->fetch_assoc()) {
-            echo "<tr>";
-            echo "<td>" . $count . "</td>";
-            echo "<td>" . $row["name"] . "</td>";
-            echo "<td>" . $row["reg"] . "</td>";
-            echo "<td>" . $row['eid'] . "</td>";
-            echo "<td>" . $row['batch'] . "</td>";
-            echo "<td>" . $row['contact'] . "</td>";
-            echo "<td>" . $row["pStatus"] . "</td></tr>";
-            $count++;
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $count . "</td>";
+                echo "<td>" . $row["name"] . "</td>";
+                echo "<td>" . $row["reg"] . "</td>";
+                echo "<td>" . $row['eid'] . "</td>";
+                echo "<td>" . $row['batch'] . "</td>";
+                echo "<td>" . $row['contact'] . "</td>";
+                echo "<td>" . $row["pStatus"] . "</td></tr>";
+                $count++;
+
+            }
+            echo "</tbody></table>";
 
         }
-        echo "</tbody></table>";
-
     }
-}
 
     ?>
-    <button class="btn btn-secondary mt-4 mx-auto d-block"><a href="dashboard.php" class="text-white text-decoration-none">Back To Dashboard</a></button>
+    <button class="btn btn-secondary mt-4 mx-auto d-block"><a href="dashboard.php"
+                                                              class="text-white text-decoration-none">Back To
+            Dashboard</a></button>
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -131,18 +134,17 @@ if (isset($_GET['date']) && isset($_GET['batch'])) {
         XLSX.utils.book_append_sheet(workbook, worksheet, "Absent");
 
         // Export workbook to file
-        XLSX.writeFile(workbook, "absent-list "+batch.value+" ("+date.value+").xlsx");
+        XLSX.writeFile(workbook, "absent-list " + batch.value + " (" + date.value + ").xlsx");
     });
 
 </script>
 <script src="loader.js"></script>
 <script>
     document.getElementById("btnAttendance").addEventListener('click', function () {
-        if(batch.value!=="" && date.value!=="") {
+        if (batch.value !== "" && date.value !== "") {
             window.location.href = "absent.php?batch=" + batch.value + "&date=" + date.value;
-        }
-        else{
-            showCustomModal("Both Batch and Date is Required!","warning");
+        } else {
+            showCustomModal("Both Batch and Date is Required!", "warning");
         }
     })
 </script>
