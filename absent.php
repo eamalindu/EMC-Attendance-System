@@ -39,7 +39,7 @@
 
                     ?>
                 </select>
-                <button type="button" id="btnAttendance" onclick="generateReport()"
+                <button type="button" id="btnAttendance"
                         class="ms-2 btn btn-success text-white rounded-0">
                     Search
                 </button>
@@ -130,10 +130,15 @@
         XLSX.utils.book_append_sheet(workbook, worksheet, "Absent");
 
         // Export workbook to file
-        XLSX.writeFile(workbook, "absent.xlsx");
+        XLSX.writeFile(workbook, "absent-list "+batch.value+" ("+date.value+").xlsx");
     });
 
 </script>
 <script src="loader.js"></script>
+<script>
+    document.getElementById("btnAttendance").addEventListener('click', function () {
+        window.location.href = "absent.php?batch="+batch.value+"&date="+date.value;
+    })
+</script>
 </body>
 </html>
