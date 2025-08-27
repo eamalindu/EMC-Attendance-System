@@ -18,47 +18,70 @@
     <div class="loader"></div>
 </div>
 <div class="container p-5">
-    <div class="row m-0 mb-4">
-        <div class="col-1 p-0">
-            <a class="btn btn-secondary btn-small" href="dashboard.php"><i class="fa-solid fa-arrow-left"></i> Back</a>
+    <h2 class="mb-3">Absent Report</h2>
+    <div class="row mb-4">
+        <div class="col-12 col-lg-6 p-0">
+            <div class="d-flex w-100">
+                <input type="date" id="date" name="date" placeholder="Enter Your Reg Number" class="w-50 form-control" <?php echo"value='".$_GET['date']."'" ?>>
+                <select class="form-select w-50 ms-2" id="batch" name="batch">
+                    <?php
+                    require_once("config.php");
+                    $sql = "SELECT DISTINCT batch FROM student order by batch asc";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result)) {
+
+                        if ($_GET['batch'] == $row['batch']) {
+                            echo "<option value='" . $row['batch'] . "' selected>" . $row['batch'] . "</option>";
+                        } else {
+                            echo "<option value='" . $row['batch'] . "'>" . $row['batch'] . "</option>";
+                        }
+                    }
+
+                    ?>
+                </select>
+                <button type="button" id="btnAttendance" onclick="generateReport()"
+                        class="ms-2 btn btn-success text-white rounded-0">
+                    Search
+                </button>
+                <button type="button" id="btnClear" class="btn btn-danger bg-red ms-2 rounded-0">X</button>
+            </div>
         </div>
-        <div class="col-10 p-0">
-            <h2 class="text-center">Absent Students</h2>
-        </div>
-        <div class="col-1 p-0">
-            <button id="exportBtn" class="btn btn-success btn-small d-block float-end"><i
-                    class="fa-solid fa-file-excel"></i>
+        <div class="col-12 col-lg-6">
+            <button id="exportBtn" class="btn btn-secondary btn-small d-block float-end rounded-0"><i
+                        class="fa-solid fa-file-excel"></i>
                 Export
             </button>
         </div>
     </div>
 
 
-<?php
-require_once("config.php");
-
-$batch = $_GET["batch"];
-$date = $_GET["date"];
+    <?php
 
 
-$sql =  "select * from student where batch = '$batch' and reg not in (select reg_id from attendance where batch_id = '$batch' and date(timestamp ) = '$date')";
-$result = mysqli_query($conn, $sql);
+    $batch = $_GET["batch"];
+    $date = $_GET["date"];
 
-if($result->num_rows > 0){
-    $count = 1;
-    while ($row = $result->fetch_assoc()) {
 
+    $sql = "select * from student where batch = '$batch' and reg not in (select reg_id from attendance where batch_id = '$batch' and date(timestamp ) = '$date')";
+    $result = mysqli_query($conn, $sql);
+
+    if ($result->num_rows > 0) {
+        $count = 1;
+        while ($row = $result->fetch_assoc()) {
+
+        }
     }
-}
 
-?>
+    ?>
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdn.datatables.net/2.3.2/js/dataTables.min.js"></script>
 
 <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script>
     new DataTable('#tle')
