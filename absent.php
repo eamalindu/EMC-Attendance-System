@@ -67,9 +67,34 @@
 
     if ($result->num_rows > 0) {
         $count = 1;
-        while ($row = $result->fetch_assoc()) {
+            echo "<table id='tle' class='table w-100 table-bordered table-striped '>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Registration Number</th>
+                    <th>EID</th>
+                    <th>Batch</th>
+                    <th>Contact</th>
+                    <th>Parent Contact</th>
+                </tr>
+            </thead>
+            <tbody>";
 
-        }
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $count . "</td>";
+                echo "<td>" . $row["name"] . "</td>";
+                echo "<td>" . $row["reg"] . "</td>";
+                echo "<td>" . $row['eid'] . "</td>";
+                echo "<td>" . $row['batch'] . "</td>";
+                echo "<td>" . $row['contact'] . "</td>";
+                echo "<td>".$row["pStatus"]."</td></tr>";
+                $count++;
+
+            }
+            echo "</tbody></table>";
+
     }
 
     ?>
