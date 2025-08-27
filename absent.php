@@ -11,7 +11,7 @@ $result = mysqli_query($conn, $sql);
 if($result->num_rows > 0){
     $count = 1;
     while ($row = $result->fetch_assoc()) {
-        echo $count."  ".$row['reg']."".$row['name']."".$row['batch']."".$row["contact"]."<br>";
+        echo $count."  ".$row['reg']." ".$row['name']." ".$row['batch']." ".$row["contact"]."<br>";
         $count++;
     }
 }
