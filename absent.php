@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Active Students</title>
+    <title>Absent Students</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aquawolf04/font-awesome-pro@5cd1511/css/all.css">
@@ -98,6 +98,7 @@
     }
 
     ?>
+    <button class="btn btn-secondary mt-4 mx-auto d-block"><a href="dashboard.php" class="text-white text-decoration-none">Back To Dashboard</a></button>
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
         integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -111,7 +112,28 @@
 <script>
     new DataTable('#tle')
 </script>
+<script>
+    document.getElementById('exportBtn').addEventListener('click', function () {
+        // Get the table element
+        let table = document.getElementById('tle');
 
+        if (!table) {
+            alert("Table not found!");
+            return;
+        }
+
+        // Convert HTML table to a worksheet
+        let workbook = XLSX.utils.book_new();
+        let worksheet = XLSX.utils.table_to_sheet(table);
+
+        // Add worksheet to workbook
+        XLSX.utils.book_append_sheet(workbook, worksheet, "Absent");
+
+        // Export workbook to file
+        XLSX.writeFile(workbook, "absent.xlsx");
+    });
+
+</script>
 <script src="loader.js"></script>
 </body>
 </html>
