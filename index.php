@@ -7,7 +7,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
 
     // Use prepared statements to prevent SQL injection
-    $stmt = $conn->prepare("SELECT * FROM users WHERE username = ? AND password = ?");
+    $stmt = $conn->prepare("SELECT * FROM users  WHERE username COLLATE utf8mb4_bin = ? AND password COLLATE utf8mb4_bin = ?");
+
 
     if (!$stmt) {
         die("Prepare failed: " . $conn->error);
