@@ -255,6 +255,15 @@ require_once "config.php";
 
     </div>
     <p class="mt-4">Class Schedule</p>
+
+    <div class="row">
+        <?php include "test.php"
+
+        ?>
+
+
+    </div>
+
 </div>
 <div class="logout">
     <button class="btn btn-danger btn-sm" onclick="logout()">Logout</button>
