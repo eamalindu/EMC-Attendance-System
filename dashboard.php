@@ -28,7 +28,7 @@ require_once "config.php";
 <div class="preloader w-100 min-vh-100">
     <div class="loader"></div>
 </div>
-<div class="container p-5">
+<div class="container p-4">
     <span class="mb-4 h3">Dashboard</span>
     <span class="float-end h3 text-capitalize">
          <?php echo "Hello, " . $_SESSION["username"]; ?> 👋
