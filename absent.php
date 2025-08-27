@@ -137,7 +137,12 @@
 <script src="loader.js"></script>
 <script>
     document.getElementById("btnAttendance").addEventListener('click', function () {
-        window.location.href = "absent.php?batch="+batch.value+"&date="+date.value;
+        if(batch.value!=="" && date.value!=="") {
+            window.location.href = "absent.php?batch=" + batch.value + "&date=" + date.value;
+        }
+        else{
+            showCustomModal("Both Batch and Date is Required!","warning");
+        }
     })
 </script>
 </body>
