@@ -29,6 +29,7 @@
                     require_once("config.php");
                     $sql = "SELECT DISTINCT batch FROM student order by batch asc";
                     $result = mysqli_query($conn, $sql);
+                    echo "<option value='' disabled selected>Select Batch</option>";
                     while ($row = mysqli_fetch_assoc($result)) {
 
                         if (isset($_GET) && $_GET['batch'] == $row['batch']) {
@@ -57,18 +58,18 @@
 
 
     <?php
-
     if (isset($_GET['date']) && isset($_GET['batch'])) {
         $batch = $_GET["batch"];
         $date = $_GET["date"];
 
-
-        $sql = "select * from student where batch = '$batch' and reg not in (select reg_id from attendance where batch_id = '$batch' and date(timestamp ) = '$date')";
+        $sql = "SELECT * FROM student WHERE batch = '$batch' 
+            AND reg NOT IN (
+                SELECT reg_id FROM attendance 
+                WHERE batch_id = '$batch' AND DATE(timestamp) = '$date'
+            )";
         $result = mysqli_query($conn, $sql);
 
-        if ($result->num_rows > 0) {
-            $count = 1;
-            echo "<table id='tle' class='table w-100 table-bordered table-striped '>
+        echo "<table id='tle' class='table w-100 table-bordered table-striped'>
             <thead>
                 <tr>
                     <th>#</th>
@@ -82,36 +83,27 @@
             </thead>
             <tbody>";
 
+        if ($result && $result->num_rows > 0) {
+            $count = 1;
             while ($row = $result->fetch_assoc()) {
-                echo "<tr>";
-                echo "<td>" . $count . "</td>";
-                echo "<td>" . $row["name"] . "</td>";
-                echo "<td>" . $row["reg"] . "</td>";
-                echo "<td>" . $row['eid'] . "</td>";
-                echo "<td>" . $row['batch'] . "</td>";
-                echo "<td>" . $row['contact'] . "</td>";
-                echo "<td>" . $row["pStatus"] . "</td></tr>";
+                echo "<tr>
+                    <td>{$count}</td>
+                    <td>" . htmlspecialchars($row["name"]) . "</td>
+                    <td>" . htmlspecialchars($row["reg"]) . "</td>
+                    <td>" . htmlspecialchars($row['eid']) . "</td>
+                    <td>" . htmlspecialchars($row['batch']) . "</td>
+                    <td>" . htmlspecialchars($row['contact']) . "</td>
+                    <td>" . htmlspecialchars($row["pStatus"]) . "</td>
+                  </tr>";
                 $count++;
-
             }
-            echo "<table id='tle' class='table w-100 table-bordered table-striped '>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Registration Number</th>
-                    <th>EID</th>
-                    <th>Batch</th>
-                    <th>Contact</th>
-                    <th>Parent Contact</th>
-                </tr>
-            </thead>
-            <tbody></tbody></table>";
-
         }
-    }
-    else{
-        echo "<table id='tle' class='table w-100 table-bordered table-striped '>
+
+        echo "</tbody></table>";
+
+    } else {
+        // Empty table if date or batch not set
+        echo "<table id='tle' class='table w-100 table-bordered table-striped'>
             <thead>
                 <tr>
                     <th>#</th>
@@ -123,10 +115,11 @@
                     <th>Parent Contact</th>
                 </tr>
             </thead>
-            <tbody></tbody></table>";
+            <tbody></tbody>
+          </table>";
     }
-
     ?>
+
     <button class="btn btn-secondary mt-4 mx-auto d-block"><a href="dashboard.php"
                                                               class="text-white text-decoration-none">Back To
             Dashboard</a></button>
