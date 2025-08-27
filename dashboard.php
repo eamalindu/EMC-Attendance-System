@@ -257,7 +257,7 @@ require_once "config.php";
     <p class="mt-4">Class Schedule</p>
 
     <div class="row">
-        <?php include "test.php"
+        <?php include "todayClassList.php"
 
         ?>
 
