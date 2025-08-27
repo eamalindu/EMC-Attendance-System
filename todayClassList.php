@@ -42,7 +42,7 @@ if ($result && $result->num_rows > 0) {
                         <div class='h-50 w-100 border-bottom border-start text-success d-flex align-items-center justify-content-center'>
                             <p class='mb-0'>Present : ".$presentCount."</p></div>
                         <div class='h-50 w-100 border-start text-danger d-flex align-items-center justify-content-center'>
-                            <p class='mb-0'><a class='text-decoration-none text-danger' href='absent.php?batch=".$batchName."&date".$todayDate."'>Absent : ".$absentCount."</a</p></div>
+                            <p class='mb-0'><a class='text-decoration-none text-danger' href='absent.php?batch=".$batchName."&date=".$todayDate."'>Absent : ".$absentCount."</a</p></div>
                     </div>
                 </div>
             </div>
