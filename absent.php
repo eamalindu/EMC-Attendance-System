@@ -94,9 +94,36 @@
                 $count++;
 
             }
-            echo "</tbody></table>";
+            echo "<table id='tle' class='table w-100 table-bordered table-striped '>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Registration Number</th>
+                    <th>EID</th>
+                    <th>Batch</th>
+                    <th>Contact</th>
+                    <th>Parent Contact</th>
+                </tr>
+            </thead>
+            <tbody></tbody></table>";
 
         }
+    }
+    else{
+        echo "<table id='tle' class='table w-100 table-bordered table-striped '>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Registration Number</th>
+                    <th>EID</th>
+                    <th>Batch</th>
+                    <th>Contact</th>
+                    <th>Parent Contact</th>
+                </tr>
+            </thead>
+            <tbody></tbody></table>";
     }
 
     ?>
