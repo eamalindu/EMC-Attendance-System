@@ -31,7 +31,7 @@ if ($result && $result->num_rows > 0) {
         $absentCount = $totalStudents - $presentCount;
 
         echo "
-             <div class='col-4'>
+             <div class='col-12 col-lg-4'>
             <div class='card card-body d-flex align-items-center justify-content-center'>
                 <div class='row w-100'>
                     <div class='col-6 text-center'>
