@@ -33,4 +33,4 @@ function sendSMS($recipient, $message, $sender = "TextLKDemo") {
 }
 
 // Example usage
-echo sendSMS("94774877845", "We are happy to inform you that your child attended today’s IT class.\n- ESOFT Nittambuwa");
+//echo sendSMS("94774877845", "We are happy to inform you that your child attended today’s IT class.\n- ESOFT Nittambuwa");
