@@ -1,5 +1,5 @@
 <?php
-
+date_default_timezone_set('Asia/Colombo');
 require_once "sms.php";
 require_once "config.php";
 
@@ -7,6 +7,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $reg = $_POST['reg'];
     $contact = $_POST['contact'];
     $batch = $_POST['batch'];
+
 
 // prepare query
     $stmt = $conn->prepare("SELECT batch FROM student WHERE reg = ? LIMIT 1");
@@ -41,12 +42,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = "System";
         $correctContact = "94" . ltrim($contact, "0");
 
-        $msg = "Dear Parent, your child has attended today’s class.\nESOFT Nittambuwa";
+        $msg = "Dear Parent, your child has attended today’s class (".$batch.") at ".date('h:i a')."\n- ESOFT Nittambuwa";
+        echo $msg;
+        exit();
 
         $stmt_insert->bind_param("sss", $reg, $batch, $user);
 
         if($stmt_insert->execute()){
             echo "Ok";
+
         } else {
             echo "failed: " . $stmt_insert->error;
         }
