@@ -96,8 +96,9 @@ const markAttendance = () => {
                 let formData = new FormData();
                 formData.append("reg", studentREG);
                 formData.append("contact",sContact.value);
+                formData.append("batch",sBatch.value);
 
-                console.log(sContact.value);
+                console.log(sBatch.value);
 
                 fetch("addAttendance.php", {
                     method: "POST", body: formData,

@@ -6,6 +6,7 @@ require_once "config.php";
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $reg = $_POST['reg'];
     $contact = $_POST['contact'];
+    $batch = $_POST['batch'];
 
 // prepare query
     $stmt = $conn->prepare("SELECT batch FROM student WHERE reg = ? LIMIT 1");
