@@ -73,8 +73,8 @@ require_once "config.php";
 
 <script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
-<script src="loader.js"></script>
-<script src="external-table.js"></script>
-<script src="report.js"></script>
+<script src="js/loader.js"></script>
+<script src="js/external-table.js"></script>
+<script src="js/report.js"></script>
 </body>
 </html>

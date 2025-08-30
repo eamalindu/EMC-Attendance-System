@@ -272,7 +272,7 @@ require_once "config.php";
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
-<script src="logout.js"></script>
-<script src="loader.js"></script>
+<script src="js/logout.js"></script>
+<script src="js/loader.js"></script>
 </body>
 </html>
