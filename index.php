@@ -63,7 +63,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <button class="btns">LOGIN</button>
                 </form>
                 <p style="color: gray;margin-top: 20px;text-decoration: underline;"><a>Forget Password?</a></p>
-                <p style="color: gray;margin-top: 20px;position: fixed;bottom: 10px;left: 82%;"><small>Maintained by
+                <p style="color: gray;"><small>Maintained by
                         @eamalindu</small></p>
             </div>
         </div>
