@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $user = "System";
         $correctContact = "94" . ltrim($contact, "0");
 
-        $msg = "Dear Parent, your child has attended today’s class (".$batch.") at ".date('h:i a')."\n- ESOFT Nittambuwa";
+        $msg = "Dear Parent, your child has attended today’s class (".$batch.") at ".date('h:i a')." - ESOFT Nittambuwa";
 
         $stmt_insert->bind_param("sss", $reg, $batch, $user);
 
