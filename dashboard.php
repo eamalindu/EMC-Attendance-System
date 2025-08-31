@@ -208,8 +208,7 @@ require_once "config.php";
                 </div>
 
                 <div class="col-lg-4 col-12 mb-3 mb-lg-0">
-                    <a aria-controls="offcanvasRight" aria-current="page" class="text-decoration-none"
-                       data-bs-target="#offCanvasInquiry" data-bs-toggle="offcanvas">
+                    <a href="manage-students.php" class="text-decoration-none">
                         <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-purple">
                             <div class="row h-100">
                                 <div class="col-3 d-flex align-items-center justify-content-center">
