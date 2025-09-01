@@ -15,7 +15,52 @@
 </div>
 <div class="container p-5">
     <h2 class="mb-3">Manage Students</h2>
+    <?php
 
+    require_once "config.php";
+
+    $sql = "SELECT * FROM student";
+    $result = $conn->query($sql);
+    $rowIndex = 1;
+    if (!$result) {
+        echo "SQL Error: " . $conn->error;
+        exit;
+    }
+
+    if ($result->num_rows > 0) {
+        echo "<table id='tle' class='table w-100 table-bordered table-striped '>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Registration Number</th>
+                    <th>EID</th>
+                    <th>Batch</th>
+                    <th>Contact</th>
+                    <th>Parent Contact</th>
+                    <th> Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>";
+
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr>";
+            echo "<td>" . $rowIndex . "</td>";
+            echo "<td>" . $row["name"] . "</td>";
+            echo "<td>" . $row["reg"] . "</td>";
+            echo "<td>" . $row['eid'] . "</td>";
+            echo "<td>" . $row['batch'] . "</td>";
+            echo "<td>" . $row['contact'] . "</td>";
+            echo "<td>".$row["pStatus"]."</td>";
+            echo "<td>".$row["sStatus"]."</td>";
+            echo "<td><button class='btn btn-secondary btn-sm'>View</button></td>";
+            $rowIndex++;
+
+        }
+        echo "</tbody></table>";
+    }
+    ?>
 
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
