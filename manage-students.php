@@ -76,8 +76,5 @@
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script src="js/loader.js"></script>
 <script src="js/manageStudents.js"></script>
-<script>
-    new DataTable('#tle');
-</script>
 </body>
 </html>
