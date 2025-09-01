@@ -1,7 +1,7 @@
 window.addEventListener('DOMContentLoaded', () => {
     new DataTable('#tle');
-})
+});
 
-const deleteStudent(button) = ()=>{
+const deleteStudent = (button) => {
 
 }
