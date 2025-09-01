@@ -29,10 +29,10 @@ require_once "config.php";
                 <select class="form-select w-50 ms-2" id="batch" name="batch">
                    <?php
                         echo "<option value='' disabled selected>Select Batch</option>";
-                        $sql = "SELECT DISTINCT batch FROM student order by batch asc";
+                        $sql = "SELECT DISTINCT name FROM batch order by name asc";
                         $result = mysqli_query($conn, $sql);
                         while ($row = mysqli_fetch_assoc($result)) {
-                            echo "<option value='" . $row['batch'] . "'>" . $row['batch'] . "</option>";
+                            echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
                         }
                    ?>
                 </select>
