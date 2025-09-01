@@ -57,8 +57,8 @@
             echo "<td class='text-center'>0" . $row['contact'] . "</td>";
             echo "<td class='text-center'>0".$row["pStatus"]."</td>";
             echo "<td class='text-center'>".$row["sStatus"]."</td>";
-            echo "<td><button class='btn btn-secondary btn-sm' onclick='getStudent(this)' data-reg='".htmlspecialchars($row['reg'])."'></button>
-                  <button class='btn btn-danger btn-sm'>Delete</button>
+            echo "<td><button class='btn btn-secondary btn-sm' onclick='getStudent(this)' data-reg='".htmlspecialchars($row['reg'])."'><i class='fa-solid fa-eye'></i></button>
+                  <button class='btn btn-danger btn-sm'><i class='fa-solid fa-trash'></i></button>
                     </td>";
             $rowIndex++;
 
