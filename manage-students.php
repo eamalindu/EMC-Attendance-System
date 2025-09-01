@@ -56,7 +56,7 @@
             echo "<td class='text-center'>0" . $row['contact'] . "</td>";
             echo "<td class='text-center'>0".$row["pStatus"]."</td>";
             echo "<td class='text-center'>".$row["sStatus"]."</td>";
-            echo "<td><button class='btn btn-secondary btn-sm' data-reg='".htmlspecialchars($row['reg'])."'>View</button></td>";
+            echo "<td><button class='btn btn-secondary btn-sm' onclick='getStudent(this)' data-reg='".htmlspecialchars($row['reg'])."'>View</button></td>";
             $rowIndex++;
 
         }
@@ -75,6 +75,7 @@
         crossorigin="anonymous"></script>
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script src="js/loader.js"></script>
+<script src="js/manageStudents.js"></script>
 <script>
     new DataTable('#tle');
 </script>
