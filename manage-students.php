@@ -30,33 +30,33 @@
     }
 
     if ($result->num_rows > 0) {
-        echo "<table id='tle' class='table w-100 table-bordered table-striped '>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Name</th>
-                    <th>Registration Number</th>
-                    <th>EID</th>
-                    <th>Batch</th>
-                    <th>Contact</th>
-                    <th>Parent Contact</th>
-                    <th> Status</th>
-                    <th>Action</th>
+        echo "<table id='tle' class='table w-100 table-bordered table-striped text-center'>
+            <thead class='text-center'>
+                <tr class='text-center'>
+                    <th class='text-center'>#</th>
+                    <th class='text-center'>Name</th>
+                    <th class='text-center'>Reg</th>
+                    <th class='text-center'>EID</th>
+                    <th class='text-center'>Batch</th>
+                    <th class='text-center'>Contact</th>
+                    <th class='text-center'>Parent Contact</th>
+                    <th class='text-center'> Status</th>
+                    <th class='text-center'>Action</th>
                 </tr>
             </thead>
             <tbody>";
 
         while ($row = $result->fetch_assoc()) {
-            echo "<tr>";
+            echo "<tr class='text-center'>";
             echo "<td>" . $rowIndex . "</td>";
             echo "<td>" . $row["name"] . "</td>";
             echo "<td>" . $row["reg"] . "</td>";
             echo "<td>" . $row['eid'] . "</td>";
             echo "<td>" . $row['batch'] . "</td>";
-            echo "<td>" . $row['contact'] . "</td>";
-            echo "<td>".$row["pStatus"]."</td>";
-            echo "<td>".$row["sStatus"]."</td>";
-            echo "<td><button class='btn btn-secondary btn-sm'>View</button></td>";
+            echo "<td class='text-center'>0" . $row['contact'] . "</td>";
+            echo "<td class='text-center'>0".$row["pStatus"]."</td>";
+            echo "<td class='text-center'>".$row["sStatus"]."</td>";
+            echo "<td><button class='btn btn-secondary btn-sm' data-reg='".htmlspecialchars($row['reg'])."'>View</button></td>";
             $rowIndex++;
 
         }
