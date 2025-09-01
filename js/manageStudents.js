@@ -5,6 +5,10 @@ window.addEventListener('DOMContentLoaded', () => {
 const deleteStudent = (button) => {
 
     let reg = button.getAttribute("data-reg");
+
+    showCustomConfirm("You Are about to delete this student <br><br>Reg Number: <span class='text-primary'>00" + reg + "</span><br><br>All the records realted to this<br>student will be <strong>deleted</strong><br><br>Are You Sure?", function (result) {
+
+    });
     console.log(reg);
 }
 
