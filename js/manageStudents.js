@@ -95,6 +95,26 @@ const updateStudent = ()=>{
                 formData.append("pContact",pContact.value);
                 formData.append("status",sStatus.value);
 
+                console.log(formData);
+                fetch("updateStudent.php",{
+                    method:"POST",
+                    body:formData,
+                })
+                    .then(response => response.text())
+                    .then(data => {
+                        if (data.trim() === "Ok") {
+                            // Success action
+                            showCustomModal('Student Updated Successfully', 'success');
+                            //click offcanvas close btn
+
+                        } else {
+                            showCustomModal(data, 'error');
+                        }
+                    })
+                    .catch(error => {
+                        console.error("Error:", error);
+                    });
+
 
             }
         });
