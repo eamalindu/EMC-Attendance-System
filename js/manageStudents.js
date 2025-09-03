@@ -22,11 +22,14 @@ const getStudent= (button)=>{
     .then(
         data=>{
             console.log(data);
+            //fill data
+            sNAme.value = data.name;
         }
     )
     //need to lock register button
-    //need to disable or readonly Registration and EID
+    btnStudentRegister.classList.add('disabled');
+    ;
 
-    //fill data
+    //need to disable or readonly Registration and EID
 
 }
