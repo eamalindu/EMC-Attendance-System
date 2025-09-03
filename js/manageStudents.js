@@ -4,11 +4,18 @@ window.addEventListener('DOMContentLoaded', () => {
 
 const deleteStudent = (button) => {
 
+    let tr = button.closest("tr");
+    tr.classList.add("table-danger"); // highlights all row cells
+
+
     let reg = button.getAttribute("data-reg");
 
     showCustomConfirm("You Are about to delete this student <br><br>Reg Number: <span class='text-primary'>00" + reg + "</span><br><br>All the records realted to this<br>student will be <strong>deleted</strong><br><br>Are You Sure?", function (result) {
         if (result) {
 
+        }
+        else{
+            tr.classList.remove("table-danger");
         }
     });
     console.log(reg);
