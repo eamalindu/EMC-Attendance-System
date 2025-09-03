@@ -76,19 +76,19 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-        <div class="mb-3">
+        <div class="mb-2">
             <label for="sNAme" class="form-label">Student Name</label>
             <input type="text" class="form-control rounded-0" id="sNAme" placeholder="John Doe">
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
             <label for="sEID" class="form-label">Student EID</label>
             <input type="text" class="form-control rounded-0" id="sEID" placeholder="EXXXXXX">
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
             <label for="sREG" class="form-label">Student Registration</label>
             <input type="text" class="form-control rounded-0" id="sREG" placeholder="00XXXX">
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
             <label for="sBatch" class="form-label">Student Batch</label>
             <select class="form-select rounded-0" id="sBatch" name="sBatch">
                 <?php
@@ -101,15 +101,15 @@
                 ?>
             </select>
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
             <label for="sContact" class="form-label">Student Contact</label>
             <input type="text" class="form-control rounded-0" id="sContact" placeholder="07X-XXXX-XXXX">
         </div>
-        <div class="mb-3">
+        <div class="mb-2">
             <label for="pContact" class="form-label">Parent Contact</label>
             <input type="text" class="form-control rounded-0" id="pContact" placeholder="07X-XXXX-XXXX">
         </div>
-        <div class="mb-3">
+        <div class="mb-4">
             <label for="sBatch" class="form-label">Student Status</label>
             <select class="form-select rounded-0" id="sBatch" name="sBatch">
                 <?php
@@ -122,10 +122,10 @@
                 ?>
             </select>
         </div>
-        <div class="mb-3 d-flex justify-content-between align-items-center ">
-            <button class="btn btn-primary" id="btnStudentRegister">Register</button>
-            <button class="btn btn-warning" id="btnStudentUpdate">Update</button>
-            <button class="btn btn-secondary" id="btnStudentReset">Reset</button>
+        <div class="mb-2 d-flex justify-content-between align-items-center ">
+            <button class="btn btn-primary w-25" id="btnStudentRegister">Register</button>
+            <button class="btn btn-warning text-white w-25" id="btnStudentUpdate">Update</button>
+            <button class="btn btn-secondary w-25" id="btnStudentReset">Reset</button>
         </div>
     </div>
 </div>
