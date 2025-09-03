@@ -24,12 +24,17 @@ const getStudent= (button)=>{
             console.log(data);
             //fill data
             sNAme.value = data.name;
+            sEID.value = data.eid;
+            sREG.value = data.reg;
+            sBatch.value = data.batch;
+            sContact.value = data.contact;
+            pContact.value = data.pStatus;
+            sStatus.value = data.sStatus;
         }
     )
     //need to lock register button
     btnStudentRegister.classList.add('disabled');
-    ;
-
     //need to disable or readonly Registration and EID
+
 
 }
