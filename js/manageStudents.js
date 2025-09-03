@@ -41,3 +41,22 @@ const getStudent= (button)=>{
     sREG.disabled = true;
 
 }
+
+const checkUpdateStudent = ()=>{
+
+    let updates  = "";
+
+    //check name
+
+    //check batch
+
+    //check student contact
+
+    //check parent contact
+
+    //check status
+
+
+    return updates;
+
+}
