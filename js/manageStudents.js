@@ -89,6 +89,11 @@ const updateStudent = ()=>{
             if(result){
                 let formData = new FormData();
                 formData.append("reg", oldStudent.reg);
+                formData.append("name",sNAme.value);
+                formData.append("batch",sBatch.value);
+                formData.append("contact",sContact.value);
+                formData.append("pContact",pContact.value);
+                formData.append("status",sStatus.value);
 
 
             }
