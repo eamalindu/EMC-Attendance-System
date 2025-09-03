@@ -47,6 +47,9 @@ const checkUpdateStudent = ()=>{
     let updates  = "";
 
     //check name
+        if(oldStudent.name !== sNAme.value){
+            updates += "Student <span class='text-primary'>name</span> Updated!<br>";
+        }
 
     //check batch
 
@@ -59,4 +62,16 @@ const checkUpdateStudent = ()=>{
 
     return updates;
 
+}
+
+const updateStudent = ()=>{
+
+    let updates = checkUpdateStudent();
+    console.log(updates);
+    if(updates===""){
+
+    }
+    else{
+        showCustomModal(updates,'warning');
+    }
 }

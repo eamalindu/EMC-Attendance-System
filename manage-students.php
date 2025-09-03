@@ -130,7 +130,7 @@
         </div>
         <div class="mb-2 d-flex justify-content-between align-items-center ">
             <button class="btn btn-primary w-25" id="btnStudentRegister">Register</button>
-            <button class="btn btn-warning text-white w-25" id="btnStudentUpdate">Update</button>
+            <button class="btn btn-warning text-white w-25" id="btnStudentUpdate" onclick="updateStudent();">Update</button>
         </div>
     </div>
 </div>
