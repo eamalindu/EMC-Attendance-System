@@ -24,5 +24,9 @@ const getStudent= (button)=>{
             console.log(data);
         }
     )
+    //need to lock register button
+    //need to disable or readonly Registration and EID
+
+    //fill data
 
 }
