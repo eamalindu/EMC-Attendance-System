@@ -77,7 +77,7 @@
     <div class="offcanvas-header justify-content-between">
         <div>
         <button type="button" class="btn btn-danger btn-red bg-red rounded-0 btn-sm" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-        <button type="button" class="btn btn-secondary rounded-0 btn-sm"><i class="fa-solid fa-arrows-rotate"></i></button>
+        <button type="button" class="btn btn-secondary rounded-0 btn-sm" id="btnStudentReset"><i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
         <h5 class="offcanvas-title " id="offcanvasExampleLabel">Manage Student Record</h5>
     </div>
@@ -131,7 +131,6 @@
         <div class="mb-2 d-flex justify-content-between align-items-center ">
             <button class="btn btn-primary w-25" id="btnStudentRegister">Register</button>
             <button class="btn btn-warning text-white w-25" id="btnStudentUpdate">Update</button>
-            <button class="btn btn-secondary w-25" id="btnStudentReset">Reset</button>
         </div>
     </div>
 </div>
