@@ -22,7 +22,7 @@
 
     require_once "config.php";
 
-    $sql = "SELECT * FROM student";
+    $sql = "SELECT * FROM student order by reg asc";
     $result = $conn->query($sql);
     $rowIndex = 1;
     if (!$result) {
