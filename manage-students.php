@@ -109,6 +109,19 @@
             <label for="pContact" class="form-label">Parent Contact</label>
             <input type="text" class="form-control rounded-0" id="pContact" placeholder="07X-XXXX-XXXX">
         </div>
+        <div class="mb-3">
+            <label for="sBatch" class="form-label">Student Status</label>
+            <select class="form-select rounded-0" id="sBatch" name="sBatch">
+                <?php
+                echo "<option value='' disabled selected>Select Status</option>";
+                $sql = "SELECT DISTINCT sStatus FROM student order by sStatus asc";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<option value='" . $row['sStatus'] . "'>" . $row['sStatus'] . "</option>";
+                }
+                ?>
+            </select>
+        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
