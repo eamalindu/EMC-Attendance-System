@@ -106,6 +106,10 @@ const updateStudent = ()=>{
                             // Success action
                             showCustomModal('Student Updated Successfully', 'success');
                             //click offcanvas close btn
+                            setTimeout(() => {
+                                location.reload();
+                            }, 3000);
+
 
                         } else {
                             showCustomModal(data, 'error');
