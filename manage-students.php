@@ -123,9 +123,9 @@
             </select>
         </div>
         <div class="mb-3 d-flex justify-content-between align-items-center ">
-            <button class="btn btn-primary" id="btnStudentUpdate">Register</button>
+            <button class="btn btn-primary" id="btnStudentRegister">Register</button>
             <button class="btn btn-warning" id="btnStudentUpdate">Update</button>
-            <button class="btn btn-secondary" id="btnStudentUpdate">Reset</button>
+            <button class="btn btn-secondary" id="btnStudentReset">Reset</button>
         </div>
     </div>
 </div>
