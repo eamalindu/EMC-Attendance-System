@@ -30,11 +30,14 @@ const getStudent= (button)=>{
             sContact.value = data.contact;
             pContact.value = data.pStatus;
             sStatus.value = data.sStatus;
+
+            oldStudent = data;
         }
     )
     //need to lock register button
     btnStudentRegister.classList.add('disabled');
     //need to disable or readonly Registration and EID
-
+    sEID.disabled = true;
+    sREG.disabled = true;
 
 }
