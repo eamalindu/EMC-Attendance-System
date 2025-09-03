@@ -80,6 +80,10 @@
             <label for="sNAme" class="form-label">Student Name</label>
             <input type="text" class="form-control rounded-0" id="sNAme" placeholder="John Doe">
         </div>
+        <div class="mb-3">
+            <label for="sEID" class="form-label">Student EID</label>
+            <input type="text" class="form-control rounded-0" id="sEID" placeholder="EXXXXXX">
+        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
