@@ -88,6 +88,19 @@
             <label for="sREG" class="form-label">Student Registration</label>
             <input type="text" class="form-control rounded-0" id="sREG" placeholder="00XXXX">
         </div>
+        <div class="mb-3">
+            <label for="sBatch" class="form-label">Student Batch</label>
+            <select class="form-select rounded-0" id="sBatch" name="sBatch">
+                <?php
+                echo "<option value='' disabled selected>Select Batch</option>";
+                $sql = "SELECT DISTINCT name FROM batch order by name asc";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($result)) {
+                    echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
+                }
+                ?>
+            </select>
+        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
