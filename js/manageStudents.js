@@ -62,6 +62,9 @@ const checkUpdateStudent = ()=>{
     }
 
     //check parent contact
+    if(oldStudent.pStatus!==pContact.value){
+        updates += "<small>Parent Contact was Updated to <span class='text-primary'>"+pContact.value+"</span></small><br>";
+    }
 
     //check status
 
