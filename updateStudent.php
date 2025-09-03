@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pContact = $_POST['pContact'];
     $status = $_POST['status'];
 
-    $stmt = "UPDATE student SET name= ?, batch= ?, contact =?, pStatus = ?,sStatus = ? WHERE reg = ? ";
+    $stmt = $conn ->prepare("UPDATE student SET name= ?, batch= ?, contact =?, pStatus = ?,sStatus = ? WHERE reg = ? ");
     $stmt -> bind_param("ssssss", $name, $batch, $contact, $pContact, $status, $reg);
     $stmt-> execute();
 
