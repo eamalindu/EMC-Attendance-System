@@ -52,6 +52,9 @@ const checkUpdateStudent = ()=>{
         }
 
     //check batch
+    if(oldStudent.batch !== sBatch.value){
+        updates += "<small>Batch was Updated to <span class='text-primary'>"+sBatch.value+"</span></small><br>";
+    }
 
     //check student contact
 
