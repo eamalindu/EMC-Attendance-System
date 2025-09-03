@@ -74,9 +74,9 @@
 <!--offcanvas-->
 <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="offcanvasExample"
      aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Manage Student Record</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-header justify-content-between">
+        <button type="button" class="btn btn-danger btn-red bg-red rounded-0 btn-sm" data-bs-dismiss="offcanvas" aria-label="Close">X</button>
+        <h5 class="offcanvas-title " id="offcanvasExampleLabel">Manage Student Record</h5>
     </div>
     <div class="offcanvas-body">
         <div class="mb-2">
