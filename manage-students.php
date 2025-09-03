@@ -101,6 +101,14 @@
                 ?>
             </select>
         </div>
+        <div class="mb-3">
+            <label for="sContact" class="form-label">Student Contact</label>
+            <input type="text" class="form-control rounded-0" id="sContact" placeholder="07X-XXXX-XXXX">
+        </div>
+        <div class="mb-3">
+            <label for="pContact" class="form-label">Parent Contact</label>
+            <input type="text" class="form-control rounded-0" id="pContact" placeholder="07X-XXXX-XXXX">
+        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
