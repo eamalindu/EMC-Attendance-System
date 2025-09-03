@@ -34,6 +34,7 @@ const getStudent= (button)=>{
             sStatus.value = data.sStatus;
 
             oldStudent = data;
+            oldStudent.reg = reg;
         }
     )
     //need to lock register button
@@ -88,6 +89,7 @@ const updateStudent = ()=>{
         showCustomConfirm("You are About to Update this Student  <br><br>Following Changes Detected! <br><br>"+updates+"<br>Are You Sure?",function(result){
             if(result){
                 let formData = new FormData();
+                formData.append("reg", );
 
             }
         });
