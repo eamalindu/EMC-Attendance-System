@@ -134,9 +134,9 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
                 ?>
             </select>
         </div>
-        <div class="mb-2 d-flex justify-content-between align-items-center ">
-            <button class="btn btn-primary w-25" id="btnStudentRegister">Register</button>
-            <button class="btn btn-warning text-white w-25" id="btnStudentUpdate" onclick="updateStudent();">Update</button>
+        <div class="mb-2 d-flex justify-content-between align-items-center gap-2">
+            <button class="btn btn-success w-50 btn-sm" id="btnStudentRegister">Register</button>
+            <button class="btn btn-warning w-50 btn-sm text-white" id="btnStudentUpdate" onclick="updateStudent();">Update</button>
         </div>
     </div>
 </div>
