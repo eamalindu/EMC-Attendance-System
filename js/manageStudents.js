@@ -67,7 +67,9 @@ const checkUpdateStudent = ()=>{
     }
 
     //check status
-
+    if(oldStudent.sStatus!==sStatus.value){
+        updates += "<small>Status was Updated to <span class='text-primary'>"+sStatus.value+"</span></small><br>";
+    }
 
     return updates;
 
