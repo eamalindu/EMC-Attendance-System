@@ -76,7 +76,10 @@
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
     <div class="offcanvas-body">
-
+        <div class="mb-3">
+            <label for="sNAme" class="form-label">Student Name</label>
+            <input type="text" class="form-control rounded-0" id="sNAme" placeholder="John Doe">
+        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
