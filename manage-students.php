@@ -122,6 +122,11 @@
                 ?>
             </select>
         </div>
+        <div class="mb-3 d-flex justify-content-between align-items-center ">
+            <button class="btn btn-primary" id="btnStudentUpdate">Register</button>
+            <button class="btn btn-warning" id="btnStudentUpdate">Update</button>
+            <button class="btn btn-secondary" id="btnStudentUpdate">Reset</button>
+        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
