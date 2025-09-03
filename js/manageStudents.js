@@ -69,7 +69,7 @@ const updateStudent = ()=>{
     let updates = checkUpdateStudent();
     console.log(updates);
     if(updates===""){
-        showCustomModal("No Updates Found!","warning");
+        showCustomModal("No Updates Found!","info");
     }
     else{
         showCustomConfirm("You are About to Update this Student  <br><br>Following Changes Detected! <br><br>"+updates+"<br>Are You Sure?",function(result){
