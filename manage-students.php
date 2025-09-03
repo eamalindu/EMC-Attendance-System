@@ -113,8 +113,8 @@
             <input type="text" class="form-control rounded-0" id="pContact" placeholder="07X-XXXX-XXXX">
         </div>
         <div class="mb-4">
-            <label for="sBatch" class="form-label">Student Status</label>
-            <select class="form-select rounded-0" id="sBatch" name="sBatch">
+            <label for="sStatus" class="form-label">Student Status</label>
+            <select class="form-select rounded-0" id="sStatus" name="sStatus">
                 <?php
                 echo "<option value='' disabled selected>Select Status</option>";
                 $sql = "SELECT DISTINCT sStatus FROM student order by sStatus asc";
