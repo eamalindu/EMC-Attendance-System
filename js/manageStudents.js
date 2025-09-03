@@ -48,7 +48,7 @@ const checkUpdateStudent = ()=>{
 
     //check name
         if(oldStudent.name !== sNAme.value){
-            updates += "Student <span class='text-primary'>name</span> Updated!<br>";
+            updates += "<small>name was Updated to <span class='text-primary'>"+sNAme.value+"</span></small><br>";
         }
 
     //check batch
@@ -72,6 +72,8 @@ const updateStudent = ()=>{
 
     }
     else{
-        showCustomModal(updates,'warning');
+        showCustomConfirm("You are About to Update this Student  <br><br>Following Changes Detected! <br><br>"+updates+"<br>Are You Sure?",function(result){
+
+        });
     }
 }
