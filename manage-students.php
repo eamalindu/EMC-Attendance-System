@@ -55,10 +55,10 @@
             echo "<td>" . $row['eid'] . "</td>";
             echo "<td>" . $row['batch'] . "</td>";
             echo "<td class='text-center'>0" . $row['contact'] . "</td>";
-            echo "<td class='text-center'>0".$row["pStatus"]."</td>";
-            echo "<td class='text-center'>".$row["sStatus"]."</td>";
-            echo "<td><button class='btn btn-success btn-sm' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasExample' aria-controls='offcanvasExample' onclick='getStudent(this)' data-reg='".htmlspecialchars($row['reg'])."'><i class='fa-solid fa-eye'></i></button>
-                  <button class='btn btn-outline-danger btn-sm' onclick='deleteStudent(this)' data-reg='".htmlspecialchars($row['reg'])."'><i class='fa-solid fa-trash'></i></button>
+            echo "<td class='text-center'>0" . $row["pStatus"] . "</td>";
+            echo "<td class='text-center'>" . $row["sStatus"] . "</td>";
+            echo "<td><button class='btn btn-success btn-sm' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasExample' aria-controls='offcanvasExample' onclick='getStudent(this)' data-reg='" . htmlspecialchars($row['reg']) . "'><i class='fa-solid fa-eye'></i></button>
+                  <button class='btn btn-outline-danger btn-sm' onclick='deleteStudent(this)' data-reg='" . htmlspecialchars($row['reg']) . "'><i class='fa-solid fa-trash'></i></button>
                     </td>";
             $rowIndex++;
 
@@ -66,11 +66,14 @@
         echo "</tbody></table>";
     }
     ?>
-    <button class="btn btn-secondary mt-4 mx-auto d-block"><a href="dashboard.php" class="text-white text-decoration-none">Back To Dashboard</a></button>
+    <button class="btn btn-secondary mt-4 mx-auto d-block"><a href="dashboard.php"
+                                                              class="text-white text-decoration-none">Back To
+            Dashboard</a></button>
 </div>
 
 <!--offcanvas-->
-<div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="offcanvasExample"
+     aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasExampleLabel">Manage Student Record</h5>
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
