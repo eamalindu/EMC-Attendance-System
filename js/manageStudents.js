@@ -14,7 +14,7 @@ const deleteStudent = (button) => {
         if (result) {
             let formData = new FormData();
             formData.append("reg",reg);
-            fetch("deleteStudent", {
+            fetch("deleteStudent.php", {
                 method: "POST",
                 body:formData
             })
