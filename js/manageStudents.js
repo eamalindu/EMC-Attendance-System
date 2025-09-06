@@ -28,6 +28,7 @@ const deleteStudent = (button) => {
                     }, 3000);
                 }
                 else{
+                    tr.classList.remove("table-danger");
                     showCustomModal(data, 'error');
                 }
             })
