@@ -12,7 +12,25 @@ const deleteStudent = (button) => {
 
     showCustomConfirm("You Are about to delete this student <br><br>Reg Number: <span class='text-primary'>00" + reg + "</span><br><br>All the records realted to this<br>student will be <strong>deleted</strong><br><br>Are You Sure?", function (result) {
         if (result) {
+            let formData = new FormData();
+            formData.append("reg",reg);
+            fetch("deleteStudent", {
+                method: "POST",
+                body:formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                if (data === "OK") {
+                    showCustomModal('Student Deleted Successfully', 'success');
 
+                    setTimeout(() => {
+                        location.reload();
+                    }, 3000);
+                }
+                else{
+                    showCustomModal(data, 'error');
+                }
+            })
         }
         else{
             tr.classList.remove("table-danger");
