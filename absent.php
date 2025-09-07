@@ -36,15 +36,15 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
                 <select class="form-select w-50 ms-2" id="batch" name="batch">
                     <?php
                     require_once("config.php");
-                    $sql = "SELECT DISTINCT batch FROM student order by batch asc";
+                    $sql = "SELECT DISTINCT name FROM batch order by name asc";
                     $result = mysqli_query($conn, $sql);
                     echo "<option value='' disabled selected>Select Batch</option>";
                     while ($row = mysqli_fetch_assoc($result)) {
 
-                        if (isset($_GET) && $_GET['batch'] == $row['batch']) {
-                            echo "<option value='" . $row['batch'] . "' selected>" . $row['batch'] . "</option>";
+                        if (isset($_GET) && $_GET['batch'] == $row['name']) {
+                            echo "<option value='" . $row['name'] . "' selected>" . $row['name'] . "</option>";
                         } else {
-                            echo "<option value='" . $row['batch'] . "'>" . $row['batch'] . "</option>";
+                            echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
                         }
                     }
 
