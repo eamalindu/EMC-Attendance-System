@@ -62,7 +62,12 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
             echo "<td>" . $row['batch'] . "</td>";
             echo "<td class='text-center'>0" . $row['contact'] . "</td>";
             echo "<td class='text-center'>0" . $row["pStatus"] . "</td>";
-            echo "<td class='text-center'>" . $row["sStatus"] . "</td>";
+            if($row["sStatus"] == "Deleted"){
+               echo "<td class='text-center text-danger fw-bold'>" . $row["sStatus"] . "</td>";
+            }
+            else {
+                echo "<td class='text-center'>" . $row["sStatus"] . "</td>";
+            }
             echo "<td><button class='btn btn-success btn-sm' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasExample' aria-controls='offcanvasExample' onclick='getStudent(this)' data-reg='" . htmlspecialchars($row['reg']) . "'><i class='fa-solid fa-eye'></i></button>
                   <button class='btn btn-outline-danger btn-sm' onclick='deleteStudent(this)' data-reg='" . htmlspecialchars($row['reg']) . "'><i class='fa-solid fa-trash'></i></button>
                     </td>";
