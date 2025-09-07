@@ -8,14 +8,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $reg = $_POST['reg'];
 
     if ($loggedInUser == "admin") {
-        echo "Service Not implemented";
-
         $stmt = $conn->prepare("UPDATE student SET sStatus = 'Deleted' WHERE reg = ?");
         $stmt->bind_param("s", $reg);
         if ($stmt->execute()) {
             echo "OK";
-        }
-        else{
+        } else {
             echo "failed: " . $stmt->error;
         }
     } else {
