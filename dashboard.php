@@ -186,20 +186,19 @@ require_once "config.php";
             </div>
             <div class="row mt-3">
                 <div class="col-lg-4 col-12 mb-3 mb-lg-0">
-                    <a aria-controls="offcanvasRight" aria-current="page" class="text-decoration-none"
-                       data-bs-target="#offCanvasInquiry" data-bs-toggle="offcanvas">
+                    <a href="absent.php" class="text-decoration-none">
                         <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-blue">
                             <div class="row h-100">
                                 <div class="col-3 d-flex align-items-center justify-content-center">
                                     <div class="d-flex align-items-center justify-content-center"
                                          style="border-radius: 50%;height: 60px;width: 60px;background: #c1eaff">
-                                        <i aria-hidden="true" class="fa-solid fa-upload"
+                                        <i aria-hidden="true" class="fa-solid fa-user-xmark"
                                            style="color:#1e7bc7;font-size: 25px"></i>
                                     </div>
                                 </div>
                                 <div class="col-9 lh-1 d-flex align-items-center justify-content-center">
                                     <div class="lh-1">
-                                        <span class="text-uppercase">Upload New Batch Details</span>
+                                        <span class="text-uppercase">Absent Report</span>
                                     </div>
                                 </div>
                             </div>
