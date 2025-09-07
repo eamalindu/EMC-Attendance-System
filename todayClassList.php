@@ -1,6 +1,6 @@
 <?php
 require_once "config.php"; // your DB connection
-
+date_default_timezone_set('Asia/Colombo');
 $today = strtolower(date('l')); // 'monday', 'tuesday', etc.
 $todayDate = date('Y-m-d');     // today's date
 
