@@ -152,7 +152,7 @@ const updateStudent = ()=>{
 }
 
 const refreshStudent = ()=>{
-    showCustomConfirm("You are About to Update this Student  <br><br>Following Changes Detected! <br><br>"+updates+"<br>Are You Sure?",function(result) {
+    showCustomConfirm("You are About to <br>Reload this Student's Data<br><br>Are You Sure?",function(result) {
         if (result) {
 
         }
