@@ -88,7 +88,7 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
     <div class="offcanvas-header justify-content-between">
         <div>
         <button type="button" class="btn btn-danger btn-red bg-red rounded-0 btn-sm" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-        <button type="button" class="btn btn-secondary rounded-0 btn-sm" id="btnStudentReset"><i class="fa-solid fa-arrows-rotate"></i></button>
+        <button type="button" class="btn btn-secondary rounded-0 btn-sm" id="btnStudentReset" onclick="refreshStudent()"><i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
         <h5 class="offcanvas-title " id="offcanvasExampleLabel">Manage Student Record</h5>
     </div>
