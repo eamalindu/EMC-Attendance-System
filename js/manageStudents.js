@@ -154,6 +154,13 @@ const updateStudent = ()=>{
 const refreshStudent = ()=>{
     showCustomConfirm("You are About to <br>Reload this Student's Data<br><br>Are You Sure?",function(result) {
         if (result) {
+            sNAme.value = oldStudent.name;
+            sEID.value = oldStudent.eid;
+            sREG.value = oldStudent.reg;
+            sBatch.value = oldStudent.batch;
+            sContact.value = oldStudent.contact;
+            pContact.value = oldStudent.pStatus;
+            sStatus.value = oldStudent.sStatus;
 
         }
     });
