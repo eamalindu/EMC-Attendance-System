@@ -93,5 +93,6 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
         crossorigin="anonymous"></script>
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script src="js/loader.js"></script>
+<script src="js/manageBatches.js"></script>
 </body>
 </html>
