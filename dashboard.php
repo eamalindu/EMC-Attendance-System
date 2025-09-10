@@ -228,8 +228,7 @@ require_once "config.php";
                     </a>
                 </div>
                 <div class="col-lg-4 col-12">
-                    <a aria-controls="offcanvasRight" aria-current="page" class="text-decoration-none"
-                       data-bs-target="#offCanvasInquiry" data-bs-toggle="offcanvas">
+                    <a class="text-decoration-none" href="manage-batches.php">
                         <div class="card card-body rounded-0 h-100 pointer text-muted dashboard-widget-orange">
                             <div class="row h-100">
                                 <div class="col-3 d-flex align-items-center justify-content-center">
