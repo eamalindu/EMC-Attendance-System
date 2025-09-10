@@ -61,13 +61,13 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
             echo "<tr class='text-center'>";
             echo "<td>" . $rowIndex . "</td>";
             echo "<td>" . $row["name"]."</td>";
-            echo "<td>" . ($row["monday"] == 1 ? "✅" : "❌") . "</td>";
-            echo "<td>" . ($row["tuesday"] == 1 ? "✅" : "❌") . "</td>";
-            echo "<td>" . ($row["wednesday"] == 1 ? "✅" : "❌") . "</td>";
-            echo "<td>" . ($row["thursday"] == 1 ? "✅" : "❌") . "</td>";
-            echo "<td>" . ($row["friday"] == 1 ? "✅" : "❌") . "</td>";
-            echo "<td>" . ($row["saturday"] == 1 ? "✅" : "❌") . "</td>";
-            echo "<td>" . ($row["sunday"] == 1 ? "✅" : "❌") . "</td>";
+            echo "<td>" . ($row["monday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
+            echo "<td>" . ($row["tuesday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
+            echo "<td>" . ($row["wednesday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
+            echo "<td>" . ($row["thursday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
+            echo "<td>" . ($row["friday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
+            echo "<td>" . ($row["saturday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
+            echo "<td>" . ($row["sunday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
             echo "<td class='text-center'>" . substr($row['startTime'],0,5) . "</td>";
             echo "<td class='text-center'>" . substr($row['endTime'],0,5) . "</td>";
             echo "<td><button class='btn btn-success btn-sm' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasExample' aria-controls='offcanvasExample' onclick='getStudent(this)' data-reg='" . htmlspecialchars($row['name']) . "'><i class='fa-solid fa-eye'></i></button>
