@@ -89,14 +89,14 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
     <div class="offcanvas-header justify-content-between">
         <div>
             <button type="button" class="btn btn-danger btn-red bg-red rounded-0 btn-sm" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-            <button type="button" class="btn btn-secondary rounded-0 btn-sm" id="btnStudentReset" onclick="refreshStudent()"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button type="button" class="btn btn-secondary rounded-0 btn-sm" id="btnStudentReset" onclick="refreshBatch()"><i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
-        <h5 class="offcanvas-title " id="offcanvasExampleLabel">Manage Student Record</h5>
+        <h5 class="offcanvas-title " id="offcanvasExampleLabel">Manage Batch Record</h5>
     </div>
     <div class="offcanvas-body">
         <div class="mb-2">
-            <label for="sNAme" class="form-label">Student Name</label>
-            <input type="text" class="form-control rounded-0" id="sNAme" placeholder="John Doe">
+            <label for="sNAme" class="form-label">Batch Name</label>
+            <input type="text" class="form-control rounded-0" id="sNAme" placeholder="L3-DIIT-01">
         </div>
         <div class="mb-2">
             <label for="sEID" class="form-label">Student EID</label>
