@@ -113,9 +113,30 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
                 </div>
             </div>
             <div class="mb-2">
-                <label for="bMonday" class="form-label">Tuesday</label>
+                <label for="bTuesday" class="form-label">Tuesday</label>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="bTuesday">
+                    <label class="form-check-label" for="switchCheckDefault">Yes</label>
+                </div>
+            </div>
+            <div class="mb-2">
+                <label for="bWednesday" class="form-label">Wednesday</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="bWednesday">
+                    <label class="form-check-label" for="switchCheckDefault">Yes</label>
+                </div>
+            </div>
+            <div class="mb-2">
+                <label for="bThursday" class="form-label">Thursday</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="bThursday">
+                    <label class="form-check-label" for="switchCheckDefault">Yes</label>
+                </div>
+            </div>
+            <div class="mb-2">
+                <label for="bFriday" class="form-label">Friday</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="bFriday">
                     <label class="form-check-label" for="switchCheckDefault">Yes</label>
                 </div>
             </div>
