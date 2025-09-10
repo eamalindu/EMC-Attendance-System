@@ -42,7 +42,7 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
             <thead class='text-center'>
                 <tr class='text-center'>
                     <th class='text-center'>#</th>
-                    <th class='text-center'>Name</th>
+                    <th class='text-center text-nowrap'>Name</th>
                     <th class='text-center'>Monday</th>
                     <th class='text-center'>Tuesday</th>
                     <th class='text-center'>Wednesday</th>
@@ -50,8 +50,8 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
                     <th class='text-center'>Friday</th>
                     <th class='text-center'> Saturday</th>
                     <th class='text-center'> Sunday</th>
-                    <th class='text-center'> Start Time</th>
-                    <th class='text-center'> End Time</th>
+                    <th class='text-center text-nowrap'> Start Time</th>
+                    <th class='text-center text-nowrap'> End Time</th>
                     <th class='text-center'>Action</th>
                 </tr>
             </thead>
@@ -60,7 +60,7 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
         while ($row = $result->fetch_assoc()) {
             echo "<tr class='text-center'>";
             echo "<td>" . $rowIndex . "</td>";
-            echo "<td>" . $row["name"]."</td>";
+            echo "<td class='text-nowrap'>" . $row["name"]."</td>";
             echo "<td>" . ($row["monday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
             echo "<td>" . ($row["tuesday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
             echo "<td>" . ($row["wednesday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
