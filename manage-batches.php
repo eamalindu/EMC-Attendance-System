@@ -26,6 +26,8 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
 <div class="container p-5">
     <h2 class="mb-3">Manage Batches</h2>
 
+
+    <button class="btn btn-secondary mt-4 mx-auto d-block"><a href="dashboard.php" class="text-white text-decoration-none">Back To Dashboard</a></button>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"
