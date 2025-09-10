@@ -1,5 +1,6 @@
 window.addEventListener('DOMContentLoaded', () => {
     new DataTable('#tle');
+    newBatch = {};
 });
 
 
@@ -76,10 +77,48 @@ const completeBatch = () => {
 
 const updateBatch = () => {
 
+    let updates = checkUpdateBatch();
+    console.log(updates);
+    if(updates===""){
+        showCustomModal("No Updates Found!","info");
+    }
+    else {
+        showCustomConfirm("You are About to Update this Batch  <br><br>Following Changes Detected! <br><br>" + updates + "<br>Are You Sure?", function (result) {
+            if (result) {
+
+            }
+        });
+    }
+
+
 }
 
 const checkUpdateBatch = () => {
     let updates = "";
 
+    let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 
-}
+    days.forEach(day => {
+        test(day); // update newBatch values
+
+        // compare with oldBatch
+        if (oldBatch[day.toLowerCase()] !== newBatch[day.toLowerCase()]) {
+            if (newBatch[day.toLowerCase()] === "1") {
+                updates += day + " Added<br>";
+            } else {
+                updates += day + " Removed<br>";
+            }
+        }
+    });
+
+    return updates;
+};
+
+const test = (day) => {
+    let element = document.getElementById("b" + day);
+    if (element && element.checked) {
+        newBatch[day.toLowerCase()] = "1";
+    } else {
+        newBatch[day.toLowerCase()] = "0";
+    }
+};
