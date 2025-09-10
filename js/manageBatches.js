@@ -6,3 +6,7 @@ window.addEventListener('DOMContentLoaded', () => {
 const refreshBatch = ()=>{
 
 }
+
+const getBatch = ()=>{
+
+}
