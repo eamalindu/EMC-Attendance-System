@@ -25,7 +25,59 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
 </div>
 <div class="container p-5">
     <h2 class="mb-3">Manage Batches</h2>
+    <?php
 
+    require_once "config.php";
+
+    $sql = "SELECT * FROM batch order by name asc";
+    $result = $conn->query($sql);
+    $rowIndex = 1;
+    if (!$result) {
+        echo "SQL Error: " . $conn->error;
+        exit;
+    }
+
+    if ($result->num_rows > 0) {
+        echo "<table id='tle' class='table w-100 table-bordered table-striped text-center'>
+            <thead class='text-center'>
+                <tr class='text-center'>
+                    <th class='text-center'>#</th>
+                    <th class='text-center'>Name</th>
+                    <th class='text-center'>Reg</th>
+                    <th class='text-center'>EID</th>
+                    <th class='text-center'>Batch</th>
+                    <th class='text-center'>Contact</th>
+                    <th class='text-center'>Parent Contact</th>
+                    <th class='text-center'> Status</th>
+                    <th class='text-center'>Action</th>
+                </tr>
+            </thead>
+            <tbody>";
+
+        while ($row = $result->fetch_assoc()) {
+            echo "<tr class='text-center'>";
+            echo "<td>" . $rowIndex . "</td>";
+            echo "<td>" . $row["name"] . "</td>";
+            echo "<td>" . $row["reg"] . "</td>";
+            echo "<td>" . $row['eid'] . "</td>";
+            echo "<td>" . $row['batch'] . "</td>";
+            echo "<td class='text-center'>0" . $row['contact'] . "</td>";
+            echo "<td class='text-center'>0" . $row["pStatus"] . "</td>";
+            if($row["sStatus"] == "Deleted"){
+                echo "<td class='text-center text-danger fw-bold'>" . $row["sStatus"] . "</td>";
+            }
+            else {
+                echo "<td class='text-center'>" . $row["sStatus"] . "</td>";
+            }
+            echo "<td><button class='btn btn-success btn-sm' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasExample' aria-controls='offcanvasExample' onclick='getStudent(this)' data-reg='" . htmlspecialchars($row['reg']) . "'><i class='fa-solid fa-eye'></i></button>
+                  <button class='btn btn-outline-danger btn-sm' onclick='deleteStudent(this)' data-reg='" . htmlspecialchars($row['reg']) . "'><i class='fa-solid fa-trash'></i></button>
+                    </td>";
+            $rowIndex++;
+
+        }
+        echo "</tbody></table>";
+    }
+    ?>
 
     <button class="btn btn-secondary mt-4 mx-auto d-block"><a href="dashboard.php" class="text-white text-decoration-none">Back To Dashboard</a></button>
 </div>
