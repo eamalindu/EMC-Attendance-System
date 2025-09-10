@@ -16,6 +16,12 @@ const getBatch = (button)=>{
         .then(
             data=> {
                 console.log(data);
+                oldBatch = data;
+
+                bNAme.value = data.name;
+                bStartTime.value = data.startTime;
+                bEndTime.value = data.endTime;
+
             })
 }
 
