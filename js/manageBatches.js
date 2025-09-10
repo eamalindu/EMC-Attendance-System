@@ -10,3 +10,11 @@ const refreshBatch = ()=>{
 const getBatch = ()=>{
 
 }
+
+const completeBatch = ()=>{
+
+}
+
+const updateBatch = ()=>{
+
+}

@@ -71,7 +71,7 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
             echo "<td class='text-center'>" . substr($row['startTime'],0,5) . "</td>";
             echo "<td class='text-center'>" . substr($row['endTime'],0,5) . "</td>";
             echo "<td><button class='btn btn-success btn-sm' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasExample' aria-controls='offcanvasExample' onclick='getBatch(this)' data-reg='" . htmlspecialchars($row['name']) . "'><i class='fa-solid fa-eye'></i></button>
-                  <button class='btn btn-outline-danger btn-sm' onclick='deleteStudent(this)' data-reg='" . htmlspecialchars($row['name']) . "'><i class='fa-solid fa-trash'></i></button>
+                  <button class='btn btn-outline-danger btn-sm' onclick='completeBatch(this)' data-reg='" . htmlspecialchars($row['name']) . "'><i class='fa-solid fa-trash'></i></button>
                     </td>";
             $rowIndex++;
 
@@ -142,7 +142,7 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
         </div>
         <div class="mb-2 d-flex justify-content-between align-items-center gap-2">
             <button class="btn btn-success w-50 btn-sm" id="btnStudentRegister">Register</button>
-            <button class="btn btn-warning w-50 btn-sm text-white" id="btnStudentUpdate" onclick="updateStudent();">Update</button>
+            <button class="btn btn-warning w-50 btn-sm text-white" id="btnStudentUpdate" onclick="updateBatch();">Update</button>
         </div>
     </div>
 </div>
