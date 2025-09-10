@@ -234,14 +234,14 @@ require_once "config.php";
                             <div class="row h-100">
                                 <div class="col-3 d-flex align-items-center justify-content-center">
                                     <div class="d-flex align-items-center justify-content-center"
-                                         style="border-radius: 50%;height: 60px;width: 60px;background: #ffddc1">
-                                        <i aria-hidden="true" class="fa-solid fa-comment-sms"
-                                           style="color:orange;font-size: 25px"></i>
+                                         style="border-radius: 50%;height: 60px;width: 60px;background: #ffe2c1">
+                                        <i aria-hidden="true" class="fa-solid fa-users-between-lines"
+                                           style="color:#ff8000;font-size: 25px"></i>
                                     </div>
                                 </div>
                                 <div class="col-9 lh-1 d-flex align-items-center justify-content-center">
                                     <div class="lh-1">
-                                        <span class="text-uppercase">SMS Portal</span>
+                                        <span class="text-uppercase">Manage Batches</span>
                                     </div>
                                 </div>
                             </div>
