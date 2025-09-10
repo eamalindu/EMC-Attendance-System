@@ -140,6 +140,20 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
                     <label class="form-check-label" for="switchCheckDefault">Yes</label>
                 </div>
             </div>
+            <div class="mb-2">
+                <label for="bSaturday" class="form-label">Saturday</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="bSaturday">
+                    <label class="form-check-label" for="switchCheckDefault">Yes</label>
+                </div>
+            </div>
+            <div class="mb-2">
+                <label for="bSunday" class="form-label">Sunday</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="bSunday">
+                    <label class="form-check-label" for="switchCheckDefault">Yes</label>
+                </div>
+            </div>
         </fieldset>
         <div class="mb-2 d-flex justify-content-between align-items-center gap-2">
             <button class="btn btn-success w-50 btn-sm" id="btnStudentRegister">Register</button>
