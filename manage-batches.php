@@ -43,12 +43,15 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
                 <tr class='text-center'>
                     <th class='text-center'>#</th>
                     <th class='text-center'>Name</th>
-                    <th class='text-center'>Reg</th>
-                    <th class='text-center'>EID</th>
-                    <th class='text-center'>Batch</th>
-                    <th class='text-center'>Contact</th>
-                    <th class='text-center'>Parent Contact</th>
-                    <th class='text-center'> Status</th>
+                    <th class='text-center'>Monday</th>
+                    <th class='text-center'>Tuesday</th>
+                    <th class='text-center'>Wednesday</th>
+                    <th class='text-center'>Thursday</th>
+                    <th class='text-center'>Friday</th>
+                    <th class='text-center'> Saturday</th>
+                    <th class='text-center'> Sunday</th>
+                    <th class='text-center'> Start Time</th>
+                    <th class='text-center'> End Time</th>
                     <th class='text-center'>Action</th>
                 </tr>
             </thead>
@@ -57,20 +60,18 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
         while ($row = $result->fetch_assoc()) {
             echo "<tr class='text-center'>";
             echo "<td>" . $rowIndex . "</td>";
-            echo "<td>" . $row["name"] . "</td>";
-            echo "<td>" . $row["reg"] . "</td>";
-            echo "<td>" . $row['eid'] . "</td>";
-            echo "<td>" . $row['batch'] . "</td>";
-            echo "<td class='text-center'>0" . $row['contact'] . "</td>";
-            echo "<td class='text-center'>0" . $row["pStatus"] . "</td>";
-            if($row["sStatus"] == "Deleted"){
-                echo "<td class='text-center text-danger fw-bold'>" . $row["sStatus"] . "</td>";
-            }
-            else {
-                echo "<td class='text-center'>" . $row["sStatus"] . "</td>";
-            }
-            echo "<td><button class='btn btn-success btn-sm' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasExample' aria-controls='offcanvasExample' onclick='getStudent(this)' data-reg='" . htmlspecialchars($row['reg']) . "'><i class='fa-solid fa-eye'></i></button>
-                  <button class='btn btn-outline-danger btn-sm' onclick='deleteStudent(this)' data-reg='" . htmlspecialchars($row['reg']) . "'><i class='fa-solid fa-trash'></i></button>
+            echo "<td>" . $row["name"]."</td>";
+            echo "<td>" . ($row["monday"] == 1 ? "✅" : "❌") . "</td>";
+            echo "<td>" . ($row["tuesday"] == 1 ? "✅" : "❌") . "</td>";
+            echo "<td>" . ($row["wednesday"] == 1 ? "✅" : "❌") . "</td>";
+            echo "<td>" . ($row["thursday"] == 1 ? "✅" : "❌") . "</td>";
+            echo "<td>" . ($row["friday"] == 1 ? "✅" : "❌") . "</td>";
+            echo "<td>" . ($row["saturday"] == 1 ? "✅" : "❌") . "</td>";
+            echo "<td>" . ($row["sunday"] == 1 ? "✅" : "❌") . "</td>";
+            echo "<td class='text-center'>" . substr($row['startTime'],0,5) . "</td>";
+            echo "<td class='text-center'>" . substr($row['endTime'],0,5) . "</td>";
+            echo "<td><button class='btn btn-success btn-sm' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasExample' aria-controls='offcanvasExample' onclick='getStudent(this)' data-reg='" . htmlspecialchars($row['name']) . "'><i class='fa-solid fa-eye'></i></button>
+                  <button class='btn btn-outline-danger btn-sm' onclick='deleteStudent(this)' data-reg='" . htmlspecialchars($row['name']) . "'><i class='fa-solid fa-trash'></i></button>
                     </td>";
             $rowIndex++;
 
