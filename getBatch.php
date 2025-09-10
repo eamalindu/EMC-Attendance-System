@@ -16,13 +16,13 @@ if (isset($_GET['batch'])) {
         if ($result->num_rows > 0) {
             echo json_encode($result->fetch_assoc());
         } else {
-            echo json_encode(["error" => "No student found"]);
+            echo json_encode(["error" => "No batch found"]);
         }
     } else {
         echo json_encode(["error" => "SQL error: " . $conn->error]);
     }
 } else {
-    echo json_encode(["error" => "Missing student reg"]);
+    echo json_encode(["error" => "Missing batch name"]);
 }
 
 $conn->close();
