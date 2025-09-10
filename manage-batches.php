@@ -164,7 +164,7 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
             <input type="time" class="form-control rounded-0" id="bEndTime" placeholder="L3-DIIT-01">
         </div>
         <div class="mb-2 d-flex justify-content-between align-items-center gap-2">
-            <button class="btn btn-success w-50 btn-sm" id="btnStudentRegister">Register</button>
+            <button class="btn btn-success w-50 btn-sm" id="btnStudentRegister">Add New Batch</button>
             <button class="btn btn-warning w-50 btn-sm text-white" id="btnStudentUpdate" onclick="updateBatch();">
                 Update
             </button>
