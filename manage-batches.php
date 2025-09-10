@@ -60,7 +60,7 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
         while ($row = $result->fetch_assoc()) {
             echo "<tr class='text-center'>";
             echo "<td>" . $rowIndex . "</td>";
-            echo "<td class='text-nowrap'>" . $row["name"]."</td>";
+            echo "<td class='text-nowrap'>" . $row["name"] . "</td>";
             echo "<td>" . ($row["monday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
             echo "<td>" . ($row["tuesday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
             echo "<td>" . ($row["wednesday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
@@ -68,8 +68,8 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
             echo "<td>" . ($row["friday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
             echo "<td>" . ($row["saturday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
             echo "<td>" . ($row["sunday"] == 1 ? "<i class='fa-solid fa-circle-check text-success'></i>" : "<i class='fa-solid fa-circle-xmark text-danger'></i>") . "</td>";
-            echo "<td class='text-center'>" . substr($row['startTime'],0,5) . "</td>";
-            echo "<td class='text-center'>" . substr($row['endTime'],0,5) . "</td>";
+            echo "<td class='text-center'>" . substr($row['startTime'], 0, 5) . "</td>";
+            echo "<td class='text-center'>" . substr($row['endTime'], 0, 5) . "</td>";
             echo "<td><button class='btn btn-success btn-sm' type='button' data-bs-toggle='offcanvas' data-bs-target='#offcanvasExample' aria-controls='offcanvasExample' onclick='getBatch(this)' data-reg='" . htmlspecialchars($row['name']) . "'><i class='fa-solid fa-eye'></i></button>
                   <button class='btn btn-outline-danger btn-sm' onclick='completeBatch(this)' data-reg='" . htmlspecialchars($row['name']) . "'><i class='fa-solid fa-trash'></i></button>
                     </td>";
@@ -80,7 +80,9 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
     }
     ?>
 
-    <button class="btn btn-secondary mt-4 mx-auto d-block"><a href="dashboard.php" class="text-white text-decoration-none">Back To Dashboard</a></button>
+    <button class="btn btn-secondary mt-4 mx-auto d-block"><a href="dashboard.php"
+                                                              class="text-white text-decoration-none">Back To
+            Dashboard</a></button>
 </div>
 
 <!--offcanvas-->
@@ -88,61 +90,41 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
      aria-labelledby="offcanvasExampleLabel">
     <div class="offcanvas-header justify-content-between">
         <div>
-            <button type="button" class="btn btn-danger btn-red bg-red rounded-0 btn-sm" data-bs-dismiss="offcanvas" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
-            <button type="button" class="btn btn-secondary rounded-0 btn-sm" id="btnStudentReset" onclick="refreshBatch()"><i class="fa-solid fa-arrows-rotate"></i></button>
+            <button type="button" class="btn btn-danger btn-red bg-red rounded-0 btn-sm" data-bs-dismiss="offcanvas"
+                    aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+            <button type="button" class="btn btn-secondary rounded-0 btn-sm" id="btnStudentReset"
+                    onclick="refreshBatch()"><i class="fa-solid fa-arrows-rotate"></i></button>
         </div>
         <h5 class="offcanvas-title " id="offcanvasExampleLabel">Manage Batch Record</h5>
     </div>
     <div class="offcanvas-body">
         <div class="mb-2">
-            <label for="sNAme" class="form-label">Batch Name</label>
-            <input type="text" class="form-control rounded-0" id="sNAme" placeholder="L3-DIIT-01">
+            <label for="bNAme" class="form-label">Batch Name</label>
+            <input type="text" class="form-control rounded-0" id="bNAme" placeholder="L3-DIIT-01">
         </div>
-        <div class="mb-2">
-            <label for="sEID" class="form-label">Student EID</label>
-            <input type="text" class="form-control rounded-0" id="sEID" placeholder="EXXXXXX">
-        </div>
-        <div class="mb-2">
-            <label for="sREG" class="form-label">Student Registration</label>
-            <input type="text" class="form-control rounded-0" id="sREG" placeholder="00XXXX">
-        </div>
-        <div class="mb-2">
-            <label for="sBatch" class="form-label">Student Batch</label>
-            <select class="form-select rounded-0" id="sBatch" name="sBatch">
-                <?php
-                echo "<option value='' disabled selected>Select Batch</option>";
-                $sql = "SELECT DISTINCT name FROM batch order by name asc";
-                $result = mysqli_query($conn, $sql);
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<option value='" . $row['name'] . "'>" . $row['name'] . "</option>";
-                }
-                ?>
-            </select>
-        </div>
-        <div class="mb-2">
-            <label for="sContact" class="form-label">Student Contact</label>
-            <input type="text" class="form-control rounded-0" id="sContact" placeholder="07X-XXXX-XXXX">
-        </div>
-        <div class="mb-2">
-            <label for="pContact" class="form-label">Parent Contact</label>
-            <input type="text" class="form-control rounded-0" id="pContact" placeholder="07X-XXXX-XXXX">
-        </div>
-        <div class="mb-4">
-            <label for="sStatus" class="form-label">Student Status</label>
-            <select class="form-select rounded-0" id="sStatus" name="sStatus">
-                <?php
-                echo "<option value='' disabled selected>Select Status</option>";
-                $sql = "SELECT DISTINCT sStatus FROM student order by sStatus asc";
-                $result = mysqli_query($conn, $sql);
-                while ($row = mysqli_fetch_assoc($result)) {
-                    echo "<option value='" . $row['sStatus'] . "'>" . $row['sStatus'] . "</option>";
-                }
-                ?>
-            </select>
-        </div>
+        <label class="form-label">Class Schedule</label>
+        <fieldset class="border p-2 mb-2">
+
+            <div class="mb-2">
+                <label for="bMonday" class="form-label">Monday</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="bMonday">
+                    <label class="form-check-label" for="switchCheckDefault">Yes</label>
+                </div>
+            </div>
+            <div class="mb-2">
+                <label for="bMonday" class="form-label">Tuesday</label>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" role="switch" id="bTuesday">
+                    <label class="form-check-label" for="switchCheckDefault">Yes</label>
+                </div>
+            </div>
+        </fieldset>
         <div class="mb-2 d-flex justify-content-between align-items-center gap-2">
             <button class="btn btn-success w-50 btn-sm" id="btnStudentRegister">Register</button>
-            <button class="btn btn-warning w-50 btn-sm text-white" id="btnStudentUpdate" onclick="updateBatch();">Update</button>
+            <button class="btn btn-warning w-50 btn-sm text-white" id="btnStudentUpdate" onclick="updateBatch();">
+                Update
+            </button>
         </div>
     </div>
 </div>
