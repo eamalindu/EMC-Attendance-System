@@ -9,7 +9,7 @@ const refreshBatch = ()=>{
 
 const getBatch = (button)=>{
     let batchName = button.getAttribute("data-reg");
-    fetch(`getBatch.php?reg=${encodeURIComponent(batchName)}`, {
+    fetch(`getBatch.php?batch=${encodeURIComponent(batchName)}`, {
         method: 'GET', headers: {'Accept': 'application/json'}
     })
         .then(response => response.json())
