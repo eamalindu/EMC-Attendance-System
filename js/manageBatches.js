@@ -18,6 +18,7 @@ const getBatch = (button) => {
             oldBatch = data;
 
             bNAme.value = data.name;
+            bNAme.disabled = true;
             bStartTime.value = data.startTime;
             bEndTime.value = data.endTime;
 
@@ -65,6 +66,8 @@ const getBatch = (button) => {
             }
 
         })
+    //need to lock register button
+    btnStudentRegister.classList.add('disabled');
 }
 
 const completeBatch = () => {
