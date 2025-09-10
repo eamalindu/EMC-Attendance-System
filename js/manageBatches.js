@@ -52,7 +52,7 @@ const getBatch = (button) => {
                 bFriday.checked = false;
             }
 
-            if (data.staurday === "1") {
+            if (data.saturday === "1") {
                 bSaturday.checked = true;
             } else {
                 bSaturday.checked = false;
