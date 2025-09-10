@@ -77,3 +77,9 @@ const completeBatch = () => {
 const updateBatch = () => {
 
 }
+
+const checkUpdateBatch = () => {
+    let updates = "";
+
+
+}
