@@ -25,8 +25,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($result->num_rows == 1) {
         $_SESSION['loggedIn'] = true;
         $_SESSION['username'] = $username;
-        header("Location: dashboard.php");
-        exit;
+
+        $stmt_log = $conn->prepare("INSERT INTO log (user,description,created) VALUES (?,?,NOW())");
+        $log = "User Logged In ";
+        $stmt_log->bind_param("ss", $username, $log);
+        if ($stmt_log->execute()) {
+            header("Location: dashboard.php");
+            exit;
+        }
+
     } else {
         $_SESSION['loggedIn'] = false;
 
