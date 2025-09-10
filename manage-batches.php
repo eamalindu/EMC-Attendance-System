@@ -106,49 +106,49 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
         <fieldset class="border p-2 mb-2">
 
             <div class="mb-2">
-                <label for="bMonday" class="form-label">Monday</label>
+                <label for="bMonday" class="form-label fw-bold">Monday</label>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="bMonday">
                     <label class="form-check-label" for="switchCheckDefault">Yes</label>
                 </div>
             </div>
             <div class="mb-2">
-                <label for="bTuesday" class="form-label">Tuesday</label>
+                <label for="bTuesday" class="form-label fw-bold">Tuesday</label>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="bTuesday">
                     <label class="form-check-label" for="switchCheckDefault">Yes</label>
                 </div>
             </div>
             <div class="mb-2">
-                <label for="bWednesday" class="form-label">Wednesday</label>
+                <label for="bWednesday" class="form-label fw-bold">Wednesday</label>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="bWednesday">
                     <label class="form-check-label" for="switchCheckDefault">Yes</label>
                 </div>
             </div>
             <div class="mb-2">
-                <label for="bThursday" class="form-label">Thursday</label>
+                <label for="bThursday" class="form-label fw-bold">Thursday</label>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="bThursday">
                     <label class="form-check-label" for="switchCheckDefault">Yes</label>
                 </div>
             </div>
             <div class="mb-2">
-                <label for="bFriday" class="form-label">Friday</label>
+                <label for="bFriday" class="form-label fw-bold">Friday</label>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="bFriday">
                     <label class="form-check-label" for="switchCheckDefault">Yes</label>
                 </div>
             </div>
             <div class="mb-2">
-                <label for="bSaturday" class="form-label">Saturday</label>
+                <label for="bSaturday" class="form-label fw-bold">Saturday</label>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="bSaturday">
-                    <label class="form-check-label" for="switchCheckDefault">Yes</label>
+                    <label class="form-check-label text-muted" for="switchCheckDefault">Yes</label>
                 </div>
             </div>
             <div class="mb-2">
-                <label for="bSunday" class="form-label">Sunday</label>
+                <label for="bSunday" class="form-label fw-bold">Sunday</label>
                 <div class="form-check form-switch">
                     <input class="form-check-input" type="checkbox" role="switch" id="bSunday">
                     <label class="form-check-label" for="switchCheckDefault">Yes</label>
