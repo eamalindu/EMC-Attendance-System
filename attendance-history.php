@@ -86,10 +86,11 @@ if (isset($_GET['reg'])) {
             echo "<td>" . $reg . "</td>";
             echo "<td>" . $row['batch_id'] . "</td>";
             echo "<td>" . $row['timestamp'] . "</td>";
-            echo "<td>" . $row['addedBy'] . "</td></tr></tbody></table>";
+            echo "<td>" . $row['addedBy'] . "</td></tr>";
             $rowIndex++;
 
         }
+        echo "</tbody></table>";
     } else {
         echo "<table id='tle' class='table w-100 table-bordered table-striped '>
             <thead>
