@@ -111,6 +111,14 @@ const checkUpdateBatch = () => {
         }
     });
 
+    if(oldBatch.starTime !== bStartTime.value){
+        updates +="Start Time was updated to <span class='text-primary'>"+bStartTime.value+"</span>";
+    }
+
+    if(oldBatch.endTime !== bEndTime.value){
+        updates +="End Time was updated to <span class='text-primary'>"+bEndTime.value+"</span>";
+    }
+
     return updates;
 };
 
