@@ -104,9 +104,9 @@ const checkUpdateBatch = () => {
         // compare with oldBatch
         if (oldBatch[day.toLowerCase()] !== newBatch[day.toLowerCase()]) {
             if (newBatch[day.toLowerCase()] === "1") {
-                updates += day + " was Added <br>";
+                updates += "<span class='text-primary'>"+day + " was Added</span> to the class Schedule<br>";
             } else {
-                updates += day + " was Removed<br>";
+                updates += "<span class='text-primary'>"+day + " was Removed</span> from the class Schedule<br>";
             }
         }
     });
