@@ -112,11 +112,11 @@ const checkUpdateBatch = () => {
     });
 
     if(oldBatch.starTime !== bStartTime.value){
-        updates +="Start Time was updated to <span class='text-primary'>"+bStartTime.value+"</span>";
+        updates +="Start Time was updated to <span class='text-primary'>"+bStartTime.value+"</span><br>";
     }
 
     if(oldBatch.endTime !== bEndTime.value){
-        updates +="End Time was updated to <span class='text-primary'>"+bEndTime.value+"</span>";
+        updates +="End Time was updated to <span class='text-primary'>"+bEndTime.value+"</span><br>";
     }
 
     return updates;
