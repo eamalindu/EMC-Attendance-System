@@ -44,6 +44,11 @@ function sendWelcomeMail($email,$name,$username)
     }
 }
 
+function sendPasswordResetMail()
+{
+
+}
+
 //example
 //sendWelcomeMail("eamalindu@gmail.com","Malindu Prabodhitha","Malindu");
 ?>
