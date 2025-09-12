@@ -70,7 +70,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                     <input type="password" placeholder="********" class="inputs" name="password" id="password" required autocomplete="off">
                     <button class="btns">LOGIN</button>
                 </form>
-                <p style="color: gray;margin-top: 20px;text-decoration: underline;"><a>Forget Password?</a></p>
+                <p style="color: gray;margin-top: 20px;text-decoration: underline;"><a href="Reset-Password.php" style="color: inherit">Forget Password?</a></p>
                 <p style="color: gray;"><small>Maintained by
                         @eamalindu</small></p>
             </div>
