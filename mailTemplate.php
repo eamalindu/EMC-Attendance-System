@@ -7,7 +7,7 @@ require 'PHPMailer-6.10.0/src/Exception.php';
 require 'PHPMailer-6.10.0/src/PHPMailer.php';
 require 'PHPMailer-6.10.0/src/SMTP.php';
 
-function sendWelcomeMail($email)
+function sendWelcomeMail($email,$name,$username)
 {
     $mail = new PHPMailer(true);
 
@@ -23,9 +23,18 @@ function sendWelcomeMail($email)
         $mail->setFrom('finalproject.eamalindu@gmail.com', 'EMC-NIT Attendance System');
         $mail->addAddress($email);
 
+        // 1. Load the HTML template
+        $htmlBody = file_get_contents(__DIR__ . '/welcomeMail.html');
+
+        $htmlBody = str_replace(
+            ["Malindu Prabodhitha", "EMP"],   // what to look for
+            [$name, $username],               // what to replace with
+            $htmlBody
+        );
+
         $mail->isHTML(true);
         $mail->Subject = 'Welcome To EMC-NIT Attendance System';
-        $mail->Body    = 'This is a test email';
+        $mail->Body    = $htmlBody;
         $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
         $mail->send();
@@ -35,5 +44,5 @@ function sendWelcomeMail($email)
     }
 }
 
-sendWelcomeMail("eamalindu@gmail.com");
+sendWelcomeMail("eamalindu@gmail.com","Malindu Prabodhitha","Malindu");
 ?>
