@@ -44,5 +44,6 @@ function sendWelcomeMail($email,$name,$username)
     }
 }
 
-sendWelcomeMail("eamalindu@gmail.com","Malindu Prabodhitha","Malindu");
+//example
+//sendWelcomeMail("eamalindu@gmail.com","Malindu Prabodhitha","Malindu");
 ?>
