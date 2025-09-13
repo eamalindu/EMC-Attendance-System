@@ -41,19 +41,21 @@
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script>
     document.getElementById("btnSend").addEventListener("click", function() {
-        let email = document.getElementById("email").value;
-        if(email !== ""){
+        let email = document.getElementById("email");
+        if(email.value !== ""){
             formData = new FormData();
-            formData.append("email", email);
+            formData.append("email", email.value);
             fetch("processReset.php",{
                 method: "POST",
                 body: formData
             })
-            .then(res => res.json())
+            .then(res => res.text())
             .then(data => {
                 console.log(data);
-                if(data==="OK"){
+                if(data.trim()==="OK"){
 
+                    showCustomModal("Email Sent","success");
+                    email.value = "";
                 }
                 else{
                     showCustomModal(data, 'error');
