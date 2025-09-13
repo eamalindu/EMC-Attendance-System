@@ -15,8 +15,11 @@
         <div class="col-6 d-flex justify-content-center align-items-center">
             <img src="images/reset.png" class="w-100" alt="Reset Password">
         </div>
-        <div class="col-6">
+        <div class="col-6 p-5">
+            <h2 class="text-center">Reset Password</h2>
+                <form class="p-5">
 
+                </form>
         </div>
     </div>
 </div>
