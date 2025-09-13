@@ -254,13 +254,13 @@ require_once "config.php";
     </div>
     <p class="mt-4">Class Schedule</p>
 
-    <div class="row">
+
         <?php include "todayClassList.php"
 
         ?>
 
 
-    </div>
+
 
 </div>
 <div class="logout">
