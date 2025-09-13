@@ -1,4 +1,5 @@
 <?php
+session_start();
 date_default_timezone_set('Asia/Colombo');
 require_once "sms.php";
 require_once "config.php";
@@ -7,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $reg = $_POST['reg'];
     $contact = $_POST['contact'];
     $batch = $_POST['batch'];
-
+    $addedBy = $_SESSION['username'];
 
 // prepare query
     $stmt = $conn->prepare("SELECT batch FROM student WHERE reg = ? LIMIT 1");
@@ -44,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $msg = "Dear Parent, your child has attended today’s class (".$batch.") at ".date('h:i a')." - ESOFT Nittambuwa";
 
-        $stmt_insert->bind_param("sss", $reg, $batch, $user);
+        $stmt_insert->bind_param("sss", $reg, $batch, $addedBy);
 
         if($stmt_insert->execute()){
             echo "Ok";
