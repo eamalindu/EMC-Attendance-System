@@ -26,15 +26,30 @@
         <div class="col-6 p-5 d-flex justify-content-center align-items-center">
             <div class="w-75 border p-3">
             <h2 class="text-center">Reset Password</h2>
-                <form class="p-1">
+                <form class="p-1" action="#">
                     <label class="form-label">Please Enter Your Email</label>
-                    <input type="text" class="form-control" placeholder="Enter your email here" id="email" required>
-                    <button class="btn btn-primary mt-3 border-0" style="background-color: #18449c;">Send Reset Link</button>
+                    <input type="text" class="form-control" placeholder="Enter your email here" id="email" required autocomplete="off">
+                    <button class="btn btn-primary mt-3 border-0" style="background-color: #18449c;" id="btnSend">Send Reset Link</button>
                 </form>
             </div>
         </div>
     </div>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+<script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
+<script>
+    document.getElementById("btnSend").addEventListener("click", function() {
+        let email = document.getElementById("email").value;
+        if(email !== ""){
+            formData = new FormData();
+            formData.append("email", email);
+        }
+        else{
+           showCustomModal("Please Enter Your Email Address","warning");
+        }
+    })
+</script>
 </body>
 </html>
