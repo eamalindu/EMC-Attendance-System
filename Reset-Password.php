@@ -23,11 +23,15 @@
         <div class="col-6 d-flex justify-content-center align-items-center">
             <img src="images/reset.png" class="w-100" alt="Reset Password">
         </div>
-        <div class="col-6 p-5">
+        <div class="col-6 p-5 d-flex justify-content-center align-items-center">
+            <div class="w-75 border p-3">
             <h2 class="text-center">Reset Password</h2>
-                <form class="p-5">
-
+                <form class="p-1">
+                    <label class="form-label">Please Enter Your Email</label>
+                    <input type="text" class="form-control" placeholder="Enter your email here" id="email" required>
+                    <button class="btn btn-primary mt-3 border-0" style="background-color: #18449c;">Send Reset Link</button>
                 </form>
+            </div>
         </div>
     </div>
 </div>
