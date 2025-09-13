@@ -1,6 +1,7 @@
 <?php
 session_start();
 require_once "config.php";
+require_once "getIP.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST["username"];
@@ -26,8 +27,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['loggedIn'] = true;
         $_SESSION['username'] = $username;
 
+        $userIP = getUserIP();
+
         $stmt_log = $conn->prepare("INSERT INTO log (user,description,created) VALUES (?,?,NOW())");
-        $log = "User Logged In ";
+        $log = "User Logged In from ".$userIP;
         $stmt_log->bind_param("ss", $username, $log);
         if ($stmt_log->execute()) {
             header("Location: dashboard.php");
