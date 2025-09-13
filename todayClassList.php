@@ -36,7 +36,7 @@ if ($result && $result->num_rows > 0) {
 
         // print the column
         echo "
-            <div class='col-12 col-lg-4 mb-3'>
+            <div class='col-12 col-lg-4'>
                 <div class='card card-body d-flex align-items-center justify-content-center'>
                     <div class='row w-100'>
                         <div class='col-6 text-center'>
@@ -64,7 +64,7 @@ if ($result && $result->num_rows > 0) {
 
         // after every 3 cards, close the row and start a new one (if more records remain)
         if ($count % 3 == 0 && $count < $result->num_rows) {
-            echo "</div><div class='row'>";
+            echo "</div><div class='row mt-2'>";
         }
     }
 
