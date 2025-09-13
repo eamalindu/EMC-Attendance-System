@@ -45,6 +45,23 @@
         if(email !== ""){
             formData = new FormData();
             formData.append("email", email);
+            fetch("processReset.php",{
+                method: "POST",
+                body: formData
+            })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if(data==="OK"){
+
+                }
+                else{
+                    showCustomModal(data, 'error');
+                }
+
+            })
+                .catch(err => console.log(err));
+
         }
         else{
            showCustomModal("Please Enter Your Email Address","warning");
