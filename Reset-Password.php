@@ -13,7 +13,7 @@
 <div class="container">
     <div class="row vh-100">
         <div class="col-6 d-flex justify-content-center align-items-center">
-            <img src="images/reset.jpg" class="w-100" alt="Reset Password">
+            <img src="images/reset.png" class="w-100" alt="Reset Password">
         </div>
         <div class="col-6">
 
