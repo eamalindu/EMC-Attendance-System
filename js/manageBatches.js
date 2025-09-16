@@ -71,7 +71,11 @@ const getBatch = (button) => {
     btnStudentRegister.classList.add('disabled');
 }
 
-const completeBatch = () => {
+const completeBatch = (button) => {
+    let batchName = button.getAttribute("data-reg");
+    showCustomConfirm("You Are About to Complete This batch<br><br>Attendace wont be able to mark once batch is completed<br><br>Are You Sure?", function (result) {
+        
+    })
 
 }
 
