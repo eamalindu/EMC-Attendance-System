@@ -50,5 +50,5 @@ function sendPasswordResetMail()
 }
 
 //example
-//sendWelcomeMail("nesiri.bc@gmail.com","Neminda Wickramasinghe","Neminda");
+//sendWelcomeMail("gayangask@gmail.com","Gayanga DISE","Gayanga");
 ?>
