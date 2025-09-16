@@ -74,7 +74,31 @@ const getBatch = (button) => {
 const completeBatch = (button) => {
     let batchName = button.getAttribute("data-reg");
     showCustomConfirm("You Are About to Complete This batch<br><br>Once completed,<br>attendance can no longer be marked<br><br>Are You Sure?", function (result) {
-        
+        if(result){
+            formData = new FormData();
+            formData.append("batch", batchName);
+            fetch("completeBatch.php",{
+                method: "POST",
+                body:formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    console.log(data);
+                    if (data.trim() === "Ok") {
+                        // Success action
+                        showCustomModal('Batch Completed Successfully', 'success');
+                        //click offcanvas close btn
+                        setTimeout(() => {
+                            location.reload();
+                        }, 3000);
+
+
+                    } else {
+                        showCustomModal(data, 'error');
+                    }
+                })
+                .catch(error => console.log(error));
+        }
     })
 
 }
