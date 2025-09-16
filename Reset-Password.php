@@ -29,9 +29,11 @@
                 <form class="p-1" action="#">
                     <label class="form-label">Please Enter Your Email</label>
                     <input type="text" class="form-control" placeholder="Enter your email here" id="email" required autocomplete="off">
-                    <button class="btn btn-primary mt-3 border-0" style="background-color: #18449c;" id="btnSend">Send Reset Link</button>
+                    <button class="btn btn-primary mt-3 border-0" style="background-color: #18449c;" id="btnSend" type="button">Send Reset Link</button>
                 </form>
+                <a class="text-muted mt-2 d-block text-center" href="index.php">Back To Home</a>
             </div>
+
         </div>
     </div>
 </div>
