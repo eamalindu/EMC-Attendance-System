@@ -54,7 +54,7 @@
                 console.log(data);
                 if(data.trim()==="OK"){
 
-                    showCustomModal("A password reset link has been emailed to you.<br>Please check your inbox and follow the instructions provided","success");
+                    showCustomModal("A password reset link has<br>been emailed to you.<br><br><i>Please check your inbox and follow the instructions provided</i>","success");
                     email.value = "";
                 }
                 else{
