@@ -6,6 +6,7 @@ $loggedInUser = $_SESSION["username"];
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+    //TODO: need to check wether batch is available and if already completed
     $batch = $_POST['batch'];
 
     $stmt = $conn->prepare("UPDATE batch SET status = ? WHERE name = ?");
