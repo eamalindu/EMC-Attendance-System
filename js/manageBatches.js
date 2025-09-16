@@ -18,7 +18,7 @@ const getBatch = (button) => {
             btnStudentUpdate.classList.remove('disabled');
             console.log(data);
             oldBatch = data;
-            //TODO: if batch already completed cannot be edited further
+
             bNAme.value = data.name;
             bNAme.disabled = true;
             bStartTime.value = data.startTime;
@@ -144,7 +144,7 @@ const checkUpdateBatch = () => {
         }
     });
 
-    if(oldBatch.starTime !== bStartTime.value){
+    if(oldBatch.startTime !== bStartTime.value){
         updates +="Start Time was updated to <span class='text-primary'>"+bStartTime.value+"</span><br>";
     }
 
