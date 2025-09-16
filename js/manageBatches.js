@@ -15,6 +15,7 @@ const getBatch = (button) => {
     })
         .then(response => response.json())
         .then(data => {
+            btnStudentUpdate.classList.remove('disabled');
             console.log(data);
             oldBatch = data;
             //TODO: if batch already completed cannot be edited further
@@ -64,6 +65,10 @@ const getBatch = (button) => {
                 bSunday.checked = true;
             } else {
                 bSunday.checked = false;
+            }
+
+            if(data.status==="Completed"){
+                btnStudentUpdate.classList.add('disabled');
             }
 
         })
