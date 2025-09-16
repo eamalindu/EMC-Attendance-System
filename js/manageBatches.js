@@ -84,7 +84,7 @@ const completeBatch = (button) => {
                 .then(response => response.text())
                 .then(data => {
                     console.log(data);
-                    if (data.trim() === "Ok") {
+                    if (data.trim() === "OK") {
                         // Success action
                         showCustomModal('Batch Completed Successfully', 'success');
                         //click offcanvas close btn
