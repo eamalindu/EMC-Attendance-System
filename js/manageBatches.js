@@ -17,7 +17,7 @@ const getBatch = (button) => {
         .then(data => {
             console.log(data);
             oldBatch = data;
-
+            //TODO: if batch already completed cannot be edited further
             bNAme.value = data.name;
             bNAme.disabled = true;
             bStartTime.value = data.startTime;
