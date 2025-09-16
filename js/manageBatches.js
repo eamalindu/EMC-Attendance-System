@@ -73,7 +73,7 @@ const getBatch = (button) => {
 
 const completeBatch = (button) => {
     let batchName = button.getAttribute("data-reg");
-    showCustomConfirm("You Are About to Complete This batch<br><br>Attendace wont be able to mark once batch is completed<br><br>Are You Sure?", function (result) {
+    showCustomConfirm("You Are About to Complete This batch<br><br>Once completed,<br>attendance can no longer be marked<br><br>Are You Sure?", function (result) {
         
     })
 
