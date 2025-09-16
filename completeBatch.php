@@ -8,5 +8,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     $batch = $_POST['batch'];
 
+    $stmt = $conn->prepare("UPDATE batch SET status = ? WHERE name = ?");
+    $status = 'Completed';
+    $stmt->bind_param("si", $status, $batch);
+    if ($stmt->execute()) {
+        echo "OK";
+    }
+    else{
+        echo "failed: " . $stmt->error;
+    }
+
 
 }
