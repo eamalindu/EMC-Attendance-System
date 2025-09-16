@@ -17,7 +17,19 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $stmt = $conn->prepare("UPDATE batch SET status = ? WHERE name = ?");
         $stmt->bind_param("ss", $status, $batch);
         if ($stmt->execute()) {
-            echo "OK";
+
+            $stmt_log = $conn->prepare("INSERT INTO log (user,description,created) VALUES (?,?,NOW())");
+            $log = "User Completed the batch ".$batch;
+            $stmt_log->bind_param("ss", $loggedInUser, $log);
+
+            if ($stmt_log->execute()){
+                echo "OK";
+            }
+            else{
+                echo "failed: " . $stmt_log->error;
+            }
+
+
         } else {
             echo "failed: " . $stmt->error;
         }
