@@ -4,7 +4,7 @@ require_once "config.php";
 
 $loggedInUser = $_SESSION["username"];
 
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     $batch = $_POST['batch'];
 
@@ -12,10 +12,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $status = 'Completed';
     $stmt->bind_param("ss", $status, $batch);
     if ($stmt->execute()) {
-
         echo "OK";
-    }
-    else{
+    } else {
         echo "failed: " . $stmt->error;
     }
 
