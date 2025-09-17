@@ -72,5 +72,13 @@
         }
     })
 </script>
+<?php
+session_start();
+if (isset($_SESSION['error'])) {
+    echo '<script>showCustomModal("'.htmlspecialchars($_SESSION['error']).'","error")</script>';
+    unset($_SESSION['error']); // clear after displaying
+}
+?>
+
 </body>
 </html>

@@ -1,9 +1,12 @@
 <?php
+session_start();
 require 'config.php';
 
 $token = $_GET['token'] ?? '';
 if (!$token) {
-    die("Invalid token.");
+    $_SESSION['error'] = 'Reset link is invalid or missing.';
+    header('Location: Reset-Password.php');
+    exit;
 }
 
 // Check token validity
@@ -13,7 +16,9 @@ $stmt->execute();
 $result = $stmt->get_result();
 
 if ($result->num_rows === 0) {
-    die("Invalid or expired token.");
+    $_SESSION['error'] = 'Reset link is Expired!';
+    header('Location: Reset-Password.php');
+    exit;
 }
 
 $row = $result->fetch_assoc();
@@ -42,6 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 }
+
 ?>
 
 <!-- HTML Form -->
@@ -51,7 +57,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reset Password</title>
+    <title>Update Password</title>
     <link rel="icon" type="image/png" href="images/icon.png" sizes="256x256">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
@@ -64,12 +70,28 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             font-family: 'Poppins', sans-serif !important;
         }
     </style>
-    <body>
-<form method="POST">
-    <input type="password" name="password" placeholder="New Password" required>
-    <input type="password" name="confirm" placeholder="Confirm Password" required>
-    <button type="submit">Reset Password</button>
-</form>
+<body>
+<div class="container">
+    <div class="row vh-100">
+        <div class="col-6 d-flex justify-content-center align-items-center">
+            <img src="images/update.jpg" class="w-75" alt="Reset Password">
+        </div>
+        <div class="col-6 p-5 d-flex justify-content-center align-items-center">
+            <div class="w-75 border p-3">
+                <h2 class="text-center">Update Password</h2>
+                <form method="POST">
+                    <label class="form-label">Please Enter Your New Password</label>
+                    <input class="form-control" type="password" name="password" placeholder="New Password" required>
+                    <label class="form-label mt-2">Confirm Your Password</label>
+
+                    <input class="form-control" type="password" name="confirm" placeholder="Confirm Password" required>
+                    <button type="submit" class="btn btn-primary mt-3 border-0" style="background-color: #18449c;">Reset Password</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
