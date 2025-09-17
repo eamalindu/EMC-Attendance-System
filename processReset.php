@@ -4,6 +4,19 @@ include_once "config.php";
 include_once "getIP.php";
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
-    echo "OK";
+
+    $email = $_POST['email'];
+    //check user account exist
+    $stmt_check = $conn->prepare("SELECT email FROM users WHERE email = ?");
+    $stmt_check->bind_param("s", $email);
+    $stmt_check->execute();
+    if($stmt_check->affected_rows > 0) {
+        //if exists send email and add record to database
+        echo "OK";
+    }
+    else {
+        echo "No User Account Found!";
+    }
+
 }
 
