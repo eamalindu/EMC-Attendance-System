@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     if ($password !== $confirm) {
         $_SESSION['error'] = 'Passwords do not match!';
     } else {
-        $hash = password_hash($password, PASSWORD_DEFAULT);
+        $hash = $password;
 
         // Update user's password
         $stmt = $conn->prepare("UPDATE users SET password=? WHERE email=?");
