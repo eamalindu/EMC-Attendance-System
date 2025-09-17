@@ -27,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt->execute()) {
 
-            $link = "http://192.168.1.3/Attendance/update-password.php?token=" . $token;
+            $link = "http://localhost/Attendance/update-password.php?token=" . $token;
 
             if(sendPasswordResetMail($email, $link)=="OK"){
                 //if exists send email and add record to database
