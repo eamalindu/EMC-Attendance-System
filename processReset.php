@@ -10,7 +10,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt_check = $conn->prepare("SELECT email FROM users WHERE email = ?");
     $stmt_check->bind_param("s", $email);
     $stmt_check->execute();
-    if($stmt_check->affected_rows > 0) {
+    $result = $stmt_check->get_result();
+    if($result->num_rows > 0) {
         //if exists send email and add record to database
         echo "OK";
     }
