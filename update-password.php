@@ -29,7 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $confirm = $_POST['confirm'];
 
     if ($password !== $confirm) {
-        echo "Passwords do not match.";
+        $_SESSION['error'] = 'Passwords do not match!';
     } else {
         $hash = password_hash($password, PASSWORD_DEFAULT);
 
@@ -96,5 +96,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
+<?php
+if (isset($_SESSION['error'])) {
+    echo '<script>showCustomModal("'.htmlspecialchars($_SESSION['error']).'","error")</script>';
+    unset($_SESSION['error']); // clear after displaying
+}
+?>
 </body>
 </html>
