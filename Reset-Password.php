@@ -43,7 +43,8 @@
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script>
     document.getElementById("btnSend").addEventListener("click", function() {
-        btnSend.innerHTML = '  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Loading...';
+        btnSend.innerHTML = '  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span> Loading...';
+        btnSend.classList.add('disabled');
         let email = document.getElementById("email");
         if(email.value !== ""){
             formData = new FormData();
@@ -60,6 +61,7 @@
                     showCustomModal("A password reset link has<br>been emailed to you.<br><br><i>Please check your inbox and follow the instructions provided</i>","success");
                     email.value = "";
                     btnSend.innerHTML = "Send Reset Link";
+                    btnSend.classList.remove('disabled');
                 }
                 else{
                     showCustomModal(data, 'error');
