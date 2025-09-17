@@ -19,6 +19,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt = $conn->prepare("INSERT INTO reset (email, token, expire) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $email, $token, $expiry);
+
+        //check if there is any old reset links if present delete before adding the new record
+        $stmt_Delete = $conn->prepare("DELETE FROM reset WHERE email = ?");
+        $stmt_Delete->bind_param("s", $email);
+        $stmt_Delete->execute();
+
         if ($stmt->execute()) {
 
             $link = "http://192.168.1.3/Attendance/update-password.php?token=" . $token;
