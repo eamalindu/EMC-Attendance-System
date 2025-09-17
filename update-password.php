@@ -43,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->bind_param("s", $token);
         $stmt->execute();
 
-        echo "Password has been reset successfully.";
+        $_SESSION['success'] = 'Password Updated Successfully!<br>You will be redirected to Login Page!';
         exit;
     }
 }
@@ -102,5 +102,14 @@ if (isset($_SESSION['error'])) {
     unset($_SESSION['error']); // clear after displaying
 }
 ?>
+<?php
+if (isset($_SESSION['success'])) {
+    echo '<script>showCustomModal("'.htmlspecialchars($_SESSION['success']).'","success") setTimeout(() => {
+                                location.href = "index.php";
+                            }, 3000);</script>';
+    unset($_SESSION['success']); // clear after displaying
+}
+?>
+
 </body>
 </html>
