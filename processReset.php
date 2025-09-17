@@ -18,13 +18,20 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $stmt = $conn->prepare("INSERT INTO reset (email, token, expire) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $email, $token, $expiry);
-        $stmt->execute();
+        if($stmt->execute()) {
 
-        $link = "http://192.168.1.3/Attendance/update-password.php?token=" . $token;
+            $link = "http://192.168.1.3/Attendance/update-password.php?token=" . $token;
+
+            echo $link;
+
+            //if exists send email and add record to database
+            echo "OK";
+        }
+        else{
+            echo "ERROR". $stmt->error;
+        }
 
 
-        //if exists send email and add record to database
-        echo "OK";
     }
     else {
         echo "No User Account Found!";
