@@ -62,6 +62,7 @@ function sendPasswordResetMail($email,$link)
 
         // 1. Load the HTML template
         $htmlBody = file_get_contents(__DIR__ . '/passwordReset.html');
+        $htmlBody = str_replace('{{reset_link}}', $link, $htmlBody);
 
         $mail->isHTML(true);
         $mail->Subject = 'Password Reset';

@@ -23,6 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
             $link = "http://192.168.1.3/Attendance/update-password.php?token=" . $token;
 
+            sendPasswordResetMail($email, $link);
             //if exists send email and add record to database
             echo "OK";
         } else {
