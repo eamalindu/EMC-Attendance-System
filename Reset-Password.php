@@ -43,7 +43,7 @@
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script>
     document.getElementById("btnSend").addEventListener("click", function() {
-        btnSend.innerHTML = '  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span><span class="visually-hidden">Loading...</span>';
+        btnSend.innerHTML = '  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Loading...';
         let email = document.getElementById("email");
         if(email.value !== ""){
             formData = new FormData();
