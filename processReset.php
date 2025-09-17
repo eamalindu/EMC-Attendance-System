@@ -3,6 +3,7 @@ session_start();
 date_default_timezone_set('Asia/Colombo');
 include_once "config.php";
 include_once "getIP.php";
+include_once "mailTemplate.php";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
