@@ -1,5 +1,6 @@
 <?php
 session_start();
+date_default_timezone_set('Asia/Colombo');
 include_once "config.php";
 include_once "getIP.php";
 
@@ -12,6 +13,16 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt_check->execute();
     $result = $stmt_check->get_result();
     if($result->num_rows > 0) {
+        $token = bin2hex(random_bytes(32));
+        $expiry = date("Y-m-d H:i:s", strtotime("+1 hour"));
+
+        $stmt = $conn->prepare("INSERT INTO reset (email, token, expire) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $email, $token, $expiry);
+        $stmt->execute();
+
+        $link = "http://192.168.1.3/Attendance/update-password.php?token=" . $token;
+
+
         //if exists send email and add record to database
         echo "OK";
     }
