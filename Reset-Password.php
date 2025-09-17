@@ -43,6 +43,7 @@
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
 <script>
     document.getElementById("btnSend").addEventListener("click", function() {
+        btnSend.innerHTML = '  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span><span class="visually-hidden">Loading...</span>';
         let email = document.getElementById("email");
         if(email.value !== ""){
             formData = new FormData();
@@ -58,6 +59,7 @@
 
                     showCustomModal("A password reset link has<br>been emailed to you.<br><br><i>Please check your inbox and follow the instructions provided</i>","success");
                     email.value = "";
+                    btnSend.innerHTML = "Send Reset Link";
                 }
                 else{
                     showCustomModal(data, 'error');
@@ -78,6 +80,14 @@ if (isset($_SESSION['error'])) {
     echo '<script>showCustomModal("'.htmlspecialchars($_SESSION['error']).'","error")</script>';
     unset($_SESSION['error']); // clear after displaying
 }
+
+if (isset($_SESSION['success'])) {
+    echo '<script>showCustomModal("' . ($_SESSION['success']) . '","success"); setTimeout(() => {
+                                location.href = "index.php";
+                            }, 5000);</script>';
+    unset($_SESSION['success']); // clear after displaying
+}
+
 ?>
 
 </body>

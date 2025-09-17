@@ -44,7 +44,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $stmt->execute();
 
         $_SESSION['success'] = 'Password Updated Successfully!<br>You will be redirected to Login Page!';
-
+        header('Location: Reset-Password.php');
+        exit;
     }
 }
 
@@ -100,14 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 if (isset($_SESSION['error'])) {
     echo '<script>showCustomModal("'.htmlspecialchars($_SESSION['error']).'","error")</script>';
     unset($_SESSION['error']); // clear after displaying
-}
-?>
-<?php
-if (isset($_SESSION['success'])) {
-    echo '<script>showCustomModal("'.htmlspecialchars($_SESSION['success']).'","success"); setTimeout(() => {
-                                location.href = "index.php";
-                            }, 3000);</script>';
-    unset($_SESSION['success']); // clear after displaying
 }
 ?>
 
