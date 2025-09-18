@@ -87,7 +87,9 @@ const goToHistory = () => {
 
 const markAttendance = () => {
     let studentREG = document.getElementById("search").value;
-    if (studentREG === "") {
+    let pattern = "^[0-9]{6}$";
+
+    if (studentREG === "" || !(new RegExp(pattern).test(studentREG))) {
         showCustomModal('Please Enter a Valid Registration Number', 'warning');
     } else {
 
