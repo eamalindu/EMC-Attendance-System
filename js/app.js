@@ -29,6 +29,7 @@ const getStudent = () => {
                 result.classList.add('d-none');
 
                 profile.src = "images/img.png";
+                oldStudent = {};
 
             } else {
                 noResult.classList.add('d-none');
@@ -49,7 +50,7 @@ const getStudent = () => {
                 }
 
                 getGender(data.nic);
-
+                    oldStudent = data;
 
             }
         })
@@ -89,7 +90,7 @@ const markAttendance = () => {
     let studentREG = document.getElementById("search").value;
     let pattern = "^[0-9]{6}$";
 
-    if (studentREG === "" || !(new RegExp(pattern).test(studentREG))) {
+    if (studentREG === "" || !(new RegExp(pattern).test(studentREG)) || Object.keys(oldStudent).length===0) {
         showCustomModal('Please Enter a Valid Registration Number', 'warning');
     } else {
 
