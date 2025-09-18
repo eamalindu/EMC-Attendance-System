@@ -26,7 +26,7 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
     <h2 class="mb-3">Mark Attendance</h2>
     <div class="row mb-4">
         <div class="col-12 p-0 input-group">
-            <input type="text" id="search" name="search" placeholder="Enter Your Reg Number" class="w-75 form-control"
+            <input type="text" id="search" name="search" placeholder="Enter Your Reg Number - [Example: 224586]" class="w-75 form-control"
                    onkeyup="getStudent()">
             <button type="button" id="btnMark" onclick="markAttendance()" class="w-25 btn btn-success">Mark</button>
         </div>
