@@ -5,7 +5,7 @@ $today = strtolower(date('l')); // 'monday', 'tuesday', etc.
 $todayDate = date('Y-m-d');     // today's date
 
 // Get batches conducting today
-$sql = "SELECT * FROM batch WHERE $today = 1 ORDER BY startTime";
+$sql = "SELECT * FROM batch WHERE $today = 1 and status='active' ORDER BY startTime";
 $result = $conn->query($sql);
 
 if ($result && $result->num_rows > 0) {
