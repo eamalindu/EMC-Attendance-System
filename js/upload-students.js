@@ -4,7 +4,7 @@ const loadUploadedExcel = (e) => {
     const file = e.target.files[0];
 
     if (!file) {
-        alert("No file selected");
+        showCustomModal('No Files Uploaded', 'error');
         return;
     }
 
@@ -21,7 +21,6 @@ const loadUploadedExcel = (e) => {
             // Convert to JSON
             fileData = XLSX.utils.sheet_to_json(firstSheet);
 
-            alert(`File loaded successfully! Found ${fileData.length} students.`);
 
             // Display preview
             displayPreview(fileData);
