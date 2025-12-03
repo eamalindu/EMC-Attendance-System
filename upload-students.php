@@ -24,13 +24,14 @@
         <input id="fileSelect" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
         <button type="button" class="btn d-block mt-3 btn-primary w-25">Upload Students</button>
     </form>
-
+    <div id="result" class="mt-4"></div>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
         crossorigin="anonymous"></script>
 <script src="customModal_V2/resources/js/customModal@2.0.min.js"></script>
+<script src="https://cdn.sheetjs.com/xlsx-latest/package/dist/xlsx.full.min.js"></script>
 <script src="js/upload-students.js"></script>
 <script src="js/loader.js"></script>
 </html>
