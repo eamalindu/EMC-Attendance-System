@@ -23,7 +23,7 @@ if (!isset($_SESSION['loggedIn']) || $_SESSION['loggedIn'] !== true) {
 <div class="preloader w-100 min-vh-100">
     <div class="loader"></div>
 </div>
-<div class="container p-5">
+<div class="container p-0 py-5">
     <h2 class="mb-3">Manage Batches</h2>
     <?php
 
