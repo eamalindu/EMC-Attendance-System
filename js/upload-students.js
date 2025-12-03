@@ -67,7 +67,7 @@ const displayPreview = (data) => {
 
 const uploadStudents = () => {
     if (!fileData) {
-        alert("Please select and load a file first");
+        showCustomModal('Please select and load a file first', 'error');
         return;
     }
 
