@@ -22,7 +22,7 @@
 
     <form action="#" type="post" enctype="multipart/form-data">
         <input id="fileSelect" type="file" accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel" />
-        <button type="button" class="btn d-block mt-3 btn-primary w-25">Upload Students</button>
+        <button type="button" class="btn d-block mt-3 btn-primary w-25" id="uploadBtn">Upload Students</button>
     </form>
     <div id="result" class="mt-4"></div>
 </div>
