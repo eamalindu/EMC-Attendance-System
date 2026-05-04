@@ -221,7 +221,7 @@ The system uses the following core tables:
 |---|---|---|
 | `id` | INT (PK, AI) | User ID |
 | `username` | VARCHAR | Login username |
-| `password` | VARCHAR | Login password |
+| `password` | VARCHAR(255) | Login password (should be stored as a `password_hash()` bcrypt hash in production) |
 | `email` | VARCHAR | User email address |
 
 ### `student`
@@ -232,7 +232,7 @@ The system uses the following core tables:
 | `eid` | VARCHAR | Student EID / barcode |
 | `batch` | VARCHAR | Assigned batch name |
 | `contact` | VARCHAR | Student contact number |
-| `pStatus` | VARCHAR | Parent contact number |
+| `pStatus` | VARCHAR | Parent contact number (column name used as parent contact field) |
 | `email` | VARCHAR | Student email |
 | `sStatus` | VARCHAR | Status: Active, Postponed, Suspended, Inactivated, Deleted |
 | `addedBy` | VARCHAR | Username who added the record |
