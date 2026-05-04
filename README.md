@@ -212,60 +212,6 @@ FLUSH PRIVILEGES;
 
 ---
 
-## 🧩 Database Schema
-
-The system uses the following core tables:
-
-### `users`
-| Column | Type | Description |
-|---|---|---|
-| `id` | INT (PK, AI) | User ID |
-| `username` | VARCHAR | Login username |
-| `password` | VARCHAR(255) | Login password (should be stored as a `password_hash()` bcrypt hash in production) |
-| `email` | VARCHAR | User email address |
-
-### `student`
-| Column | Type | Description |
-|---|---|---|
-| `reg` | VARCHAR (PK) | Student registration number |
-| `name` | VARCHAR | Full name |
-| `eid` | VARCHAR | Student EID / barcode |
-| `batch` | VARCHAR | Assigned batch name |
-| `contact` | VARCHAR | Student contact number |
-| `pStatus` | VARCHAR | Parent contact number (column name used as parent contact field) |
-| `email` | VARCHAR | Student email |
-| `sStatus` | VARCHAR | Status: Active, Postponed, Suspended, Inactivated, Deleted |
-| `addedBy` | VARCHAR | Username who added the record |
-| `created_at` | DATETIME | Record creation timestamp |
-
-### `batch`
-| Column | Type | Description |
-|---|---|---|
-| `name` | VARCHAR (PK) | Batch name (e.g., `L4-DiSE-01`) |
-| `monday` – `sunday` | TINYINT(1) | Class days (1 = Yes, 0 = No) |
-| `startTime` | TIME | Class start time |
-| `endTime` | TIME | Class end time |
-| `status` | VARCHAR | Active / Completed |
-
-### `attendance`
-| Column | Type | Description |
-|---|---|---|
-| `id` | INT (PK, AI) | Attendance record ID |
-| `reg_id` | VARCHAR | Student registration number (FK → student) |
-| `batch_id` | VARCHAR | Batch name (FK → batch) |
-| `timestamp` | DATETIME | Date and time attendance was marked |
-| `addedBy` | VARCHAR | Username who marked attendance |
-
-### `log`
-| Column | Type | Description |
-|---|---|---|
-| `id` | INT (PK, AI) | Log entry ID |
-| `user` | VARCHAR | Username |
-| `description` | VARCHAR | Log description |
-| `created` | DATETIME | Log timestamp |
-
----
-
 ## 📁 File Structure
 
 ```
@@ -430,7 +376,7 @@ Please make sure your code follows the existing coding style and does not introd
 
 ## 👤 Author
 
-**Amalindu Ekanayaka**  
+**Malindu Prabodhitha**  
 GitHub: [@eamalindu](https://github.com/eamalindu)
 
 > Maintained for **ESOFT Nittambuwa**
